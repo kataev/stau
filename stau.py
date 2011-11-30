@@ -5,7 +5,8 @@ import scipy.interpolate as inter
 from scipy.misc import derivative
 from variants import variants
 from scipy import signal
-import string
+from scipy.integrate import quad
+from inverse_laplase import _riemann
 
 class Response:
     def __init__(self,data,time=None,T=None):
@@ -61,12 +62,8 @@ class Response:
         q,e = 0,0
         for i,val in enumerate(data):
             if data[0]+1 > val: q=i
-#        for i,val in enumerate(data):
-#            if data[-1] == val:
-#                e=i
-#                break
-        self.data = data[q:]#e+1]
-        self.time = time[q:]#e+1]
+        self.data = data[q:]
+        self.time = time[q:]
         self.make_time()
         return self
 
@@ -133,7 +130,18 @@ class Transfer:
         n[1]+=u' -%f S\n'% self.tau + u'-'*l + u' e'
         return n[0]+u'\n'+n[1]+u'\n'+str(den)
 
+    def normalization(self):
+        z = self.data.copy()
+        min = z.min()
+        max = z.max()
+        for i,val in enumerate(z):
+            z[i] = (val)/(max)
+        self.data = z
+        return self
 
+    def to_time(self,time):
+        self.data = _riemann(lambda s:np.exp(-s*self.tau)/(self.T*s+1),time,1)
+        return self
 
 def all_vars():
     """ Работа со всеми вариантами одновременно """
@@ -185,13 +193,17 @@ def test_lf():
     plt.show()
 
 def test_transfer():
-    p = Response(np.array(variants['v13']),T=10)
-    p.linearization().flattening(3).normalization()
+    orig = Response(np.array(variants['v11']),T=10)
+    orig.linearization().flattening(1).remove_delay().normalization()
 
-    poly =  p.tangent_poly()
-    t = Transfer(poly['T'],poly['tau'])
-    print t
+    poly =  orig.match3(orig.tangent())
+
+    transfer = Transfer(poly['T'],poly['tau']).to_time(orig.time).normalization()
+    print transfer
+    plt.plot(orig.time,orig.data,'-') #original
+    plt.plot(orig.time,transfer.data,'-')
+    plt.show()
 
 if __name__ == '__main__':
-    test()
+    test_transfer()
 #    all_vars()
