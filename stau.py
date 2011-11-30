@@ -94,7 +94,6 @@ class Response:
         T = D/(data[j+1] - data[j])
         m = np.where(data==data.max())
         tau = self.time[j-1]-data[j]*T
-
         return {'point':(A,B,j),'T':T,'tau':tau}
 
     def tangent_poly(self):
@@ -117,30 +116,27 @@ class Response:
         return {'T':T,'tau':tau}
 
 class Transfer:
-    def __init__(self,T,tau):
+    def __init__(self,T,tau,point=None):
         self.tau = tau
         self.T = T
 
     def __str__(self):
+        """
+        Вывод в читаемом виде
+        """
         num = np.poly1d([1],variable='s')
         den = np.poly1d([self.T,1],variable='s')
         l = max(len(str(num).strip()),len(str(den).strip()))
         n = unicode(num).split('\n')
         n[1]=n[1].center(l)
-        n[1]+=u' -%f S\n'% self.tau + u'-'*l + u' e'
+        n[1]+=u' -%f s\n'% self.tau + u'-'*l + u' e'
         return n[0]+u'\n'+n[1]+u'\n'+str(den)
 
-    def normalization(self):
-        z = self.data.copy()
-        min = z.min()
-        max = z.max()
-        for i,val in enumerate(z):
-            z[i] = (val)/(max)
-        self.data = z
-        return self
-
     def to_time(self,time):
-        self.data = _riemann(lambda s:np.exp(-s*self.tau)/(self.T*s+1),time,1)
+        """
+        Во временную область
+        """
+        self.data = _riemann(lambda s:np.exp(-s*self.tau)/(self.T*s+1)/s,time,1)
         return self
 
 def all_vars():
@@ -180,6 +176,7 @@ def test():
 #    plt.plot(match3['T']+match3['tau'],1,'o',match3['T']+match3['tau'],1,'x')
 #    plt.plot(poly['point'][0],poly['point'][1],'o',tangent['point'][0],tangent['point'][1],'x')
 #    plt.show()
+    pass
 
 def test_lf():
     """
@@ -193,12 +190,12 @@ def test_lf():
     plt.show()
 
 def test_transfer():
-    orig = Response(np.array(variants['v11']),T=10)
-    orig.linearization().flattening(1).remove_delay().normalization()
+    orig = Response(np.array(variants['v13']),T=10)
+    orig.linearization().flattening(3).normalization()
 
-    poly =  orig.match3(orig.tangent())
+    poly = orig.tangent()
 
-    transfer = Transfer(poly['T'],poly['tau']).to_time(orig.time).normalization()
+    transfer = Transfer(**poly).to_time(orig.time)#.normalization()
     print transfer
     plt.plot(orig.time,orig.data,'-') #original
     plt.plot(orig.time,transfer.data,'-')

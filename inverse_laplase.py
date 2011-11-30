@@ -1,7 +1,5 @@
 import numpy
 
-#scipy has a factorial function, but this is faster, and saves from having to 
-#import scipy
 def factorial(n):
     if n == 0:
         return 1
@@ -10,7 +8,7 @@ def factorial(n):
         return
     else:
         #algorithm from internet posting by Lawrence David
-        return reduce(lambda i, j: i*j, range(1, n+1))
+        return reduce(lambda i, j: i*j, xrange(1, n+1))
 
 def _riemann(transform, timearray, N, show_progress=False):
     '''This algorithm is proposed by Tzou, Oezisik and Chiffelle (1994)'''
@@ -27,25 +25,10 @@ def _riemann(transform, timearray, N, show_progress=False):
     f = numpy.array([])
     
     for t in timearray:
-        rsum = reduce(lambda s,n: s+transform(b/t + 1J*n*numpy.pi/t)*((-1)**n).real,xrange(N))
+        rsum = .0
+        for n in range(1, N+1): rsum += transform(b/t + 1J*n*numpy.pi/t)*((-1)**n).real
+#        rsum = reduce(lambda s,n: s+transform(b/t + 1J*n*numpy.pi/t)*((-1)**n).real,xrange(N))
         tempval2 = transform(b/t)*0.5
-        fval = (numpy.exp(b) / t) * (tempval2 + rsum)
+        fval = numpy.exp(b)/t * (tempval2 + rsum)
         f = numpy.append(f,fval)
     return f
-
-              
-def time_response(transform, timearray, inverse_method, n, show_progress=False):
-    #provide support for ^ exponentiator
-    transform = transform.replace('^','**')
-    
-    if 'S' not in transform:
-        raise SyntaxError("transfer function must be of complex variable 'S'")
-    else:
-        if inverse_method == 'stehfest':
-            return _stehfest(transform, timearray, n, show_progress)
-        elif inverse_method == 'riemann':
-            return _riemann(transform, timearray, n, show_progress)
-        else:
-            pass
-    
-
