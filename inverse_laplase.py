@@ -3,17 +3,12 @@ import numpy
 def factorial(n):
     if n == 0:
         return 1
-    elif n < 0:
-        print 'cannot take the factorial of a negative number'
-        return
     else:
-        #algorithm from internet posting by Lawrence David
         return reduce(lambda i, j: i*j, xrange(1, n+1))
 
 def _riemann(transform, timearray, N, show_progress=False):
     '''This algorithm is proposed by Tzou, Oezisik and Chiffelle (1994)'''
     
-    #do some checking on the time array
     if numpy.any(timearray<0):
             raise ValueError('Cannot evaluate for negative time')
 
