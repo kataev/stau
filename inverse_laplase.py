@@ -1,10 +1,6 @@
+#!/usr/bin/env python
 import numpy
-
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return reduce(lambda i, j: i*j, xrange(1, n+1))
+__author__ = 'S. Chris Colbert' # sccolbert@gmail.com http://mail.scipy.org/pipermail/scipy-user/2009-November/023478.html
 
 def _riemann(transform, timearray, N, show_progress=False):
     '''This algorithm is proposed by Tzou, Oezisik and Chiffelle (1994)'''
@@ -17,13 +13,13 @@ def _riemann(transform, timearray, N, show_progress=False):
         timearray[0] = 0.00001
 
     b = 4.7
-    f = numpy.array([],numpy.float64)
-    
-    for t in timearray:
-        rsum = .0
-        for n in range(1, N+1): rsum += transform(b/t + 1J*n*numpy.pi/t)*((-1)**n).real
-#        rsum = reduce(lambda s,n: s+transform(b/t + 1J*n*numpy.pi/t)*((-1)**n).real,xrange(N))
-        tempval2 = transform(b/t)/2
-        fval = numpy.exp(b)/t * (tempval2 + rsum)
-        f = numpy.append(f,fval)
-    return f
+
+    f=map(lambda t:numpy.exp(b)/t * (transform(b/t)/2 + reduce(lambda s,n: s+(transform(b/t + 1J*n*numpy.pi/t)*((-1)**n)).real,xrange(0,N))),timearray)
+    return numpy.array(f)
+
+
+if __name__=='__main__':
+    print '1/s'
+    print _riemann(lambda s:1/s**1,xrange(1,10),100)
+    print '1/s^2'
+    print _riemann(lambda s:1/s**2,xrange(1,10),100)

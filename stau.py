@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+__author__ = 'Kataev Denis'
 import numpy as np
 from scipy import signal
 from inverse_laplase import _riemann
@@ -111,18 +113,7 @@ class Transfer:
         n[1]+=u' -%f s\n'% self.tau + u'-'*l + u' e'
         return n[0]+u'\n'+n[1]+u'\n'+str(den)
 
-
-    def normalization(self):
-        """ Нормализация к [0:1] """
-        z = self.data.copy()
-        min = z.min()
-        max = z.max()
-        for i,val in enumerate(z):
-            z[i] = (val-min)/(max-min)
-        self.data = z
-        return self
-
     def to_time(self,time):
         """ Во временную область """
-        self.data = _riemann(lambda s:np.exp(-s*self.tau)/(self.T*s+1)/s,time,1)
+        self.data = _riemann(lambda s:np.exp(-s*self.tau)/(self.T*s+1)/s,time,100)
         return self

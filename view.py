@@ -1,5 +1,6 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__author__ = 'bteam'
+__author__ = 'Kataev Denis'
 import matplotlib.pyplot as plt
 from variants import variants
 from stau import *
@@ -8,7 +9,6 @@ def all_vars():
     """ Работа со всеми вариантами одновременно """
     q = []
     for v in variants:
-#        q.append(Response(np.array(variants[v]),T=10).remove_delay().linearization().flattening().normalization())
         q.append(Response(np.array(variants[v]),T=10).flattening().normalization())
     w=[]
     for a in q:
@@ -55,7 +55,7 @@ def test_lf():
     plt.show()
 
 def test_transfer():
-    orig = Response(np.array(variants['v11']),T=10)
+    orig = Response(np.array(variants['v11']),T=10) #Мой вариант 14
     orig.linearization().flattening(3).normalization()
 
     poly = orig.tangent()
