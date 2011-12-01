@@ -17,13 +17,13 @@ def _riemann(transform, timearray, N, show_progress=False):
         timearray[0] = 0.00001
 
     b = 4.7
-    f = numpy.array([])
+    f = numpy.array([],numpy.float64)
     
     for t in timearray:
         rsum = .0
         for n in range(1, N+1): rsum += transform(b/t + 1J*n*numpy.pi/t)*((-1)**n).real
 #        rsum = reduce(lambda s,n: s+transform(b/t + 1J*n*numpy.pi/t)*((-1)**n).real,xrange(N))
-        tempval2 = transform(b/t)*0.5
+        tempval2 = transform(b/t)/2
         fval = numpy.exp(b)/t * (tempval2 + rsum)
         f = numpy.append(f,fval)
     return f

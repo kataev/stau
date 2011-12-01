@@ -56,7 +56,7 @@ def test_lf():
 
 def test_transfer():
     orig = Response(np.array(variants['v11']),T=10)
-    orig.linearization().flattening(3).remove_delay().normalization()
+    orig.linearization().flattening(3).normalization()
 
     poly = orig.tangent()
 
