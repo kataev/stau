@@ -93,10 +93,40 @@ class Response:
         j = int(point/self.t)
         return {'point':(point,tang(point),j),'T':T,'tau':tau}
 
-    def match3(self,tangent):
+    def match3(self,tangent=None):
+        if not tangent: tangent=self.tangent()
         T = tangent['T']*(1-tangent['point'][1])
         tau = tangent['point'][0]-T*np.log(tangent['T']/T)
+        return {'T':T,'tau':tau,'point':tangent['point']}
+
+    def contact4(self,match3=None):
+        if not match3: match3=self.match3()
+        j = match3['point'][2]-1
+        a = self.time[j],self.data[j]
+        i = np.where(self.data>=0.75)[0][0]
+        b = self.time[i],self.data[i]
+#        print a,b
+        if a and b:
+            tau = (b[0]*np.log(1-b[1]) - a[0]*np.log(1-b[1]))/(np.log(1-a[1]) - np.log(1-b[1]))
+            T = tau/np.log(1-a[1])
+        if tau and T:
+            return {'T':T,'tau':-1*tau,'point':match3['point']}
+
+    def orman(self):
+        i = np.where(self.data>=0.33)[0][0]
+        a = self.time[i],self.data[i]
+
+        j = np.where(self.data>=0.7)[0][0]
+        b = self.time[j],self.data[j]
+
+        T = 1.25*(b[0]-a[0])
+        tau = (3*a[0]-b[0])/2
+
         return {'T':T,'tau':tau}
+
+
+        
+
 
 class Transfer:
     def __init__(self,T,tau,point=None):

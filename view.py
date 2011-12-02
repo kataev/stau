@@ -4,6 +4,8 @@ __author__ = 'Kataev Denis'
 import matplotlib.pyplot as plt
 from variants import variants
 from stau import *
+from inverse_laplase import _riemann
+from scipy import signal
 
 def all_vars():
     """ Работа со всеми вариантами одновременно """
@@ -19,6 +21,7 @@ def all_vars():
     plt.show()
 
 def test():
+    """ Тестирование методов у класса Response """
     p = Response(np.array(variants['v13']),T=10)
     p.linearization().flattening(3).normalization()
 
@@ -44,9 +47,7 @@ def test():
     pass
 
 def test_lf():
-    """
-    Проба scipy системы.
-    """
+    """ Проба scipy системы. """
     num = np.poly1d([3.6,1])
     den = np.poly1d([130,23,1])
     system = signal.lti(*signal.tf2ss(num,den))
@@ -54,24 +55,44 @@ def test_lf():
     plt.plot(d[0],d[1],'-',)
     plt.show()
 
-def test_transfer():
+def test_contact4():
     orig = Response(np.array(variants['v11']),T=10) #Мой вариант 14
     orig.linearization().flattening(3).normalization()
 
-    poly = orig.tangent()
+    plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
+    plt.plot(orig.time,Transfer(**orig.contact4()).to_time(orig.time).data,'-',label=u'Соприкосновения 4')
+    plt.plot(orig.time,Transfer(**orig.orman()).to_time(orig.time).data,'-',label=u'Орман')
+    plt.legend(loc='upper left')
+    plt.show()
 
-#    transfer = Transfer(**orig.tangent()).to_time(orig.time)#.normalization()
+def test_transfer():
+    """ Тестирование передаточной функции """
+    orig = Response(np.array(variants['v14']),T=10) #Мой вариант 14
+    orig.linearization().flattening(1).normalization()
 
     plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
     plt.plot(orig.time,Transfer(**orig.tangent()).to_time(orig.time).data,'-',label=u'Касательная')
-    plt.plot(orig.time,Transfer(**orig.tangent_poly()).to_time(orig.time).data,'-',label=u'Касатльная Поли')
     plt.plot(orig.time,Transfer(**orig.match3(orig.tangent())).to_time(orig.time).data,'-',label=u'3 точки')
-    plt.plot(orig.time,Transfer(**orig.match3(orig.tangent_poly())).to_time(orig.time).data,'-',label=u'3 точки поли')
+    plt.plot(orig.time,Transfer(**orig.contact4()).to_time(orig.time).data,'-',label=u'Соприкосновения 4')
+    plt.plot(orig.time,Transfer(**orig.orman()).to_time(orig.time).data,'-',label=u'Орман')
     plt.ylim([0,1])
     plt.xlim([0,orig.time.max()])
     plt.legend(loc='upper left')
     plt.show()
 
+def test_poly_n():
+    """ Тест полиномной передаточной функции и системы lti """
+    num = [20,1]
+    den = [130,23,1]
+
+    system = signal.lti(num,den)
+    t,i = system.step()
+
+    plt.plot(t,i)
+    plt.show()
+
 if __name__ == '__main__':
-    test_transfer()
+#    test_contact4()
+#    test_transfer()
+    test_poly_n()
 #    all_vars()
