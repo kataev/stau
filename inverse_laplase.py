@@ -14,7 +14,8 @@ def _riemann(transform, timearray, N, show_progress=False):
 
     b = 4.7
 
-    f=map(lambda t:numpy.exp(b)/t * (transform(b/t)/2 + reduce(lambda s,n: s+(transform(b/t + 1J*n*numpy.pi/t)*((-1)**n)).real,xrange(0,N))),timearray)
+    f=map(lambda t:numpy.exp(b)/t * (transform(b/t)/2 + reduce(lambda s,n: s+(transform(b/t + 1J*n*numpy.pi/t)*((-1)**n)).real,xrange(1,N+1),0)),timearray)
+    
     return numpy.array(f)
 
 

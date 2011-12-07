@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
-<meta name="create-date" content="2011-11-29"/>
-<link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="http://www.nongnu.org/elyxer/">
+<meta name="create-date" content="2011-12-07">
+<link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all">
 <title>Теоритические основы автоматического управления</title>
 </head>
 <body>
@@ -13,7 +12,316 @@
 <h1 class="title">
 Теоритические основы автоматического управления
 </h1>
+<div class="fulltoc">
+<div class="tocheader">
+Table of Contents
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Part-I">Part I: Тау и СТАУ</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Section--1">Section: Синтез системы управления</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--2">Section: Философские основы СУ</a>
+</div>
+<div class="tocindent">
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection--1">Subsubsection: Объект управления</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection--2">Subsubsection: Управляющее воздействие</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection--3">Subsubsection: Система управления</a>
+</div>
+</div>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Part-II">Part II: Информационные основы систем управления</a>
+</div>
+<div class="tocindent">
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection--1">Subsection: Измерение информации и её избыточность</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--3">Section: Основные составляющие интенсивности информационных процессов</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--4">Section: Основы теории систем</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Part-III">Part III: Классификация систем управления</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Section--5">Section: Классификация по решаемым задачам</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--6">Section: Классификация по структуре</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--7">Section: Классификация по принципу</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--8">Section: Классификация по кол-ву контуров управления</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection--2">Subsection: Одно контурная система</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--3">Subsection: Каскадная система управления</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--4">Subsection: Комбинированная система управления</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--5">Subsection: Система с НЦ управлением</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--6">Subsection: Супервизорные системы</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--9">Section: Классификация систем управления в рамках СТАУ</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection--7">Subsection: Самонастраивающиеся системы</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--10">Section: Классификация объектов управления</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Part-IV">Part IV: Идентификация объекта управления</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Section--11">Section: Аналитическая идентификация(пример)</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--12">Section: Обработка результатов экспериментов</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection--8">Subsection: Усреднение динамических характеристик</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--9">Subsection: Линеаризация повторяющихся точек</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--10">Subsection: Сглаживание динамических характеристик</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--11">Subsection: Нормирование динамических характеристик</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--13">Section: Аппроксимация динамических характеристик дифференциальным уравнением первого порядка</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection--12">Subsection: Метод касательной</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--13">Subsection: Метод совпадения 3 точек.</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--14">Subsection: Метод соприкосновения 4 точек</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--15">Subsection: Метод Ормана</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--16">Subsection: Проверка аппроксимации</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection--17">Subsection: Метод Симою</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection--4">Subsubsection: Вычисление площадей табличным способом</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection--5">Subsubsection: Алгоритм вычисления площадей согласно приведённой формуле.(Алгоритм суммирования)</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection--6">Subsubsection: Расчёт площядей с помощью алгоритма произведений</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection--7">Subsubsection: Проверка аппроксимации</a>
+</div>
+</div>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Part-V">Part V: Типовые законы регулирования</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Section--14">Section: Методы расчитывания настроечных параметров</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection--18">Subsection: Граница области устойчивости системы</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--15">Section: Запас устойчивости по модулю и по фазе</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--16">Section: Условия оптимальной настройки регуляторов в одноконтурных системах регулирования</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section--17">Section: Определние оптимальных настроек графо-аналитическим способом по АФХ объекта методом Ротача.</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection--19">Subsection: Расчет одноконтурных систем методом Стефани</a>
+</div>
+</div>
+</div>
+
+</div>
+<h1 class="Part">
+<a class="toc" name="toc-Part-I">Part I.</a> Тау и СТАУ
+</h1>
 <div class="Unindented">
+Периодизация развития ТАУ как и многих других относительно новых областей науки, не является установившейся и общепринятой. Классической теорией автоматического регулирования было принято называть базирующиюся на расмотрении обычкновенных приемущественно линейных диф уравнений, теорию устойчивости и качества переходных процессов в системе: объект - регулятор. 
+</div>
+<div class="Indented">
+По существу она тесно соприкасалось с терией устойчивости в движении &ldquo;в малом&rdquo;, но имело ярко выраженную инженерную направленность. В инженерной ТАУ этого периода уже ставились и решались задачи оптимизации и адаптации, но в основном применительно в управлении &ldquo;в малом&rdquo;. Таким образом предметом этой теории для сложных систем является решение множества частных задач, на каждом этапе функционирования технологического процесса увязка всех этих задачь для достижения конечной цели управления производилось на стадии проектирования систем на основе приорной информации с помощью методов внешних по отнощению к данной теории.
+</div>
+<div class="Indented">
+Недостатки к такому подходу управления были ясны, но иные постановки в тот период были не практичными т.к отсутствовали апаратные(быстрые ЭВМ) и математические средства их решения. 
+</div>
+<div class="Indented">
+Пока не существует общепринятного определения понятия <i>современная теория автоматического управления(СТАУ). </i>Одни<i> </i>авторы в качесве ее характерного признака отмечают описание процессов в пространстве состояния. Однако и в классической теории широко принялось описание движения на фазовой плосокости.
+</div>
+<div class="Indented">
+Другие подчеркивают методы связанные с принципом максимума, динамическим программированием и т.д. Наконец некоторые авторы связывают понятния стау с адаптивным управлением т.е управление при неполной априорной информации.
+</div>
+<div class="Indented">
+Наиболее удовлетворительное управление СТАУ получается если в основу положить требования современной перспективной автоматизации. Важнейшим из таких требований является оптимальное использование на каждом этапе функционирования системы всех располагаемых ресурсов(Энергетических, вычислительных, информационных и т.д) для достижения конечной цели для этого этапа при соблюдения множества ограничений(Много критериальноая оптимизация). В связи с этим оптимизация &ldquo;в большом&rdquo; осуществляемая в реальном времени в процессе управления является главной проблемой СТАУ. Это фундоментальная проблема, пораждает ряд других крупных проблем, задач и методов их решения. Прежде всего следует отметить что оптимизация &ldquo;в большом&rdquo; в реальном маштабе времени требует использования всех имеющейся априорной информации в виде модели управляемого объекта, представленной в той или иной форме(чаще математической). Использование математических моделей не только на стадии проектирования, но и процессе функционирования системы, является одной из характерных черт СТАУ.
+</div>
+<div class="Indented">
+Вывод: тау занимается управленнием &ldquo;в малом&rdquo;, СТАУ занимается управлением &ldquo;в большом&rdquo;.
+</div>
+<div class="Description">
+<span class="Description-entry">Управление в малом</span> подразумевает что управляемый объект в процессе управления не меняет своих свойств.
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--1"></a>Синтез системы управления
+</h1>
+<ol>
+<li>
+Проведение эксперимента и получение динамической характеристики объекта управления.
+</li>
+<li>
+Получение математической модели объекта управления. Существует целый ряд методов как имя динамическую характристику получить динамическую характеристику системы т.е получать передаточную функцию.
+</li>
+<li>
+Расчет настроечных параметров управляющего устройства. Существет целый ряд методов которые на основе передаточной функции может посчитать параметры для управляющего устройства. <span class="formula">(<i>k</i><sub><i>p</i></sub>, <i>T</i><sub><i>n</i></sub>, <i>T</i><sub><i>g</i></sub>)</span>
+</li>
+<li>
+Моделирование системы управления.(Симулинк, Python)
+</li>
+<li>
+Техническая реализация.
+</li>
+
+</ol>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--2"></a>Философские основы СУ
+</h1>
+<div class="Unindented">
+Информация управления это две филосовские категории теоритически связанные между собой. 
+</div>
+<ul>
+<li>
+Что бы управлять каким ли бо объектом необходимо знать свойства этого объекта, т.е получать о нем информацию.
+</li>
+<li>
+Чтобы получить информацию об объекте управления необходимо чтобы на этот объект действовали возмущяющие воздействия.(Естсвенные или искуственные)
+</li>
+
+</ul>
+<div class="Description">
+<span class="Description-entry">Управляющим воздействием</span> называют целенаправленные возмущяющие воздействия.
+</div>
+<div class="Unindented">
+В связи в этим любую систему можно представить в виде:
+</div>
+<div class="Indented">
+Прямая связь предствляет управляющее воздейтвие.
+</div>
+<div class="Indented">
+И обратная свзья представляющяя информацию.
+</div>
+<h3 class="Subsubsection-">
+<a class="toc" name="toc-Subsubsection--1"></a>Объект управления
+</h3>
+<div class="Unindented">
+Исходя из филосовского определения объекта. 
+</div>
+<div class="Description">
+<span class="Description-entry">Объект</span> это то на что воздейтсвует познавательная деятельность субъекта. С точки зрения управления необходимо добавить что познавательная деятельность субьета воздействует на объект с определенной целью(С целью управления).
+</div>
+<div class="Description">
+<span class="Description-entry">С кибернетической точки зрения</span> объектом управления является может быть всё что угодно, вплоть до самого субьекта. 
+</div>
+<div class="Unindented">
+Тогда интересен вопрос о соотношение объекта управления и управляющего устройтва с точки зрения сложности последнего, по отношению к объекту. Здесь всё зависит от цели к которой стремится система управления. Если речь идёт об управлении каким либо одним качественным или функциональным показанием объекта то природа управляющего устройства может быть проще природы самого объекта. 
+</div>
+<div class="Indented">
+Если речь идет об управлении объекта в целом с учетом его развития то управляющее устройство необходимо расматривать как само настраивающееся адаптирующеся обладающего интелектуальными способностями. В этом случае в управляющем устройстве должно быть заложенно модель объекта полностью раскрывающяя его суть, а т.к с точки зрения современной философии познание сути это процесс безконечный, то можно говорить об прибллижении к оптимальному управлению.
+</div>
+<div class="Description">
+<span class="Description-entry">Обратная информационная связь</span> предполагает управление по <i>отклонению регулируемого параметра.</i>
+</div>
+<div class="Unindented">
+Существуют системы использующие информационную свзяь не как обратную(а <i>управление по возмущению</i>) они могут обладать отдельными преимуществами, но только в сочетании хотя бы с одной глобальной обратной связью.
+</div>
+<div class="Description">
+<span class="Description-entry">Управляющее устройство</span> это устройство вырабатывающее управляющее воздействие согластно алгоритму который в этом устройстве заложен.
+</div>
+<div class="Description">
+<span class="Description-entry">Исходными данными</span> называют информацией или в технических системах параметрами или целевая функция или в технических системах задание.
+</div>
+<div class="Description">
+<span class="Description-entry">В устройстве</span> происходит постоянное сравнение информации с заданием, алгебраическая разность этого сравнения называется отклонением (<i>разсогласование</i>).
+</div>
+<div class="Unindented">
+В зависимости от величины знака и скорсти изменения разсогласования, устройство вырабатывает управляющее воздействие.
+</div>
+<h3 class="Subsubsection-">
+<a class="toc" name="toc-Subsubsection--2"></a>Управляющее воздействие
+</h3>
+<div class="Unindented">
+Это воздействие приложенное к объекту управления как правило какму либо исполнительному механизму и в структурном изображении объекта является его входной величиной. 
+</div>
+<h3 class="Subsubsection-">
+<a class="toc" name="toc-Subsubsection--3"></a>Система управления
+</h3>
+<div class="Unindented">
+Внешнеее возмущение воздействует не только на объект управления, но и на всю систему в целом. 
+</div>
+<div class="Indented">
+Например воздействие на обратную информационную связь может привести к искажению зашумлению отдельной информации это проблема дала новое направление в раздитие ТАУ. 
+</div>
+<div class="Indented">
+По возможности поручать основные управленчиские функции самому объекту управления закладывая их на стадии проектирования технолгических объектов.
+</div>
+<div class="Indented">
 Кибернетитческий подход к системе упрвления заключается в сткуртурном обозначении элементов системы в виде так называемых черных ящиков. При этом физическая природа этого ящика не известна это может быть:
 </div>
 <ul>
@@ -38,10 +346,10 @@
 Имея специальные методы анализа входных и выходных векторов, можно получить математическое описание объекта управления.
 </div>
 <div class="Indented">
-С этой точки зрения кибернетика претендует на общие законы управления не зависящие 
+С этой точки зрения кибернетика претендует на общие законы управления не зависящие.
 </div>
-<h1 class="Part-">
-<a class="toc" name="toc-Part--I"></a>Информационные основы систем управления
+<h1 class="Part">
+<a class="toc" name="toc-Part-II">Part II.</a> Информационные основы систем управления
 </h1>
 <div class="Unindented">
 Первоначально информация понималась как новые сведения, новые знания, но с середины 20 века стало рассматриваться обобщено в отвлечение от конкретной природы физических систем.
@@ -50,19 +358,19 @@
 Основоположниками информационной теории являются Винер, зафиксировавший существенную общность информационных процессов в различных объектах. Шеннон создавший теорию информации, и разработавший количественный подход к оценке сложности передаваемых информационных структур. Проникновение методов в теории информации в физику, биологию и другие науки показало тесную взаимосвязь понятие кол-ва информации с естественнонаучным понятием <i>энтропии</i>. 
 </div>
 <div class="Indented">
-Первоначально энтропия использовалась лишь в физике для описания работы тепловых двигателей. Связь между энтропией и вероятностью установлена Польсаном <span class="formula"><i>h</i> = ln<span class="symbol">(</span><span class="text">w</span><span class="symbol">)</span></span>, далее работами Шредингера понятие энтропии ещё больше расширилось до понимания, её как меры дезорганизации любой природы. Эта мера простирается от максимальной энтропии <span class="formula"><i>h</i> = 1</span> до исчезновения энтропии <span class="formula"><i>h</i> = 0</span> наивысшего порядка.
+Первоначально энтропия использовалась лишь в физике для описания работы тепловых двигателей. Связь между энтропией и вероятностью установлена Польсаном <span class="formula"><i>h</i> = ln<span class="symbol">(</span><span class="text">w</span><span class="symbol">)</span></span>, далее работами Шредингера понятие энтропии ещё больше расширилось до понимания, её как меры дезорганизации любой природы. Эта мера простирается от максимальной энтропии <span class="formula"><i>h</i> = 1</span> до исчезновения энтропии <span class="formula"><i>h</i> = 0</span> наивысшего порядка.
 </div>
 <div class="Indented">
 Если система эволюционирует в сторону порядка, то елее энтропия уменьшается. Но это требует целенаправленных усилий, а именно &ldquo;снятие&rdquo; с системы информации с целью управления.
 </div>
-<h4 class="Subsubsection-">
-<a class="toc" name="toc-Subsubsection--1"></a>Измерение информации и её избыточность
-</h4>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--1"></a>Измерение информации и её избыточность
+</h2>
 <div class="Unindented">
 Если энтропия является мерой вероятности ИС и относительной единицей информации, то единицей измерения информации является один бит.
 </div>
 <div class="Description">
-<span class="Description-entry">Бит</span> это информации которая содержится в сообщении для которого возможно только два равно вероятностных альтернативных варианта <span class="formula"><i>I</i> = log<sub>2</sub>(<i>w</i>)</span>
+<span class="Description-entry">Бит</span> это информации которая содержится в сообщении для которого возможно только два равно вероятностных альтернативных варианта <span class="formula"><i>I</i> = log<sub>2</sub>(<i>w</i>)</span>
 </div>
 <div class="Unindented">
 Если подсчитать кол-во информации в сообщении которое полностью известно = 0
@@ -71,11 +379,11 @@
 Информация обладает таким свойством как избыточность, если подсчитать максимальную информацию букв в русском языке <span class="formula"><span class="text">I=log(32)=5бит</span></span>, но т.к буквы как и слова встречаются не равновероятностно, то реальная информация буквы, составляет всего от 0.5 - 1.5 бит.
 </div>
 <div class="Description">
-<span class="Description-entry">Коэффициент избыточности</span> <span class="formula"><i>R</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>I</i><sub><i>p</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>I</i><sub><i>max</i></sub></span><span class="ignored">)</span></span></span>
+<span class="Description-entry">Коэффициент избыточности</span> <span class="formula"><i>R</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>I</i><sub><i>p</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>I</i><sub><i>max</i></sub></span><span class="ignored">)</span></span></span>
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--1"></a>Основные составляющие интенсивности информационных процессов
-</h3>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--3"></a>Основные составляющие интенсивности информационных процессов
+</h1>
 <ol>
 <li>
 Увеличение скорости передачи информации<div class="Unindented">
@@ -109,9 +417,9 @@
 </li>
 
 </ol>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--2"></a>Основы теории систем
-</h3>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--4"></a>Основы теории систем
+</h1>
 <div class="Unindented">
 Это чаще говорит что исследователь находится на этапе осмысления результатов путём приведения их в систему воспринимая этот термин на интуитивном уровне как целое состоящее из систем. После того как системы стали предметом исследования математиков, стало ясно что теория систем это <i>логика</i> математическая дисциплина изучающий изоморфизм системных понятий, законов и моделей в различных предметных областях. 
 </div>
@@ -157,19 +465,19 @@
 <ul>
 <li>
 Простые<div class="Unindented">
-<span class="formula"><span class="text">Целое</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="text">структура</span></span><span class="ignored">)/(</span><span class="denominator"><span class="text">функция</span></span><span class="ignored">)</span></span>⟷<span class="textrm"><span class="text">элемент</span></span></span>
+<span class="formula"><span class="text">Целое</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="text">структура</span></span><span class="ignored">)/(</span><span class="denominator"><span class="text">функция</span></span><span class="ignored">)</span></span>⟷<span class="textrm"><span class="text">элемент</span></span></span>
 </div>
 
 </li>
 <li>
 Сложные <div class="Unindented">
-<span class="formula"><i>Механическая</i> <i>целостность</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="text">порядок</span></span><span class="ignored">)/(</span><span class="denominator"><span class="text">регулирование</span></span><span class="ignored">)</span></span>⟷<span class="text">компнент</span></span>
+<span class="formula"><i>Механическая</i> <i>целостность</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="text">порядок</span></span><span class="ignored">)/(</span><span class="denominator"><span class="text">регулирование</span></span><span class="ignored">)</span></span>⟷<span class="text">компнент</span></span>
 </div>
 
 </li>
 <li>
 Сверхсложные<div class="Unindented">
-<span class="formula"><i>Органическая</i> <i>целосность</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="text">организация</span></span><span class="ignored">)/(</span><span class="denominator"><span class="text">управние</span></span><span class="ignored">)</span></span>⟷<span class="text">уровень</span></span>
+<span class="formula"><i>Органическая</i> <i>целосность</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="text">организация</span></span><span class="ignored">)/(</span><span class="denominator"><span class="text">управние</span></span><span class="ignored">)</span></span>⟷<span class="text">уровень</span></span>
 </div>
 
 </li>
@@ -184,12 +492,12 @@
 <div class="Indented">
 Наблюдается прямая зависимость между экономическим показателем и технологическим параметром, но технологический параметр ограничен регламентным значением. Тогда задание регулятора должна равняться этому ограничению в идеальном случае и как можно меньше отличатся в реальном случае. Примером может служить регулирование температуры в топке котла.
 </div>
-<h1 class="Part-">
-<a class="toc" name="toc-Part--II"></a>Классификация систем управления
+<h1 class="Part">
+<a class="toc" name="toc-Part-III">Part III.</a> Классификация систем управления
 </h1>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--1"></a>Классификация по решаемым задачам
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--5"></a>Классификация по решаемым задачам
+</h1>
 <ol>
 <li>
 Дистанционное управление
@@ -217,9 +525,9 @@
 </li>
 
 </ol>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--2"></a>Классификация по структуре
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--6"></a>Классификация по структуре
+</h1>
 <div class="Unindented">
 Различают:
 </div>
@@ -259,9 +567,9 @@ ERP расширенное планирование ресурсов, систе
 </li>
 
 </ol>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--3"></a>Классификация по принципу
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--7"></a>Классификация по принципу
+</h1>
 <ul>
 <li>
 По отклонению
@@ -274,9 +582,9 @@ ERP расширенное планирование ресурсов, систе
 </li>
 
 </ul>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--4"></a>Классификация по кол-ву контуров управления
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--8"></a>Классификация по кол-ву контуров управления
+</h1>
 <ol>
 <li>
 Одно контурные системы
@@ -292,9 +600,9 @@ ERP расширенное планирование ресурсов, систе
 <div class="Unindented">
 Рассмотрим подробней данные системы на примере процесса сушки. Основной параметр это влажность высушенного продукта. Основная цель - поддержание конкретной влажности, управляющее воздействие приложено к подаче топлива в печь сушилки.
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--3"></a>Одно контурная система
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--2"></a>Одно контурная система
+</h2>
 <div class="Unindented">
 Такая система с данным объектом работоспособна только теоретически. Из-за высокой инерционности. Рис1
 </div>
@@ -307,36 +615,36 @@ ERP расширенное планирование ресурсов, систе
 <div class="Indented">
 В таких случаях используют каскадные системы управления.
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--4"></a>Каскадная система управления
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--3"></a>Каскадная система управления
+</h2>
 <div class="Unindented">
 В данной структуре (рис 3) используется 2 контура управления и последовательно два регулятора, при этом регулятор 2 называют <i>ведущим </i>(внешним, корректирующим), а регулятор 1 <i>ведомым </i>(внутренним, стабилизирующим).
 </div>
 <div class="Indented">
 Цель регулятора 1 - стабилизация температуры, но эта цель всегда может быть скорректированный регулятором 2 в зависимости от внешних возмущающих воздействий.
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--5"></a>Комбинированная система управления
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--4"></a>Комбинированная система управления
+</h2>
 <div class="Unindented">
 Допустим что на объект действует дополнительное возмущающее воздействие <span class="formula"><i>x</i><sub><span class="text">вх</span>1</sub></span>, тогда когда нет смысле дожидаться когда это воздействие скажется на выходной величине <span class="formula"><i>x</i></span> влажности продукта, и регулятор 2 его отработает. Это возмущение можно зафиксировать компенсирующим устройством КУ и предварительно таким образом изменить подачу топлива, что бы это возмущение не сказалось на выходной величине.
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--6"></a>Система с НЦ управлением
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--5"></a>Система с НЦ управлением
+</h2>
 <div class="Unindented">
 Роль управляющего устройства в такой системе, формирование закона управления выполняет непосредственно персональный компьютер, такие системы себя не зарекомендовали с точки зрения декомпозиции задач управления с появлением многоуровневых систем или распределённых систем, формирование закона управления осуществляется всё же на уровне Controll.
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--7"></a>Супервизорные системы
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--6"></a>Супервизорные системы
+</h2>
 <div class="Unindented">
 Это такие системы когда задания локальным регулятором, меняются с более высокого уровня, как правило с персонального компьютера. Пк можно рассматривать в этом случае как глобальное компенсирующее устройство. Имея всю информацию об объекте управления и модель объекта можно прогнозировать поведение объекта при различных возмущениях в ускоренном режиме времени и оптимально изменять задания локальных регуляторов.
 </div>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--5"></a>Классификация систем управления в рамках СТАУ
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--9"></a>Классификация систем управления в рамках СТАУ
+</h1>
 <div class="Unindented">
 Классификация таким систем во многих источниках засматривается достаточно размыто как отдельные свойства сложной системы управления.
 </div>
@@ -388,9 +696,9 @@ ERP расширенное планирование ресурсов, систе
 <div class="Indented">
 Допустим что фирма занимается ремонтом Пека, одна из целей это обеспечить n’нный ремонт всей необходимой документации, для простоты возьмём единственный документ - заявка на комплектующие и сузим его до формирования заявки на оперативную память типа sDR.
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--8"></a>Самонастраивающиеся системы
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--7"></a>Самонастраивающиеся системы
+</h2>
 <div class="Unindented">
 Основное назначение это автоматически рассчитывать и затем корректировать параметры управляющих устройства при изменении свойств управления. В принципе система должна автоматически реализовать пункты перечисленные при синтезе системы управления ТАУ.
 </div>
@@ -457,9 +765,9 @@ ERP расширенное планирование ресурсов, систе
 <div class="Indented">
 С технической точки зрения необходимо будет сказать, что в данном случае в системе возникает положительная обратная связь формируемая семантическим фильтром, т.к только при положительной обратной связи возможны состояния генераций и само генераций.
 </div>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--6"></a>Классификация объектов управления
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--10"></a>Классификация объектов управления
+</h1>
 <div class="Unindented">
 Все объекты можно поделить на две группы это
 </div>
@@ -487,8 +795,8 @@ ERP расширенное планирование ресурсов, систе
 <div class="Indented">
 Детерминированные объекты можно классифицировать по их порядку, т.е по кол-ву дифференциальному уравнения входящих в систему описывающие объект или что тоже самое максимальная степень при операторе Лапласа в знаменателе передаточной функции описывающей объект.
 </div>
-<h1 class="Chapter-">
-<a class="toc" name="toc-Chapter--1"></a>Идентификация объекта управления
+<h1 class="Part">
+<a class="toc" name="toc-Part-IV">Part IV.</a> Идентификация объекта управления
 </h1>
 <div class="Unindented">
 Идентификация это описание объекта управления математическим уравнением.
@@ -514,21 +822,18 @@ ERP расширенное планирование ресурсов, систе
 </li>
 
 </ol>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--7"></a>Аналитическая идентификация(пример)
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--11"></a>Аналитическая идентификация(пример)
+</h1>
 <div class="Unindented">
 Бочка. Рассмотрим объект регулирования уровня в ёмкости. Расход жидкости вытекающей под действием силы тяжести, на основании уравнения Бернулли будет, <div class="formula">
-<a class="eqnumber" name="eq-None.1">(None.1) </a><i>V</i><sub><i>cm</i></sub> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gh</i></span><span class="ignored">)</span></span>
+<a class="eqnumber" name="eq:Расход жидкости в бочке">(1) </a><i>V</i><sub><i>cm</i></sub> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gh</i></span><span class="ignored">)</span></span>
 </div>
 Где <span class="formula"><i>μ</i></span>
 </div>
 <div class="Indented">
-Ёмкость имеет поперечное сечение <span class="formula"><i>F</i></span>, начальный уровень <span class="formula"><i>H</i><sub>1</sub></span>. Определим время истечения жидкости из ёмкости при отсутствии оттока жидкости из ёмкости, при отсутствии притока жидкости. При уровне <span class="formula"><i>x</i></span>, да время <span class="formula"><i>dt</i></span>, из ёмкости вытекает кол-во жидкости равное <span class="formula"><i>V</i><sub><i>cm</i></sub> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span><i>dt</i></span>, на основании уравнения неразрывности струи, уровень одновременно опустится на величины <span class="formula"> − <i>dxF</i> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span><i>dt</i></span>, откуда <span class="formula"><i>dt</i> =  − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dxF</i></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>, </span>проинтегрируем это уравнение в пределах между уровнями <span class="formula"><i>h</i><sub>1</sub> − <i>h</i><sub>2</sub></span>, тогда <span class="formula"><i>t</i> =  − <span class="limits"><span class="limit">∫</span></span><span class="scripts"><sup class="script"><i>h</i><sub>2</sub></sup><sub class="script"><i>h</i><sub>3</sub></sub></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dxF</i></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>f</i></span><span class="ignored">)/(</span><span class="denominator"><i>f</i><i>μ</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>x</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>f</i>2<span class="symbol">(</span><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>h</i><sub>3</sub></span><span class="ignored">)</span></span> − <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>h</i><sub>2</sub></span><span class="ignored">)</span></span><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span></span>
-</div>
-<div class="Indented">
-<div class="formula">
-<a class="eqnumber" name="eq-None.2">(None.2) </a><i>t</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>h</i><sub>1</sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>fh</i><sub>1</sub></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>w</i></span><span class="ignored">)/(</span><span class="denominator"><i>V</i><sub><i>c</i><span class="text">m</span></sub></span><span class="ignored">)</span></span>
+Ёмкость имеет поперечное сечение <span class="formula"><i>F</i></span>, начальный уровень <span class="formula"><i>H</i><sub>1</sub></span>. Определим время истечения жидкости из ёмкости при отсутствии оттока жидкости из ёмкости, при отсутствии притока жидкости. При уровне <span class="formula"><i>x</i></span>, да время <span class="formula"><i>dt</i></span>, из ёмкости вытекает кол-во жидкости равное <span class="formula"><i>V</i><sub><i>cm</i></sub> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span><i>dt</i></span>, на основании уравнения неразрывности струи, уровень одновременно опустится на величины <span class="formula"> − <i>dxF</i> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span><i>dt</i></span>, откуда <span class="formula"><i>dt</i> =  − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dxF</i></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>, </span>проинтегрируем это уравнение в пределах между уровнями <span class="formula"><i>h</i><sub>1</sub> − <i>h</i><sub>2</sub></span>, тогда <div class="formula">
+<a class="eqnumber" name="eq:Время опоражнения бочки">(2) </a><i>t</i> =  − <span class="limits"><span class="limit">∫</span></span><sub><i>h</i><sub>3</sub></sub><sup><i>h</i><sub>2</sub></sup><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dxF</i></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gx</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>f</i></span><span class="ignored">)/(</span><span class="denominator"><i>f</i><i>μ</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>x</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>f</i>2<span class="symbol">(</span><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>h</i><sub>3</sub></span><span class="ignored">)</span></span> − <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>h</i><sub>2</sub></span><span class="ignored">)</span></span><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>h</i><sub>1</sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>fh</i><sub>1</sub></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>w</i></span><span class="ignored">)/(</span><span class="denominator"><i>V</i><sub><i>c</i><span class="text">m</span></sub></span><span class="ignored">)</span></span>
 </div>
 
 </div>
@@ -536,8 +841,8 @@ ERP расширенное планирование ресурсов, систе
 Таким образом время опорожнения при постоянном уровне в два раза больше, времени порождения при постоянно уровне.
 </div>
 <div class="Indented">
-Определим дифференциальное управление и динамические характеристики ёмкости, если приток жидкости равен стоку жидкости, то <span class="formula"><i>V</i><sub><i>np</i></sub> = <i>V</i><sub><i>cm</i></sub></span> уровень в ёмкости займёт какое то стационарное положение <span class="formula"><i>h</i><sub>0</sub></span>, допустим возникает между притоком и стоком в течении времени <span class="formula">△<i>t</i></span>, тогда за это время кол-во жидкости изменится на <span class="formula"><span class="symbol">(</span><i>V</i><sub><i>np</i></sub> − <i>V</i><sub><i>cm</i></sub><span class="symbol">)</span>△<i>t</i></span>, это может произойти за счёт некоторого изменения уровня на некоторую величину <span class="formula"><i>h</i></span>, определяем из управления материального баланса <div class="formula">
-<a class="eqnumber" name="eq-None.3">(None.3) </a><i>f</i>△<i>H</i> = <span class="symbol">(</span><i>V</i><sub><i>np</i></sub> − <i>V</i><sub><i>cm</i></sub><span class="symbol">)</span>△<i>t</i>
+Определим дифференциальное управление и динамические характеристики ёмкости, если приток жидкости равен стоку жидкости, то <span class="formula"><i>V</i><sub><i>np</i></sub> = <i>V</i><sub><i>cm</i></sub></span> уровень в ёмкости займёт какое то стационарное положение <span class="formula"><i>h</i><sub>0</sub></span>, допустим возникает между притоком и стоком в течении времени <span class="formula">△<i>t</i></span>, тогда за это время кол-во жидкости изменится на <span class="formula"><span class="symbol">(</span><i>V</i><sub><i>np</i></sub> − <i>V</i><sub><i>cm</i></sub><span class="symbol">)</span>△<i>t</i></span>, это может произойти за счёт некоторого изменения уровня на некоторую величину <span class="formula"><i>h</i></span>, определяем из уравления материального баланса <div class="formula">
+<a class="eqnumber" name="eq-3">(3) </a><i>f</i>△<i>h</i> = <span class="symbol">(</span><i>V</i><sub><i>np</i></sub> − <i>V</i><sub><i>cm</i></sub><span class="symbol">)</span>△<i>t</i>
 </div>
 
 </div>
@@ -546,7 +851,7 @@ ERP расширенное планирование ресурсов, систе
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <i>V</i><sub><i>np</i></sub> − <i>V</i><sub><i>cp</i></sub>
+<i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <i>V</i><sub><i>np</i></sub> − <i>V</i><sub><i>cp</i></sub>
 </div>
 
 </div>
@@ -555,7 +860,7 @@ ERP расширенное планирование ресурсов, систе
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <i>V</i><sub><i>np</i></sub> − <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gH</i></span><span class="ignored">)</span></span>
+<i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <i>V</i><sub><i>np</i></sub> − <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>gH</i></span><span class="ignored">)</span></span>
 </div>
 
 </div>
@@ -564,19 +869,19 @@ ERP расширенное планирование ресурсов, систе
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i>2<i>y</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dy</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> + <i>Zy</i> = <i>V</i><sub><i>np</i></sub>    <i>Z</i> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span>
+<i>F</i>2<i>y</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dy</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> + <i>Zy</i> = <i>V</i><sub><i>np</i></sub>    <i>Z</i> = <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i></sub> − <i>Zy</i></span><span class="ignored">)/(</span><span class="denominator">2<i>ydy</i></span><span class="ignored">)</span></span>;  <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dt</i></span><span class="ignored">)/(</span><span class="denominator"><i>f</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>ydy</i></span><span class="ignored">)/(</span><span class="denominator"><i>zy</i> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span>
+<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i></sub> − <i>Zy</i></span><span class="ignored">)/(</span><span class="denominator">2<i>ydy</i></span><span class="ignored">)</span></span>;  <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dt</i></span><span class="ignored">)/(</span><span class="denominator"><i>f</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>ydy</i></span><span class="ignored">)/(</span><span class="denominator"><i>zy</i> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<span class="limits"><span class="limit">⌠</span><span class="limit">⌡</span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>udu</i></span><span class="ignored">)/(</span><span class="denominator"><i>au</i> − <i>b</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>u</i></span><span class="ignored">)/(</span><span class="denominator"><i>a</i></span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sup>2</sup></span><span class="ignored">)</span></span> + ln<span class="symbol">(</span><i>au</i> − <i>b</i><span class="symbol">)</span> + <i>C</i>
+<span class="limits"><span class="limit">∫</span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>udu</i></span><span class="ignored">)/(</span><span class="denominator"><i>au</i> − <i>b</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>u</i></span><span class="ignored">)/(</span><span class="denominator"><i>a</i></span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sup>2</sup></span><span class="ignored">)</span></span> + ln<span class="symbol">(</span><i>au</i> − <i>b</i><span class="symbol">)</span> + <i>C</i>
 </div>
 
 </div>
@@ -585,79 +890,79 @@ ERP расширенное планирование ресурсов, систе
 </div>
 <div class="Indented">
 <div class="formula">
- − <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span><span class="limits"><sup class="limit"><i>t</i></sup><span class="limit">⌠</span><span class="limit">⌡</span><sub class="limit"><i>t</i><sub>0</sub></sub></span><i>dt</i> = 2<span class="limits"><sup class="limit"><i>y</i></sup><span class="limit">⌠</span><span class="limit">⌡</span><sub class="limit"><i>y</i><sub>0</sub></sub></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>ydy</i></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sub><i>y</i></sub> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i> − <i>t</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span> =  − 2<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>z</i></span><span class="ignored">)</span></span><span class="symbol">(</span><i>y</i> − <i>y</i><sub>0</sub><span class="symbol">)</span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>ln<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i><sub><i>y</i></sub> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sub><i>y</i><sub>0</sub></sub> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+ − <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span><span class="limits"><span class="limit">∫</span></span><sub><i>t</i><sub>0</sub></sub><sup><i>t</i></sup><i>dt</i> = 2<span class="limits"><span class="limit">∫</span></span><sub><i>y</i><sub>0</sub></sub><sup><i>y</i></sup><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>ydy</i></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sub><i>y</i></sub> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i> − <i>t</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span> =  − 2<span class="symbol">[</span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>z</i></span><span class="ignored">)</span></span><span class="symbol">(</span><i>y</i> − <i>y</i><sub>0</sub><span class="symbol">)</span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>ln<span class="symbol">(</span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i><sub><i>y</i></sub> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sub><i>y</i><sub>0</sub></sub> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span><span class="symbol">)</span><span class="symbol">]</span>
 </div>
 
 </div>
 <div class="Indented">
-Заменим <span class="formula"><i>y</i> = <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span></span>
+Заменим <span class="formula"><i>y</i> = <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span></span>
 </div>
 <div class="Indented">
 <div class="formula">
- − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i> − <i>t</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2</span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span><span class="symbol">(</span><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span> − <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span><span class="symbol">)</span> + <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>2<i>n</i><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span>
+ − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i> − <i>t</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2</span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span><span class="symbol">(</span><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span> − <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span><span class="symbol">)</span> + <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>2<i>n</i><span class="symbol">(</span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span> − <i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span><span class="symbol">)</span>
 </div>
 
 </div>
 <div class="Indented">
-Поток <span class="formula"><i>V</i><sub><i>pr</i></sub></span>притока будет равно <span class="formula"><i>V</i><sub><i>np</i></sub> = <i>V</i><sub><i>np</i>.<i>o</i></sub> + △<i>V</i><sub><i>np</i></sub></span>, т.к в начале <span class="formula"><i>V</i><sub><i>np</i></sub> = <i>V</i><sub><i>np</i>.<i>o</i></sub></span>,
+Поток <span class="formula"><i>V</i><sub><i>pr</i></sub></span>притока будет равно <span class="formula"><i>V</i><sub><i>np</i></sub> = <i>V</i><sub><i>np</i>.<i>o</i></sub> + △<i>V</i><sub><i>np</i></sub></span>, т.к в начале <span class="formula"><i>V</i><sub><i>np</i></sub> = <i>V</i><sub><i>np</i>.<i>o</i></sub></span>,
 </div>
 <div class="Indented">
 <div class="formula">
-<a class="eqnumber" name="eq-None.4">(None.4) </a><i>V</i><sub><i>np</i>.<i>o</i></sub> + <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>qh</i><sub>0</sub></span><span class="ignored">)</span></span> = <i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span>   <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>cm</i>.<i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i>.<i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span>;   <i>H</i><sub>0</sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><span class="scripts"><sup class="script">2</sup><sub class="script"><i>np</i>.0</sub></span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>
+<a class="eqnumber" name="eq-4">(4) </a><i>V</i><sub><i>np</i>.<i>o</i></sub> + <i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>qh</i><sub>0</sub></span><span class="ignored">)</span></span> = <i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span>   <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub>0</sub></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>cm</i>.<i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i>.<i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span>;   <i>H</i><sub>0</sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i>.0</sub><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 Тогда, <div class="formula">
-<a class="eqnumber" name="eq-None.5">(None.5) </a> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i> − <i>t</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>V</i><sub><i>np</i>.0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="symbol">(</span><i>V</i><sub><i>np</i>.0</sub> + △<i>V</i><sub><i>np</i></sub><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>ln<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i>.0</sub> + △<i>V</i><sub><i>np</i></sub> − <i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator">△<i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span>
+<a class="eqnumber" name="eq-5">(5) </a> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i> − <i>t</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>V</i><sub><i>np</i>.0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="symbol">(</span><i>V</i><sub><i>np</i>.0</sub> + △<i>V</i><sub><i>np</i></sub><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><sup>2</sup></span><span class="ignored">)</span></span>ln<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>V</i><sub><i>np</i>.0</sub> + △<i>V</i><sub><i>np</i></sub> − <i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator">△<i>V</i><sub><i>np</i></sub></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
-Это уравнение подтверждает что величина в уровня ёмкости не является не линейной функцией от величины притока. Для линеаризации диф.ура (5) полагаем что при небольшом изменение уровня зависимость между уровнем и стоком можно принять линейной.<span class="formula">△<i>V</i><sub><i>cm</i></sub> = <i>K</i>△<i>H</i></span>, где K коэффициент усиления. <div class="formula">
-<i>K</i> = <i>V</i><span class="scripts"><sup class="script">′</sup><sub class="script"><i>cm</i>.<i>cp</i></sub></span> = <span class="symbol">(</span><i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>op</i></sub></span><span class="ignored">)</span></span><span class="symbol">)</span><sup>′</sup> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
-</div>
-
-</div>
-<div class="Indented">
-<div class="formula">
-<i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>Dt</i></span><span class="ignored">)</span></span> = △<i>V</i><sub><i>np</i></sub> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>△<i>H</i>
+Это уравнение подтверждает что величина в уровня ёмкости не является не линейной функцией от величины притока. Для линеаризации диф.ура (5) полагаем что при небольшом изменение уровня зависимость между уровнем и стоком можно принять линейной.<span class="formula">△<i>V</i><sub><i>cm</i></sub> = <i>K</i>△<i>H</i></span>, где K коэффициент усиления. <div class="formula">
+<i>K</i> = <i>V</i><sub><i>cm</i>.<i>cp</i></sub><sup>′</sup> = <span class="symbol">(</span><i>Z</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>op</i></sub></span><span class="ignored">)</span></span><span class="symbol">)</span><sup>′</sup> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<a class="eqnumber" name="eq-None.6">(None.6) </a><i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>△<i>H</i> = △<i>V</i><sub><i>np</i></sub>
+<i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>Dt</i></span><span class="ignored">)</span></span> = △<i>V</i><sub><i>np</i></sub> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>△<i>H</i>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<a class="eqnumber" name="eq-6">(6) </a><i>F</i><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dH</i></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>△<i>H</i> = △<i>V</i><sub><i>np</i></sub>
 </div>
 
 </div>
 <div class="Indented">
 Это линейное дифференциальное уравнение первого порядка, всегда можно перейти к передаточной функции апериодического звена 1 порядка, отсюда передаточная функция выряжающая зависимость изменения уровня от изменения притока, имеет вид. <div class="formula">
-<a class="eqnumber" name="eq-None.7">(None.7) </a><i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>Fs</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>F</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span><i>s</i> + 1</span><span class="ignored">)</span></span>
+<a class="eqnumber" name="eq-7">(7) </a><i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>Fs</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>Z</i></span><span class="ignored">)/(</span><span class="denominator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>F</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i></span><span class="ignored">)</span></span><i>s</i> + 1</span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 В результате получили передаточную функцию апериодического звена 1 порядка, <div class="formula">
-<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>K</i></span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i> + 1</span><span class="ignored">)</span></span>      <i>k</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>      <i>T</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>F</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
+<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>K</i></span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i> + 1</span><span class="ignored">)</span></span>      <i>k</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>      <i>T</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>F</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>H</i><sub><i>cp</i></sub></span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator"><i>μ</i><i>f</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">2<i>g</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 Коэффициент передачи будет больше чем меньше будет отверстие. Постоянная времени пропорциональна ширине бочки, и обратно пропорциональная площади поперечного сечения отверстия.
 </div>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--8"></a>Обработка результатов экспериментов
+<h1 class="Section-">
+<a class="toc" name="toc-Section--12"></a>Обработка результатов экспериментов
+</h1>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--8"></a>Усреднение динамических характеристик
 </h2>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--9"></a>Усреднение динамических характеристик
-</h3>
 <div class="Unindented">
-Усреднение необходимо при проведение нескольких экспериментов, при этом шаг по времени и кол-во точек должны совпадать, усреднение для какой то I той точки производится по формуле. <span class="formula"><i>y</i><sub><i>ic</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="limits"><span class="limit">∑</span></span><span class="scripts"><sup class="script"><i>n</i></sup><sub class="script"><i>i</i> = 1</sub></span><i>y</i><sub><i>i</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>n</i></span><span class="ignored">)</span></span></span>
+Усреднение необходимо при проведение нескольких экспериментов, при этом шаг по времени и кол-во точек должны совпадать, усреднение для какой то I той точки производится по формуле. <span class="formula"><i>y</i><sub><i>ic</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="limits"><span class="limit">∑</span></span><sub><i>i</i> = 1</sub><sup><i>n</i></sup><i>y</i><sub><i>i</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>n</i></span><span class="ignored">)</span></span></span>
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--10"></a>Линеаризация повторяющихся точек
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--9"></a>Линеаризация повторяющихся точек
+</h2>
 <div class="Unindented">
 Повторяющиеся точки имеют место в начале и в конце динамической характеристики, из-за низкой разрешающей способности(цены деления) средств измерения. Отдельные методы идентификации не допускают наличия таких точек. Линеаризация можно производить по следующему алгоритму
 </div>
@@ -693,9 +998,9 @@ Y массив ординат динамической характеристи�
 <div class="Unindented">
 Алгоритм определяет участки с повторяющимися точками (A:B), кол-во точек на участке, и проводит их линеаризацию. Берет края, и проводит прямую.
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--11"></a>Сглаживание динамических характеристик
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--10"></a>Сглаживание динамических характеристик
+</h2>
 <div class="Unindented">
 Самые простой метод сглаживания, это сглаживание по лекалу. Если имеет массив динамической характеристики можно использовать математические методы сглаживания (интерполяцию)
 </div>
@@ -714,26 +1019,26 @@ def flattering(x,iter=1):
 </div>
 
 </pre>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--12"></a>Нормирование динамических характеристик
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--11"></a>Нормирование динамических характеристик
+</h2>
 <div class="Unindented">
 Практически все методы идентификации требуют чтобы динамическая характеристика была приведёна к единичному значению т.е нормирована. Реальная динамическая характеристика выражена либо в единицах технологического параметра либо в процентах.
 </div>
 <div class="Indented">
 <div class="formula">
-<i>y</i><sub><i>inorm</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>y</i><sub><i>u</i></sub> − <i>y</i><sub><i>min</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>y</i><sub><i>max</i></sub> − <i>y</i><sub><i>min</i></sub></span><span class="ignored">)</span></span>
+<i>y</i><sub><i>i</i> <i>norm</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>y</i><sub><i>i</i></sub> − <i>y</i><sub><i>min</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>y</i><sub><i>max</i></sub> − <i>y</i><sub><i>min</i></sub></span><span class="ignored">)</span></span>
 </div>
 
 </div>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--9"></a>Аппроксимация динамических характеристик дифференциальным уравнением первого порядка
+<h1 class="Section-">
+<a class="toc" name="toc-Section--13"></a>Аппроксимация динамических характеристик дифференциальным уравнением первого порядка
+</h1>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--12"></a>Метод касательной
 </h2>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--13"></a>Метод касательной
-</h3>
 <div class="Unindented">
-Допустим что наш объект описывается диф.уравнением первого порядка с запаздывающим аргументом т.е передаточная функция<span class="formula"><i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i></span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i> + 1</span><span class="ignored">)</span></span><i>e</i><sup> − <i>τ</i><i>s</i></sup></span>. динамическая характеристика многоёмкностного объекта имеет точку перегиба <span class="formula"><i>A</i></span>, до этой точки характеристика вогнутая, после выпуклая.
+Допустим что наш объект описывается диф.уравнением первого порядка с запаздывающим аргументом т.е передаточная функция<span class="formula"><i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i></span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i> + 1</span><span class="ignored">)</span></span><i>e</i><sup> − <i>τ</i><i>s</i></sup></span>. динамическая характеристика многоёмкностного объекта имеет точку перегиба <span class="formula"><i>A</i></span>, до этой точки характеристика вогнутая, после выпуклая.
 </div>
 <div class="Indented">
 Метод заключается в проведении к динамической характеристике касательной в точку перегиба. Касательная на оси времени отсекает запаздывающее время<span class="formula"><i>τ</i></span>, а проекция касательной равна постоянной времени объекта<span class="formula"><i>T</i></span>.
@@ -790,24 +1095,24 @@ def tangent(x):
 </li>
 
 </ul>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--14"></a>Метод совпадения 3 точек.
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--13"></a>Метод совпадения 3 точек.
+</h2>
 <div class="Unindented">
 Постоянная времени объекта полученная по методу касательной, значение абсциссы точки перегиба <span class="formula"><i>a</i></span>, значение ординаты точки перегиба <span class="formula"><i>b</i></span>. А так же новое значение постоянной времени<span class="formula"><i>T</i><sub>1</sub></span> и запаздывающий аргумент засчитывается по формуле.<div class="formula">
-<i>T</i><sub>1</sub> = <i>T</i><span class="symbol">(</span>1 − <i>b</i><span class="symbol">)</span>
+<i>T</i><sub>1</sub> = <i>T</i><span class="symbol">(</span>1 − <i>b</i><span class="symbol">)</span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>τ</i><sub>1</sub> = <i>A</i> − <i>T</i><sub>1</sub>ln<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>T</i></span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub>1</sub></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span>
+<i>τ</i><sub>1</sub> = <i>A</i> − <i>T</i><sub>1</sub>ln<span class="symbol">(</span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>T</i></span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub>1</sub></span><span class="ignored">)</span></span><span class="symbol">)</span>
 </div>
 
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--15"></a>Метод соприкосновения 4 точек
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--14"></a>Метод соприкосновения 4 точек
+</h2>
 <div class="Unindented">
 Исходными данными для метода являются:
 </div>
@@ -831,49 +1136,49 @@ def tangent(x):
 </div>
 <div class="Indented">
 <div class="formula">
-<i>τ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>T</i><sub><i>b</i></sub>ln<span class="symbol">(</span>1 − <i>H</i><sub><i>b</i></sub><span class="symbol">)</span> − <i>T</i><sub><i>a</i></sub>ln<span class="symbol">(</span>1 − <i>H</i><sub><i>b</i></sub><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">ln<span class="symbol">(</span>1 − <i>H</i><sub><i>a</i></sub><span class="symbol">)</span> − ln<span class="symbol">(</span>1 − <i>H</i><sub><i>b</i></sub><span class="symbol">)</span></span><span class="ignored">)</span></span>
+<i>τ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>T</i><sub><i>b</i></sub>ln<span class="symbol">(</span>1 − <i>H</i><sub><i>b</i></sub><span class="symbol">)</span> − <i>T</i><sub><i>a</i></sub>ln<span class="symbol">(</span>1 − <i>H</i><sub><i>b</i></sub><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">ln<span class="symbol">(</span>1 − <i>H</i><sub><i>a</i></sub><span class="symbol">)</span> − ln<span class="symbol">(</span>1 − <i>H</i><sub><i>b</i></sub><span class="symbol">)</span></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>T</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>τ</i></span><span class="ignored">)/(</span><span class="denominator">ln<span class="text"><span class="symbol">(</span>1-H<sub>a</sub><span class="symbol">)</span></span></span><span class="ignored">)</span></span>
+<i>T</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>τ</i></span><span class="ignored">)/(</span><span class="denominator">ln<span class="text"><span class="symbol">(</span>1-H<sub>a</sub><span class="symbol">)</span></span></span><span class="ignored">)</span></span>
 </div>
 
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--16"></a>Метод Ормана
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--15"></a>Метод Ормана
+</h2>
 <div class="Unindented">
-В данном методе на динамической характеристики берутся 2 точки с ординатами <span class="formula"><i>H</i><sub><i>a</i></sub> = 0.33;<i>H</i><sub><i>b</i></sub> = 0.7</span> затем определяют абсциссы этих точек, постоянные времени и запаздывания определяются по форме
+В данном методе на динамической характеристики берутся 2 точки с ординатами <span class="formula"><i>H</i><sub><i>a</i></sub> = 0.33;<i>H</i><sub><i>b</i></sub> = 0.7</span> затем определяют абсциссы этих точек, постоянные времени и запаздывания определяются по форме
 </div>
 <div class="Indented">
 <div class="formula">
-<i>T</i> = 1.25<span class="symbol">(</span><i>T</i><sub><i>b</i></sub> − <i>T</i><sub><i>a</i></sub><span class="symbol">)</span>
+<i>T</i> = 1.25<span class="symbol">(</span><i>T</i><sub><i>b</i></sub> − <i>T</i><sub><i>a</i></sub><span class="symbol">)</span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>τ</i> = 0.5<span class="symbol">(</span>3<i>T</i><sub><i>a</i></sub> − <i>T</i><sub><i>b</i></sub><span class="symbol">)</span>
+<i>τ</i> = 0.5<span class="symbol">(</span>3<i>T</i><sub><i>a</i></sub> − <i>T</i><sub><i>b</i></sub><span class="symbol">)</span>
 </div>
 
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--17"></a>Проверка аппроксимации
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--16"></a>Проверка аппроксимации
+</h2>
 <div class="Unindented">
 Проверка заключается в расчёте ординат динамической характеристики по полученной передаточной функции.
 </div>
 <div class="Indented">
 <div class="formula">
-<i>y</i><sub><i>ip</i></sub> = <span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
+<i>y</i><sub><i>ip</i></sub> = <span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
 <span class="arrayrow">
 <span class="case align-l">
-! = 0 
+! = 0 
 </span>
 <span class="case align-l">
-<i>t</i><sub><i>i</i></sub> &lt;  = <i>τ</i><span class="text"></span> 
+<i>t</i><sub><i>i</i></sub> &lt;  = <i>τ</i><span class="text"></span> 
 </span>
 
 </span>
@@ -888,7 +1193,7 @@ def tangent(x):
 </span>
 <span class="arrayrow">
 <span class="case align-l">
-1 − <i>e</i><sup> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i><sub><i>i</i> − <i>τ</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>t</i></span><span class="ignored">)</span></span></sup><span class="text">при </span><i>t</i><sub><i>i</i></sub> &gt;  = <i>τ</i> 
+1 − <i>e</i><sup> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i><sub><i>i</i> − <i>τ</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>t</i></span><span class="ignored">)</span></span></sup><span class="text">при </span><i>t</i><sub><i>i</i></sub> &gt;  = <i>τ</i> 
 </span>
 
 </span>
@@ -901,27 +1206,27 @@ def tangent(x):
 <div class="Indented">
 После вычисления нового массива ординат для каждой пары точек вычислить приведённую погрешность, если максимальная погрешность не превышает 10% то аппроксимация считается удовлетворительной
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--18"></a>Метод Симою
-</h3>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--17"></a>Метод Симою
+</h2>
 <div class="Unindented">
 Метод предназначен для апроксимации динамической хар-ки передаточной функцией следующего вида:
 </div>
 <div class="Indented">
 <div class="formula">
-<a class="eqnumber" name="eq:Метод Ормана">(None.8) </a><i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><sub><i>m</i></sub><i>s</i><sup><i>m</i></sup> + <i>b</i><sub><i>m</i> − 1</sub><i>s</i><sup><i>m</i> − 1</sup> + … + <i>b</i><sub><i>i</i></sub><i>s</i><sup><i>i</i></sup> + <i>b</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub><i>n</i></sub><i>s</i><sup><i>n</i></sup> + <i>a</i><sub><i>n</i> − 1</sub><i>s</i><sup><i>n</i> − 1</sup> + … + <i>a</i><sub><i>i</i></sub><i>s</i><sup><i>i</i></sup> + <i>a</i><sub>0</sub></span><span class="ignored">)</span></span>
+<a class="eqnumber" name="eq:Метод Ормана">(8) </a><i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><sub><i>m</i></sub><i>s</i><sup><i>m</i></sup> + <i>b</i><sub><i>m</i> − 1</sub><i>s</i><sup><i>m</i> − 1</sup> + … + <i>b</i><sub><i>i</i></sub><i>s</i><sup><i>i</i></sup> + <i>b</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub><i>n</i></sub><i>s</i><sup><i>n</i></sup> + <i>a</i><sub><i>n</i> − 1</sub><i>s</i><sup><i>n</i> − 1</sup> + … + <i>a</i><sub><i>i</i></sub><i>s</i><sup><i>i</i></sup> + <i>a</i><sub>0</sub></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
-Где коэффициенты <span class="formula"><i>a</i><sup><i>i</i></sup>, <i>b</i><sup><i>i</i></sup></span>, входящие в формулу <a class="Reference" href="#eq:Метод Ормана">None.8↑</a> определяются следующей системой уравнений
+Где коэффициенты <span class="formula"><i>a</i><sup><i>i</i></sup>, <i>b</i><sup><i>i</i></sup></span>, входящие в формулу <a class="Reference" href="#eq:Метод Ормана">8↑</a> определяются следующей системой уравнений
 </div>
 <div class="Indented">
 <div class="formula">
 <span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
 <span class="arrayrow">
 <span class="case align-l">
-<i>a</i><sub>1</sub> =  
+<i>a</i><sub>1</sub> =  
 </span>
 <span class="case align-l">
 <i>F</i><sub>1</sub><i>b</i><sub>1</sub> 
@@ -939,10 +1244,10 @@ def tangent(x):
 </span>
 <span class="arrayrow">
 <span class="case align-l">
-<i>a</i><sub>2</sub> =  
+<i>a</i><sub>2</sub> =  
 </span>
 <span class="case align-l">
-<i>F</i><sub>2</sub> + <i>b</i><sub>2</sub> + <i>F</i><sub>1</sub> 
+<i>F</i><sub>2</sub> + <i>b</i><sub>2</sub> + <i>F</i><sub>1</sub> 
 </span>
 
 </span>
@@ -957,10 +1262,10 @@ def tangent(x):
 </span>
 <span class="arrayrow">
 <span class="case align-l">
-<i>a</i><sub>3</sub> =  
+<i>a</i><sub>3</sub> =  
 </span>
 <span class="case align-l">
-<i>F</i><sub>3</sub> + <i>b</i><sub>3</sub> + <i>b</i><sub>3</sub><i>F</i><sub>1</sub> + <i>b</i><sub>1</sub><i>F</i><sub>2</sub> 
+<i>F</i><sub>3</sub> + <i>b</i><sub>3</sub> + <i>b</i><sub>3</sub><i>F</i><sub>1</sub> + <i>b</i><sub>1</sub><i>F</i><sub>2</sub> 
 </span>
 
 </span>
@@ -993,10 +1298,10 @@ def tangent(x):
 </span>
 <span class="arrayrow">
 <span class="case align-l">
-<i>a</i><sub><i>i</i></sub> =  
+<i>a</i><sub><i>i</i></sub> =  
 </span>
 <span class="case align-l">
-<i>F</i><sub><i>i</i></sub> + <i>b</i><sub>1</sub> + <span class="limits"><sup class="limit"><i>i</i> − 1</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>j</i> = 1</sub></span><span class="symbol">[</span><i>b</i><sub><i>j</i></sub><i>F</i><sub><i>i</i> − <i>j</i></sub><span class="symbol">]</span> 
+<i>F</i><sub><i>i</i></sub> + <i>b</i><sub>1</sub> + <span class="limits"><span class="limit">∑</span></span><sub><i>j</i> = 1</sub><sup><i>i</i> − 1</sup><span class="symbol">[</span><i>b</i><sub><i>j</i></sub><i>F</i><sub><i>i</i> − <i>j</i></sub><span class="symbol">]</span> 
 </span>
 
 </span>
@@ -1007,29 +1312,65 @@ def tangent(x):
 
 </div>
 <div class="Indented">
-Где <span class="formula"><i>F</i><sub>1</sub>,  <i>F</i><sub>2</sub>,  <i>F</i><sub>3</sub></span> так называемые площади связанны с динамической характеристикой интегральными выражениями.
+Где <span class="formula"><i>F</i><sub>1</sub>,  <i>F</i><sub>2</sub>,  <i>F</i><sub>3</sub></span> так называемые площади связанны с динамической характеристикой интегральными выражениями.
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><sub>1</sub> = <span class="limits"><sup class="limit">∞</sup><span class="limit">⌠</span><span class="limit">⌡</span><sub class="limit">0</sub></span><span class="symbol">(</span>1 − <i>y</i><span class="symbol">)</span><i>dt</i>
+<span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
+<span class="arrayrow">
+<span class="case align-l">
+<i>F</i><sub>1</sub> =  
+</span>
+<span class="case align-l">
+<span class="limits"><span class="limit">∫</span></span><sub>0</sub><sup>∞</sup><span class="symbol">(</span>1 − <i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span><span class="symbol">)</span><i>dt</i> 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<i>F</i><sub>2</sub> =  
+</span>
+<span class="case align-l">
+<i>F</i><sub>1</sub><sup>2</sup><span class="limits"><span class="limit">∫</span></span><sub>0</sub><sup>∞</sup><span class="symbol">(</span>1 − <i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span><span class="symbol">)</span><span class="symbol">(</span>1 − <i>θ</i><span class="symbol">)</span><i>d</i><i>θ</i> 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<i>F</i><sub>3</sub> =  
+</span>
+<span class="case align-l">
+<i>F</i><sub>3</sub><sup>2</sup><span class="limits"><span class="limit">∫</span></span><sub>0</sub><sup>∞</sup><span class="symbol">(</span>1 − <i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span><span class="symbol">)</span><span class="symbol">(</span>1 − 2<i>θ</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="symbol">)</span><i>d</i><i>θ</i> 
+</span>
+
+</span>
+
+</span>
+
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><sub>2</sub> = <i>F</i><span class="scripts"><sup class="script">2</sup><sub class="script">1</sub></span><span class="limits"><sup class="limit">∞</sup><span class="limit">⌠</span><span class="limit">⌡</span><sub class="limit">0</sub></span><span class="symbol">(</span>1 − <i>y</i><span class="symbol">)</span><span class="symbol">(</span>1 − Θ<span class="symbol">)</span><i>d</i>Θ
-</div>
-
-</div>
-<div class="Indented">
-<div class="formula">
-<i>F</i><sub>3</sub> = <i>F</i><span class="scripts"><sup class="script">2</sup><sub class="script">3</sub></span><span class="limits"><sup class="limit">∞</sup><span class="limit">⌠</span><span class="limit">⌡</span><sub class="limit">0</sub></span><span class="symbol">(</span>1 − <i>y</i><span class="symbol">)</span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span>1 − 2Θ + <span class="fraction"><span class="ignored">(</span><span class="numerator">Θ<sup>2</sup></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><i>d</i><i>θ</i>
-</div>
-
-</div>
-<div class="Indented">
-<div class="formula">
-<span class="text">Где</span><i>θ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span>
+<span class="text">Где</span><i>θ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i></span><span class="ignored">)/(</span><span class="denominator"><i>F</i></span><span class="ignored">)</span></span>
 </div>
 
 </div>
@@ -1038,28 +1379,28 @@ def tangent(x):
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><sub>1</sub> = △<i>T</i><span class="symbol">[</span><span class="limits"><sup class="limit"><i>n</i></sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>i</i> = 0</sub></span><span class="symbol">(</span> − 0.5<span class="symbol">)</span><span class="symbol">]</span>
+<i>F</i><sub>1</sub> = △<i>T</i><span class="symbol">[</span><span class="limits"><span class="limit">∑</span></span><sub><i>i</i> = 0</sub><sup><i>n</i></sup><span class="symbol">(</span> − 0.5<span class="symbol">)</span><span class="symbol">]</span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><sub>2</sub> = <i>F</i><span class="scripts"><sup class="script">2</sup><sub class="script">1</sub></span>△<i>θ</i><span class="symbol">[</span><span class="limits"><sup class="limit"><i>n</i></sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>i</i> = 0</sub></span><span class="symbol">(</span><i>I</i> − <i>Y</i><sub>1</sub><span class="symbol">)</span><span class="symbol">(</span>1 − <i>θ</i><sub><i>i</i></sub><span class="symbol">)</span> − 0.5<span class="symbol">]</span>
+<i>F</i><sub>2</sub> = <i>F</i><sub>1</sub><sup>2</sup>△<i>θ</i><span class="symbol">[</span><span class="limits"><span class="limit">∑</span></span><sub><i>i</i> = 0</sub><sup><i>n</i></sup><span class="symbol">(</span><i>I</i> − <i>y</i><sub>1</sub><span class="symbol">)</span><span class="symbol">(</span>1 − <i>θ</i><sub><i>i</i></sub><span class="symbol">)</span> − 0.5<span class="symbol">]</span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><sub>2</sub> = <i>F</i><span class="scripts"><sup class="script">3</sup><sub class="script">1</sub></span>△<i>θ</i><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="limits"><sup class="limit"><i>n</i></sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>i</i> = 0</sub></span><span class="symbol">(</span><i>I</i> − <i>y</i><sub>1</sub><span class="symbol">)</span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span>1 − 2<i>θ</i><sub><i>i</i></sub> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span> − 0.5<span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+<i>F</i><sub>3</sub> = <i>F</i><sub>1</sub><sup>3</sup>△<i>θ</i><span class="symbol">[</span><span class="limits"><span class="limit">∑</span></span><sub><i>i</i> = 0</sub><sup><i>n</i></sup><span class="symbol">(</span><i>I</i> − <i>y</i><sub>1</sub><span class="symbol">)</span><span class="symbol">(</span>1 − 2<i>θ</i><sub><i>i</i></sub> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="symbol">)</span> − 0.5<span class="symbol">]</span>
 </div>
 
 </div>
 <div class="Indented">
-При расчётах может оказаться что какая то из последующих вычисленных площадей окажется отрицательной(например <span class="formula"><i>F</i><sub>3</sub> &lt; 0</span>, это означает что в дифференциальном уровнении
+При расчётах может оказаться что какая то из последующих вычисленных площадей окажется отрицательной(например <span class="formula"><i>F</i><sub>3</sub> &lt; 0</span>, это означает что в дифференциальном уравнении
 </div>
 <div class="Indented">
 <div class="formula">
-<a class="eqnumber" name="eq-None.9">(None.9) </a><i>a</i><sub>3</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i><sup>3</sup><i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i><sup>3</sup></span><span class="ignored">)</span></span> + <i>a</i><sub>2</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i><sup>2</sup><i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i><sup>2</sup></span><span class="ignored">)</span></span> + <i>a</i><sub>1</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dt</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> + <i>a</i><sub>0</sub><i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span> = <i>u</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span>
+<a class="eqnumber" name="eq-9">(9) </a><i>a</i><sub>3</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i><sup>3</sup><i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i><sup>3</sup></span><span class="ignored">)</span></span> + <i>a</i><sub>2</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i><sup>2</sup><i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i><sup>2</sup></span><span class="ignored">)</span></span> + <i>a</i><sub>1</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>dt</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span> + <i>a</i><sub>0</sub><i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span> = <i>u</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span>
 </div>
 
 </div>
@@ -1067,31 +1408,31 @@ def tangent(x):
 Соответствующих s образной характеристике, коэффициент <span class="formula"><i>a</i><sub>3</sub></span>отрицателен, следовательно объект неустойчив.
 </div>
 <div class="Indented">
-Такой вывод противоречит действительности т.к полученная экспериментальная динамическая характеристика свидетельствует об устойчивости объекта. То в рассмотренном случае необходимо на единицу уменьшить порядок левой части диф.уравнения (8), а правую увеличить на единицу т.е прибавить производную <span class="formula"><i>b</i><sub>1</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>du</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span></span>. Коэффициенты <span class="formula"><i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>b</i><sub>1</sub></span>определяют из системы уравнения (?) то если предположить <span class="formula"><i>a</i><sub>3</sub> = <i>b</i><sub>2</sub> = <i>b</i><sub>3</sub> = 0</span>, если <span class="formula"><i>F</i><sub>2</sub> &gt; <i>F</i><sub>3</sub> &gt; 0</span>, то порядок левой части уравнения (8) также уменьшают на единицу не прибавляя производной в правой части в этом случае коэффициенты знаменателя передаточной функции будут равны самим площадям.
+Такой вывод противоречит действительности т.к полученная экспериментальная динамическая характеристика свидетельствует об устойчивости объекта. То в рассмотренном случае необходимо на единицу уменьшить порядок левой части диф.уравнения (8), а правую увеличить на единицу т.е прибавить производную <span class="formula"><i>b</i><sub>1</sub><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>du</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>dt</i></span><span class="ignored">)</span></span></span>. Коэффициенты <span class="formula"><i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>b</i><sub>1</sub></span>определяют из системы уравнения (?) то если предположить <span class="formula"><i>a</i><sub>3</sub> = <i>b</i><sub>2</sub> = <i>b</i><sub>3</sub> = 0</span>, если <span class="formula"><i>F</i><sub>2</sub> &gt; <i>F</i><sub>3</sub> &gt; 0</span>, то порядок левой части уравнения (8) также уменьшают на единицу не прибавляя производной в правой части в этом случае коэффициенты знаменателя передаточной функции будут равны самим площадям.
 </div>
 <div class="Indented">
 Считаем площади до тех пор как площадь не будет меньше предыдущей. Если положительная последняя площадь то 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>F</i><sub>1</sub> = 6.3; <i>F</i><sub>2</sub> = 150; <i>F</i><sub>3</sub> = 567
+<i>F</i><sub>1</sub> = 6.3; <i>F</i><sub>2</sub> = 150; <i>F</i><sub>3</sub> = 567
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">567<i>s</i><sup>3</sup> + 150<i>s</i><sup>2</sup> + 6.3<i>s</i> + 1</span><span class="ignored">)</span></span>
+<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">567<i>s</i><sup>3</sup> + 150<i>s</i><sup>2</sup> + 6.3<i>s</i> + 1</span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><sub>1</sub><i>s</i> + 1</span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>3</sub><i>s</i><sup>3</sup> + <i>a</i><sub>2</sub><i>s</i><sup>2</sup> + <i>a</i><sub>1</sub><i>s</i> + 1</span><span class="ignored">)</span></span>
+<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><sub>1</sub><i>s</i> + 1</span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>3</sub><i>s</i><sup>3</sup> + <i>a</i><sub>2</sub><i>s</i><sup>2</sup> + <i>a</i><sub>1</sub><i>s</i> + 1</span><span class="ignored">)</span></span>
 </div>
 
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--19"></a>Вычисление площадей табличным способом
+<h3 class="Subsubsection-">
+<a class="toc" name="toc-Subsubsection--4"></a>Вычисление площадей табличным способом
 </h3>
 <div class="Unindented">
 <table>
@@ -1106,34 +1447,34 @@ t
 <span class="formula"><i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span>
 </td>
 <td align="center" valign="top">
-<span class="formula">1 − <i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span>
+<span class="formula">1 − <i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span></span>
 </td>
 <td align="center" valign="top">
-<span class="formula"><i>θ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span></span>
+<span class="formula"><i>θ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span></span>
 </td>
 <td align="center" valign="top">
-<span class="formula">1 − <i>θ</i></span>
+<span class="formula">1 − <i>θ</i></span>
 </td>
 <td align="center" valign="top">
-<span class="formula">4 × 6</span>
+<span class="formula">4 × 6</span>
 </td>
 <td align="center" valign="top">
-<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span> − <i>θ</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span></span>
+<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span> − <i>θ</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span></span>
 </td>
 <td align="center" valign="top">
-<span class="formula">4 × 8</span>
+<span class="formula">4 × 8</span>
 </td>
 <td align="center" valign="top">
-<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>3</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><span class="scripts"><sup class="script">3</sup><sub class="script">1</sub></span></span><span class="ignored">)</span></span><i>θ</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub><sup>2</sup>1</sub>2</span><span class="ignored">)</span></span></span>
+<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>3</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub><sup>3</sup></span><span class="ignored">)</span></span><i>θ</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub><sup>2</sup>1</sub>2</span><span class="ignored">)</span></span></span>
 </td>
 <td align="center" valign="top">
-<span class="formula">4 × 10</span>
+<span class="formula">4 × 10</span>
 </td>
 <td align="center" valign="top">
-<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>3</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><span class="scripts"><sup class="script">3</sup><sub class="script">1</sub></span></span><span class="ignored">)</span></span><i>θ</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub><sup>2</sup>1</sub>2</span><span class="ignored">)</span></span></span>-<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>3</sup></span><span class="ignored">)/(</span><span class="denominator">6</span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>4</sup></span><span class="ignored">)/(</span><span class="denominator">24</span><span class="ignored">)</span></span></span>
+<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span> − <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>3</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub><sup>3</sup></span><span class="ignored">)</span></span><i>θ</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub><i>θ</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub><sup>2</sup>1</sub>2</span><span class="ignored">)</span></span></span>-<span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>3</sup></span><span class="ignored">)/(</span><span class="denominator">6</span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>θ</i><sup>4</sup></span><span class="ignored">)/(</span><span class="denominator">24</span><span class="ignored">)</span></span></span>
 </td>
 <td align="center" valign="top">
-<span class="formula">4 × 12</span>
+<span class="formula">4 × 12</span>
 </td>
 
 </tr>
@@ -1443,38 +1784,38 @@ t
 Вычисляем сумму 4 колонки
 </li>
 <li>
-Вычисляем первую площадь <span class="formula"><i>F</i><sub>1</sub> = ∇<i>t</i><span class="symbol">(</span><i>s</i><sub>1</sub> − 0.5<span class="symbol">)</span></span>
+Вычисляем первую площадь <span class="formula"><i>F</i><sub>1</sub> = ∇<i>t</i><span class="symbol">(</span><i>s</i><sub>1</sub> − 0.5<span class="symbol">)</span></span>
 </li>
 <li>
 Заполняем колонки 5-7, где значение 7 колонки это произведение 4 колонки на 6
 </li>
 <li>
-Находим сумму 7 колонки <span class="formula"><i>s</i><sub>2</sub></span>, вычисляем 2 площадь <span class="formula"><i>F</i><sub>2</sub> = ∇<i>tF</i><sub>1</sub><span class="symbol">(</span><i>s</i><sub>2</sub> − 0.5<span class="symbol">)</span></span>
+Находим сумму 7 колонки <span class="formula"><i>s</i><sub>2</sub></span>, вычисляем 2 площадь <span class="formula"><i>F</i><sub>2</sub> = ∇<i>tF</i><sub>1</sub><span class="symbol">(</span><i>s</i><sub>2</sub> − 0.5<span class="symbol">)</span></span>
 </li>
 <li>
-Дальше считаем по аналогии вычислив сумму <span class="formula"><i>s</i><sub>3</sub>, <i>s</i><sub>4</sub>, <i>s</i><sub>5</sub></span>, формулы для площадей будет <div class="formula">
-<i>F</i><sub>3</sub> = ∇<i>tF</i><span class="scripts"><sup class="script">2</sup><sub class="script">1</sub></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><i>s</i><sub>3</sub> − 0, 5<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><span class="scripts"><sup class="script">2</sup><sub class="script">1</sub></span></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span>
+Дальше считаем по аналогии вычислив сумму <span class="formula"><i>s</i><sub>3</sub>, <i>s</i><sub>4</sub>, <i>s</i><sub>5</sub></span>, формулы для площадей будет <div class="formula">
+<i>F</i><sub>3</sub> = ∇<i>tF</i><sub>1</sub><sup>2</sup><span class="symbol">(</span><i>s</i><sub>3</sub> − 0, 5<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub><sup>2</sup></span><span class="ignored">)</span></span><span class="symbol">)</span>
 </div>
 
 </li>
 <li>
 <div class="formula">
-<i>F</i><sub>4</sub> = ∇<i>tF</i><span class="scripts"><sup class="script">3</sup><sub class="script">1</sub></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><i>s</i><sub>4</sub> − 0, 5<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>3</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><span class="scripts"><sup class="script">3</sup><sub class="script">1</sub></span></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span>
+<i>F</i><sub>4</sub> = ∇<i>tF</i><sub>1</sub><sup>3</sup><span class="symbol">(</span><i>s</i><sub>4</sub> − 0, 5<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub>3</sub></span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub><sup>3</sup></span><span class="ignored">)</span></span><span class="symbol">)</span>
 </div>
 
 </li>
 <li>
 Выражение для n-ной площади выглядит<div class="formula">
-<a class="eqnumber" name="eq:Вычисление Нного F">(None.10) </a><i>F</i><sub><i>m</i></sub> = <span class="symbol">[</span><i>q</i><span class="symbol">(</span><i>F</i><sub>1</sub><span class="symbol">)</span><sup><i>m</i></sup><span class="symbol">]</span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="limits"><sup class="limit"><i>n</i> − 1</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>i</i> = 0</sub></span><span class="symbol">(</span>1 − <i>y</i><sub><i>i</i> + 1</sub><span class="symbol">)</span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="limits"><sup class="limit"><i>m</i> − 3</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>j</i> = 0</sub></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub><i>m</i> − <i>j</i> − <i>i</i></sub><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span><sup><i>j</i></sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>F</i><sub>1</sub><span class="symbol">)</span><sup><i>m</i> − <i>j</i> − <i>i</i></sup><i>J</i>!</span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span><sup><i>m</i> − 1</sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>m</i> − 1<span class="symbol">)</span>!</span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span><sup><i>m</i> − 2</sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>m</i> − 2<span class="symbol">)</span>!</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> − 0.5<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub><i>m</i> − 1</sub></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>F</i><sub>1</sub><span class="symbol">)</span><sup><i>m</i> − 1</sup></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+<a class="eqnumber" name="eq:Вычисление Нного F">(10) </a><i>F</i><sub><i>m</i></sub> = <i>qF</i><sub>1</sub><sup><i>m</i></sup>⋅<span class="limits"><span class="limit">∑</span></span><sub><i>i</i> = 0</sub><sup><i>n</i> − 1</sup><span class="symbol">[</span><span class="symbol">(</span>1 − <i>y</i><sub><i>i</i> + 1</sub><span class="symbol">)</span><span class="symbol">[</span><span class="limits"><span class="limit">∑</span></span><sub><i>j</i> = 0</sub><sup><i>m</i> − 3</sup><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub><i>m</i> − <i>j</i> − <i>i</i></sub><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span><sup><i>j</i></sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>F</i><sub>1</sub><span class="symbol">)</span><sup><i>m</i> − <i>j</i> − <i>i</i></sup><i>J</i>!</span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span><sup><i>m</i> − 1</sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>m</i> − 1<span class="symbol">)</span>!</span><span class="ignored">)</span></span> + <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span><sup><i>m</i> − 2</sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>m</i> − 2<span class="symbol">)</span>!</span><span class="ignored">)</span></span><span class="symbol">]</span> − 0.5<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>F</i><sub><i>m</i> − 1</sub></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>F</i><sub>1</sub><span class="symbol">)</span><sup><i>m</i> − 1</sup></span><span class="ignored">)</span></span><span class="symbol">]</span>
 </div>
 Предварительно необходимо вычислить <div class="formula">
-<a class="eqnumber" name="eq:Вычисление Ф1">(None.11) </a><i>F</i><sub>1</sub> = ∇<i>t</i><span class="symbol">[</span><span class="symbol">[</span><span class="limits"><sup class="limit"><i>n</i></sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>i</i> = 1</sub></span><span class="symbol">(</span>1 − <i>y</i><sub><i>i</i></sub><span class="symbol">)</span><span class="symbol">]</span> − 0.5<span class="symbol">]</span>
+<a class="eqnumber" name="eq:Вычисление Ф1">(11) </a><i>F</i><sub>1</sub> = △<i>t</i><span class="symbol">(</span><span class="limits"><span class="limit">∑</span></span><sub><i>i</i> = 1</sub><sup><i>n</i></sup><span class="symbol">[</span>1 − <i>y</i><sub><i>i</i></sub><span class="symbol">]</span> − 0.5<span class="symbol">)</span>
 </div>
 <div class="formula">
-<a class="eqnumber" name="eq:Вычислние Q">(None.12) </a><i>q</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span>
+<a class="eqnumber" name="eq:Вычислние Q">(12) </a><i>q</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>F</i><sub>1</sub></span><span class="ignored">)</span></span>
 </div>
 <div class="formula">
-<a class="eqnumber" name="eq:Вычисление Ф2">(None.13) </a><i>F</i><sub>2</sub> = <span class="symbol">[</span><i>q</i><span class="symbol">(</span><i>F</i><sub>1</sub><span class="symbol">)</span><sup>2</sup><span class="symbol">]</span><span class="symbol">[</span><span class="limits"><sup class="limit"><i>n</i> − 1</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>i</i> = 0</sub></span><span class="symbol">(</span>1 − <i>y</i><sub><i>n</i> + 1</sub><span class="symbol">)</span><span class="symbol">[</span><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span> + 1<span class="symbol">]</span> − 0.5<span class="symbol">]</span>
+<a class="eqnumber" name="eq:Вычисление Ф2">(13) </a><i>F</i><sub>2</sub> = <i>q</i><span class="symbol">(</span><i>F</i><sub>1</sub><span class="symbol">)</span><sup>2</sup><span class="symbol">(</span><span class="limits"><span class="limit">∑</span></span><sub><i>i</i> = 0</sub><sup><i>n</i> − 1</sup><span class="symbol">(</span>1 − <i>y</i><sub><i>n</i> + 1</sub><span class="symbol">)</span><span class="symbol">[</span><span class="symbol">(</span> − <i>iq</i><span class="symbol">)</span> + 1<span class="symbol">]</span> − 0.5<span class="symbol">)</span>
 </div>
 
 </li>
@@ -1485,15 +1826,15 @@ t
 </div>
 <div class="Indented">
 <div class="formula">
-<i>n</i>: = 10;∇<i>t</i>: = 1;<i>y</i>: = <span class="symbol">(</span>0, 0.1, 0.3<span class="symbol">)</span>;<i>y</i>: = <i>y</i>
+<i>n</i>: = 10;△<i>t</i>: = 1;<i>y</i>: = <span class="symbol">(</span>0, 0.1, 0.3<span class="symbol">)</span>;<i>y</i>: = <i>y</i>
 </div>
 
 </div>
 <div class="Indented">
-Считаем по формуле (<a class="Reference" href="#eq:Вычисление Ф1">None.11↑</a>), выведем <span class="formula"><i>F</i><sub>1</sub></span>, вычисляем (<a class="Reference" href="#eq:Вычислние Q">None.12↑</a>), считаем по формуле (<a class="Reference" href="#eq:Вычисление Ф2">None.13↑</a>), выводим <span class="formula"><i>F</i><sub>2</sub></span>, задаёмся допустим <span class="formula"><i>m</i> = 3</span>, считаем по формуле (<a class="Reference" href="#eq:Вычисление Нного F">None.10↑</a>), и в цикл
+Считаем по формуле (<a class="Reference" href="#eq:Вычисление Ф1">11↑</a>), выведем <span class="formula"><i>F</i><sub>1</sub></span>, вычисляем (<a class="Reference" href="#eq:Вычислние Q">12↑</a>), считаем по формуле (<a class="Reference" href="#eq:Вычисление Ф2">13↑</a>), выводим <span class="formula"><i>F</i><sub>2</sub></span>, задаёмся допустим <span class="formula"><i>m</i> = 3</span>, считаем по формуле (<a class="Reference" href="#eq:Вычисление Нного F">10↑</a>), и в цикл
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--20"></a>Алгоритм вычисления площадей согласно приведённой формуле.(Алгоритм суммирования)
+<h3 class="Subsubsection-">
+<a class="toc" name="toc-Subsubsection--5"></a>Алгоритм вычисления площадей согласно приведённой формуле.(Алгоритм суммирования)
 </h3>
 <div class="Unindented">
 <div class="float">
@@ -1504,8 +1845,8 @@ t
 </div>
 
 </div>
-<h3 class="Subsection-">
-<a class="toc" name="toc-Subsection--21"></a>Расчёт плодящей с помощью алгоритма произведений
+<h3 class="Subsubsection-">
+<a class="toc" name="toc-Subsubsection--6"></a>Расчёт площядей с помощью алгоритма произведений
 </h3>
 <div class="Unindented">
 Алгоритм получен на основе анализа формул для вычисления площадей табличным методом.
@@ -1524,7 +1865,7 @@ t
 </div>
 <div class="Indented">
 <div class="formula">
-<i>A</i> = <span class="array"><span class="arrayrow">
+<i>A</i> = <span class="array"><span class="arrayrow">
 <span class="arraycell align-c">
 1
 </span>
@@ -1535,7 +1876,7 @@ t
 0
 </span>
 <span class="arraycell align-c">
- − 1
+ − 1
 </span>
 
 </span>
@@ -1565,7 +1906,7 @@ t
 0
 </span>
 <span class="arraycell align-c">
- − <i>f</i>1
+ − <i>f</i>1
 </span>
 
 </span>
@@ -1595,7 +1936,7 @@ t
 1
 </span>
 <span class="arraycell align-c">
- − <i>f</i>2
+ − <i>f</i>2
 </span>
 
 </span>
@@ -1625,11 +1966,11 @@ t
 0
 </span>
 <span class="arraycell align-c">
- − <i>F</i>3
+ − <i>F</i>3
 </span>
 
 </span>
-</span>;<i>B</i> = <span class="array"><span class="arrayrow">
+</span>;<i>B</i> = <span class="array"><span class="arrayrow">
 <span class="arraycell align-c">
 <i>f</i>1
 </span>
@@ -1675,33 +2016,33 @@ t
 </div>
 
 </div>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--10"></a>Проверка аппроксимации
-</h2>
+<h3 class="Subsubsection-">
+<a class="toc" name="toc-Subsubsection--7"></a>Проверка аппроксимации
+</h3>
 <div class="Unindented">
 Проверку аппроксимации передаточной функции n-ного порядка можно осуществить 2 способами:
 </div>
 <ol>
 <li>
-Численным интегрированием системы обыкновенных дифференциальных уравнений каким либо из известных методов (Эллейра, Рунге-Кутты), но для этого необходимо сначала составить такую систему дифференциальных уравнений, первого порядка в нормальной форме Коши из дифференциального уравнения n-ного порядка, описывающего передаточную функцию что связанно с определёнными сложностями.
+Численным интегрированием системы обыкновенных дифференциальных уравнений каким либо из известных методов (Эллейра, Рунге-Кутты), но для этого необходимо сначала составить такую систему дифференциальных уравнений, первого порядка в нормальной форме Коши из дифференциального уравнения n-ного порядка, описывающего передаточную функцию что связанно с определёнными elсложностями.
 </li>
 <li>
 Определение выражения аналитического выражения переходного процесса с помощью какого либо из известных методов. (Обратное преобразование Лапласа, использование теоремы разложение и преобразование Картона-Хевисайда,Фурье)
 </li>
 
 </ol>
-<h4 class="Subsubsection-">
-<a class="toc" name="toc-Subsubsection--2"></a>Построение переходного процесса с помощью обратного преобразования Лапласа
-</h4>
+<div class="Subparagraph*">
+Построение переходного процесса с помощью обратного преобразования Лапласа
+</div>
 <div class="Unindented">
 <div class="formula">
-<span class="text">W<span class="symbol">(</span>s<span class="symbol">)</span>=</span><span class="fraction"><span class="ignored">(</span><span class="numerator">1 + 3.6<i>s</i></span><span class="ignored">)/(</span><span class="denominator">130<i>s</i><sup>2</sup> + 23<i>s</i> + 1</span><span class="ignored">)</span></span>
+<span class="text">W<span class="symbol">(</span>s<span class="symbol">)</span>=</span><span class="fraction"><span class="ignored">(</span><span class="numerator">1 + 3.6<i>s</i></span><span class="ignored">)/(</span><span class="denominator">130<i>s</i><sup>2</sup> + 23<i>s</i> + 1</span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>s</i></span><span class="ignored">)</span></span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">50 − <i>s</i><sup>2</sup> + 20<i>s</i> + 1</span><span class="ignored">)</span></span>
+<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>s</i></span><span class="ignored">)</span></span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">50 − <i>s</i><sup>2</sup> + 20<i>s</i> + 1</span><span class="ignored">)</span></span>
 </div>
 
 </div>
@@ -1714,24 +2055,24 @@ y(t) =
 <div class="Indented">
 t=range(100) График
 </div>
-<h4 class="Subsubsection-">
-<a class="toc" name="toc-Subsubsection--3"></a>С помощью теоремы разложений
-</h4>
+<div class="Subparagraph*">
+С помощью теоремы разложений
+</div>
 <div class="Unindented">
 <div class="formula">
-<i>B</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = 20<i>s</i>
+<i>B</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = 20<i>s</i>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>A</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = 40<i>s</i><sup>2</sup> + 15<i>s</i> + 1
+<i>A</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = 40<i>s</i><sup>2</sup> + 15<i>s</i> + 1
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>k</i> = <span class="array"><span class="arrayrow">
+<i>k</i> = <span class="array"><span class="arrayrow">
 <span class="arraycell align-c">
 1
 </span>
@@ -1749,15 +2090,15 @@ t=range(100) График
 </div>
 <div class="Indented">
 <div class="formula">
-<i>h</i> = <i>polyroots</i><span class="symbol">(</span><i>k</i><span class="symbol">)</span>
+<i>h</i> = <i>polyroots</i><span class="symbol">(</span><i>k</i><span class="symbol">)</span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>h</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="array"><span class="arrayrow">
+<i>h</i> = <span class="symbol">(</span><span class="array"><span class="arrayrow">
 <span class="arraycell align-c">
- − 0.288
+ − 0.288
 </span>
 
 </span>
@@ -1769,31 +2110,31 @@ t=range(100) График
 </span>
 <span class="arrayrow">
 <span class="arraycell align-c">
- − 0.087
+ − 0.087
 </span>
 
 </span>
-</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span>;<i>M</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i></span><span class="ignored">)/(</span><span class="denominator"><i>ds</i></span><span class="ignored">)</span></span><i>A</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span>
+</span><span class="symbol">)</span>;<i>M</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i></span><span class="ignored">)/(</span><span class="denominator"><i>ds</i></span><span class="ignored">)</span></span><i>A</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>A</i><sub>0</sub></span><span class="ignored">)</span></span> + <span class="limits"><sup class="limit">1</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>n</i> = 0</sub></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><span class="symbol">(</span><i>h</i><sub><i>n</i></sub><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>h</i><sub><i>n</i></sub><i>M</i><span class="symbol">(</span><i>h</i><sub><i>n</i></sub><span class="symbol">)</span></span><span class="ignored">)</span></span><i>e</i><sup><i>h</i><sub><i>n</i></sub><i>t</i></sup>
+<i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>A</i><sub>0</sub></span><span class="ignored">)</span></span> + <span class="limits"><span class="limit">∑</span></span><sub><i>n</i> = 0</sub><sup>1</sup><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>b</i><span class="symbol">(</span><i>h</i><sub><i>n</i></sub><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>h</i><sub><i>n</i></sub><i>M</i><span class="symbol">(</span><i>h</i><sub><i>n</i></sub><span class="symbol">)</span></span><span class="ignored">)</span></span><i>e</i><sup><i>h</i><sub><i>n</i></sub><i>t</i></sup>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>t</i> = <i>range</i>(100)
+<i>t</i> = <i>range</i>(100)
 </div>
 
 </div>
 <div class="Indented">
 <div class="float">
-<a class="Label" name="Figure-None.3"> </a><div class="figure">
+<a class="Label" name="Figure-3"> </a><div class="figure">
 <div class="caption">
-Figure None.3 График
+Figure 3 График
 </div>
 
 </div>
@@ -1801,38 +2142,38 @@ Figure None.3 График
 </div>
 
 </div>
-<h4 class="Subsubsection-">
-<a class="toc" name="toc-Subsubsection--4"></a>Использование интеграла Фурье
-</h4>
+<div class="Subparagraph*">
+Использование интеграла Фурье
+</div>
 <div class="Unindented">
 <div class="formula">
-<i>h</i> = <i>π</i>
+<i>h</i> = <i>π</i>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">5<i>s</i></span><span class="ignored">)/(</span><span class="denominator">250<i>s</i><sup>3</sup> + 100<i>s</i><sup>2</sup> + 20<i>s</i> + 3</span><span class="ignored">)</span></span>
+<i>W</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">5<i>s</i></span><span class="ignored">)/(</span><span class="denominator">250<i>s</i><sup>3</sup> + 100<i>s</i><sup>2</sup> + 20<i>s</i> + 3</span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2</span><span class="ignored">)/(</span><span class="denominator"><i>π</i></span><span class="ignored">)</span></span><span class="limits"><sup class="limit">5</sup><span class="limit">⌠</span><span class="limit">⌡</span><sub class="limit">0</sub></span><i>Re</i><span class="symbol">(</span><i>W</i><span class="symbol">(</span><i>h</i>⋅<i>li</i><span class="symbol">)</span><span class="symbol">)</span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>sin</i><span class="symbol">(</span><i>h</i>⋅<i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>h</i></span><span class="ignored">)</span></span><i>dh</i>
+<i>y</i><span class="symbol">(</span><i>t</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2</span><span class="ignored">)/(</span><span class="denominator"><i>π</i></span><span class="ignored">)</span></span><span class="limits"><span class="limit">∫</span></span><sub>0</sub><sup>5</sup><i>Re</i><span class="symbol">(</span><i>W</i><span class="symbol">(</span><i>h</i>⋅<i>li</i><span class="symbol">)</span><span class="symbol">)</span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>sin</i><span class="symbol">(</span><i>h</i>⋅<i>t</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>h</i></span><span class="ignored">)</span></span><i>dh</i>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>t</i> = <i>range</i>(1, 100)
+<i>t</i> = <i>range</i>(1, 100)
 </div>
 
 </div>
 <div class="Indented">
 <div class="float">
-<a class="Label" name="Figure-None.4"> </a><div class="figure">
+<a class="Label" name="Figure-4"> </a><div class="figure">
 <div class="caption">
-Figure None.4 График
+Figure 4 График
 </div>
 
 </div>
@@ -1840,9 +2181,9 @@ Figure None.4 График
 </div>
 
 </div>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--11"></a>Типовые законы регулирования
-</h2>
+<h1 class="Part">
+<a class="toc" name="toc-Part-V">Part V.</a> Типовые законы регулирования
+</h1>
 <div class="Description">
 <span class="Description-entry">Позиционный закон</span> это такой закон при котором выходная величина регулятора имеет только два дискретных состояния (открыт|закрыт,включён|выключен), регулятор имеет один настоечный параметр это уставка срабатывания. Регулятор представляет из себя релейный элемент.
 </div>
@@ -1884,7 +2225,7 @@ Figure None.4 График
 </ol>
 <div class="Unindented">
 <div class="formula">
-<i>T</i><sub><span class="text">из</span></sub> = <i>T</i><sub><span class="text">и</span></sub><i>Kp</i>
+<i>T</i><sub><span class="text">из</span></sub> = <i>T</i><sub><span class="text">и</span></sub><i>Kp</i>
 </div>
 
 </div>
@@ -1897,42 +2238,36 @@ Figure None.4 График
 </div>
 
 </div>
-<h1 class="Chapter-">
-<a class="toc" name="toc-Chapter--2"></a>Методы расчитывания настроечных параметров
+<h1 class="Section-">
+<a class="toc" name="toc-Section--14"></a>Методы расчитывания настроечных параметров
 </h1>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--12"></a>Граница области устойчивости системы
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--18"></a>Граница области устойчивости системы
 </h2>
 <div class="Unindented">
 Граница области устойчивости системы это график постоенный в координатах настроечных параметрах регулятора.
 </div>
 <div class="Indented">
-Рассмотрим разомкнутую систему <div class="float">
-<div class="figure">
-
-</div>
-
-</div>
- В качестве объекта возмеме объект с самовыравниваем 2 порядка с передаточной функцией <span class="formula"><i>W</i><sub><i>o</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>2</sub><i>s</i><sup>2</sup> + <i>a</i><sub>1</sub><i>s</i> + 1</span><span class="ignored">)</span></span></span>, в качестве регулятора возмем ПИД регулятор с раздельными настройками с передаточной функцией <span class="formula"><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <i>k</i><sub><i>p</i></sub> + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>TK</i><sub><i>p</i></sub><i>s</i> + 1</span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i></span><span class="ignored">)</span></span></span>. Тогда передаточная функция замкнутой системы будет иметь вид <span class="formula"><i>W</i><sub><i>zs</i></sub> = <i>W</i><sub>0</sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span>⋅<i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub><i>o</i></sub><i>k</i><sub><i>p</i></sub><i>Ts</i> + <i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>2</sub><i>Ts</i><sup>3</sup> + <i>a</i><sub>1</sub><i>Ts</i><sup>2</sup> + <i>Ts</i></span><span class="ignored">)</span></span></span>, перейдем в частотную область <span class="formula"><i>W</i><sub><i>pc</i></sub><span class="symbol">(</span><i>jw</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub>0</sub><i>k</i><sub><i>p</i></sub><i>Tjw</i> + <i>k</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>2</sub><i>T</i><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><sup>3</sup> + <i>a</i><sub>1</sub><i>T</i><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><sup>2</sup> + <i>T</i><span class="symbol">(</span><i>jw</i><span class="symbol">)</span></span><span class="ignored">)</span></span></span> выделим действитульную и мнимую части для этого воспользуемся программой маткад
+Рассмотрим разомкнутую систему В качестве объекта возмеме объект с самовыравниваем 2 порядка с передаточной функцией <span class="formula"><i>W</i><sub><i>o</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>2</sub><i>s</i><sup>2</sup> + <i>a</i><sub>1</sub><i>s</i> + 1</span><span class="ignored">)</span></span></span>, в качестве регулятора возмем ПИД регулятор с раздельными настройками с передаточной функцией <span class="formula"><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <i>k</i><sub><i>p</i></sub> + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>TK</i><sub><i>p</i></sub><i>s</i> + 1</span><span class="ignored">)/(</span><span class="denominator"><i>Ts</i></span><span class="ignored">)</span></span></span>. Тогда передаточная функция замкнутой системы будет иметь вид <span class="formula"><i>W</i><sub><i>zs</i></sub> = <i>W</i><sub>0</sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span>⋅<i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub><i>o</i></sub><i>k</i><sub><i>p</i></sub><i>Ts</i> + <i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>2</sub><i>Ts</i><sup>3</sup> + <i>a</i><sub>1</sub><i>Ts</i><sup>2</sup> + <i>Ts</i></span><span class="ignored">)</span></span></span>, перейдем в частотную область <span class="formula"><i>W</i><sub><i>pc</i></sub><span class="symbol">(</span><i>jw</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub>0</sub><i>k</i><sub><i>p</i></sub><i>Tjw</i> + <i>k</i><sub>0</sub></span><span class="ignored">)/(</span><span class="denominator"><i>a</i><sub>2</sub><i>T</i><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><sup>3</sup> + <i>a</i><sub>1</sub><i>T</i><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><sup>2</sup> + <i>T</i><span class="symbol">(</span><i>jw</i><span class="symbol">)</span></span><span class="ignored">)</span></span></span> выделим действитульную и мнимую части для этого воспользуемся программой маткад
 </div>
 <div class="Indented">
 <div class="formula">
-<i>W</i><sub><i>pc</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>K</i><sub><i>p</i></sub> − <i>K</i><sub><i>o</i></sub><i>T</i>⋅<i>li</i>⋅<i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>T</i> − <i>a</i><sub>2</sub> − <span class="symbol">(</span><i>li</i> − <i>w</i><span class="symbol">)</span><sup>3</sup></span><span class="ignored">)</span></span>
+<i>W</i><sub><i>pc</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>K</i><sub><i>p</i></sub> − <i>K</i><sub><i>o</i></sub><i>T</i>⋅<i>li</i>⋅<i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>T</i> − <i>a</i><sub>2</sub> − <span class="symbol">(</span><i>li</i> − <i>w</i><span class="symbol">)</span><sup>3</sup></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
-Передаточная функция <span class="formula"><i>W</i><sub><i>pc</i></sub><span class="symbol">(</span><i>ω</i><span class="symbol">)</span> = </span>
+Передаточная функция <span class="formula"><i>W</i><sub><i>pc</i></sub><span class="symbol">(</span><i>ω</i><span class="symbol">)</span> = </span>
 </div>
 <div class="Indented">
 На основании теории найквиста замкнутая система будет находится на границе устойчивости если годограф разомкнутой системы проходит через точку с координатами (-1,0). На основании этого можно записать систему уравнений <div class="formula">
 <span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
 <span class="arrayrow">
 <span class="case align-l">
-<i>U</i><span class="symbol">(</span><i>w</i><span class="symbol">)</span> =  
+<i>U</i><span class="symbol">(</span><i>w</i><span class="symbol">)</span> =  
 </span>
 <span class="case align-l">
- − 1 
+ − 1 
 </span>
 
 </span>
@@ -1947,7 +2282,7 @@ Figure None.4 График
 </span>
 <span class="arrayrow">
 <span class="case align-l">
-<i>V</i><span class="symbol">(</span><i>w</i><span class="symbol">)</span> =  
+<i>V</i><span class="symbol">(</span><i>w</i><span class="symbol">)</span> =  
 </span>
 <span class="case align-l">
 0 
@@ -1973,32 +2308,32 @@ Figure None.4 График
 В результате получили настроечные параметры регулятора выраженные через свойства объекта
 </div>
 <div class="Indented">
-<span class="formula"><i>k</i><sub><i>r</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span><i>a</i><sub>2</sub><i>w</i><sup>2</sup> − 1<span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)</span></span></span>
+<span class="formula"><i>k</i><sub><i>r</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span><i>a</i><sub>2</sub><i>w</i><sup>2</sup> − 1<span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)</span></span></span>
 </div>
 <div class="Indented">
-Построем границу области устойчивости для конкретного объекта с передаточной функцией <span class="formula"><i>W</i><sub><i>o</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">50<i>s</i><sup>3</sup> + 20<i>s</i><sup>2</sup> + 1</span><span class="ignored">)</span></span></span>
+Построем границу области устойчивости для конкретного объекта с передаточной функцией <span class="formula"><i>W</i><sub><i>o</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">50<i>s</i><sup>3</sup> + 20<i>s</i><sup>2</sup> + 1</span><span class="ignored">)</span></span></span>
 </div>
 <div class="Indented">
-<span class="formula"><i>k</i><sub>0</sub> = 1, <i>a</i><sub>2</sub> = 50, <i>a</i><sub>1</sub> = 20</span>
+<span class="formula"><i>k</i><sub>0</sub> = 1, <i>a</i><sub>2</sub> = 50, <i>a</i><sub>1</sub> = 20</span>
 </div>
 <div class="Indented">
-<span class="formula"><i>i</i> = 0..20;<i>w</i> = 0.08 + 0.01<i>i</i></span>
+<span class="formula"><i>i</i> = 0..20;<i>w</i> = 0.08 + 0.01<i>i</i></span>
 </div>
 <div class="Indented">
-<span class="formula"><i>T</i><sub><i>i</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>w</i><span class="scripts"><sup class="script">2</sup><sub class="script"><i>i</i></sub></span>⋅<i>a</i><sub>1</sub><span class="symbol">)</span></span><span class="ignored">)</span></span></span> <span class="formula"><i>k</i><sub><i>r</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span><i>a</i><sub>2</sub><i>w</i><span class="scripts"><sup class="script">2</sup><sub class="script"><i>i</i></sub></span> − 1<span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)</span></span></span>
+<span class="formula"><i>T</i><sub><i>i</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span><i>w</i><sub><i>i</i></sub><sup>2</sup>⋅<i>a</i><sub>1</sub><span class="symbol">)</span></span><span class="ignored">)</span></span></span> <span class="formula"><i>k</i><sub><i>r</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="symbol">(</span><i>a</i><sub>2</sub><i>w</i><sub><i>i</i></sub><sup>2</sup> − 1<span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>k</i><sub><i>o</i></sub></span><span class="ignored">)</span></span></span>
 </div>
 <div class="Indented">
 Построем переходный процессы для следующих значений настроечных параметров регулятора:
 </div>
 <ol>
 <li>
-<span class="formula"><i>K</i><sub><i>r</i></sub> = 0, 33, <i>T</i> = 1, 33</span>
+<span class="formula"><i>K</i><sub><i>r</i></sub> = 0, 33, <i>T</i> = 1, 33</span>
 </li>
 <li>
-<span class="formula"><i>K</i><sub><i>r</i></sub> = 1, 67, <i>T</i> = 1, 33</span>
+<span class="formula"><i>K</i><sub><i>r</i></sub> = 1, 67, <i>T</i> = 1, 33</span>
 </li>
 <li>
-\strikeout off\uuline off\uwave off<span class="formula"><i>K</i><sub><i>r</i></sub> = 1, <i>T</i> = 1, 25</span>
+<span class="formula"><i>K</i><sub><i>r</i></sub> = 1, <i>T</i> = 1, 25</span>
 </li>
 
 </ol>
@@ -2017,14 +2352,14 @@ Figure None.4 График
 <div class="Unindented">
 Но из всего множества настроечных параметров обеспечивающих устойчивый переходный процесс только <i>одна</i> пара настроечных параметров является оптимальной. Найти эти настроечные параметры и является задачей синтеза системы управления.
 </div>
-<h2 class="Section-">
-<a class="toc" name="toc-Section--13"></a>Запас устойчивости по модулю и по фазе
-</h2>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--15"></a>Запас устойчивости по модулю и по фазе
+</h1>
 <div class="Unindented">
 При синтезе систем управления требуется система была не просто устойчивой а обладала определенным запасом устойчивости. Отличают запас устойчивости по модулю и запас усточивости по фазе.
 </div>
 <div class="Description">
-<span class="Description-entry">Запас усточивости по модулю</span> это астояние от точки пересечение АФЧХ разомкнутой системы с вещественной полуосью до точки с координинами <span class="formula">[ − 1, 0]</span>
+<span class="Description-entry">Запас усточивости по модулю</span> это астояние от точки пересечение АФЧХ разомкнутой системы с вещественной полуосью до точки с координинами <span class="formula">[ − 1, 0]</span>
 </div>
 <div class="Description">
 <span class="Description-entry">Запас усточивости по фазе</span> это угол между действительной полуосью и лучем проведённым из начал координат до точки пересечения с АЛФХ разомкнутой системы с окружностью еденичного радиуса
@@ -2033,42 +2368,534 @@ Figure None.4 График
 Имеем АФЧХ разомкнутой системы тогда АФЧХ замкнутой системы
 </div>
 <div class="Indented">
-<span class="formula"><i>W</i><sub>3<i>c</i></sub><span class="symbol">(</span><i>w</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>w</i><span class="symbol">(</span><i>ω</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">1 + <i>w</i><span class="symbol">(</span><i>ω</i><span class="symbol">)</span></span><span class="ignored">)</span></span> = <i>A</i><span class="symbol">(</span><i>ω</i><span class="symbol">)</span></span>
+<span class="formula"><i>W</i><sub>3<i>c</i></sub><span class="symbol">(</span><i>w</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>w</i><span class="symbol">(</span><i>ω</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">1 + <i>w</i><span class="symbol">(</span><i>ω</i><span class="symbol">)</span></span><span class="ignored">)</span></span> = <i>A</i><span class="symbol">(</span><i>ω</i><span class="symbol">)</span></span>
 </div>
 <div class="Indented">
 Числитель определяется отрезом ОА а знаменатель отрезом АБ
 </div>
 <div class="Indented">
-При изменение частоты от 0 до inf АЧХ замкнутой системы монотонно уменьшается от 1 до 0. Если АФЧХ разомкнутой системы будет проходить близко от точки с координатами (-1,0) то ачх замкнутой системы будет изменятся по кривой 2. Если АФЧХ разомкнутой системы будет проходить через точку <span class="formula">[ − 1, 0]</span> то АЧХ замкнутой системы будет проходить по кривой 3
+При изменение частоты от 0 до inf АЧХ замкнутой системы монотонно уменьшается от 1 до 0. Если АФЧХ разомкнутой системы будет проходить близко от точки с координатами (-1,0) то ачх замкнутой системы будет изменятся по кривой 2. Если АФЧХ разомкнутой системы будет проходить через точку <span class="formula">[ − 1, 0]</span> то АЧХ замкнутой системы будет проходить по кривой 3
 </div>
 <div class="Indented">
-Другими словами вид графика АЧХ будет зависеть от соотношения отрезком АО и АБ. Используя формулы 1, можно указать как должна проходить АФЧХ разомкнутой системы относительно точки с координатами <span class="formula">[ − 1, 0]</span>, для того что максимум АЧХ замкнутой системы имело поределнное значение(заданную величину), чем больше максимум ачх, тем меньше запас устойчивости имеет система.
+Другими словами вид графика АЧХ будет зависеть от соотношения отрезком АО и АБ. Используя формулы 1, можно указать как должна проходить АФЧХ разомкнутой системы относительно точки с координатами <span class="formula">[ − 1, 0]</span>, для того что максимум АЧХ замкнутой системы имело поределнное значение(заданную величину), чем больше максимум ачх, тем меньше запас устойчивости имеет система.
 </div>
 <div class="Indented">
 <div class="formula">
-<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>C</i><sup>2</sup> + <i>y</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span>1 − <i>C</i><span class="symbol">)</span><sup>2</sup> + <i>y</i><sup>2</sup></span><span class="ignored">)</span></span> = <i>M</i><sup>2</sup>
+<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>C</i><sup>2</sup> + <i>y</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><span class="symbol">(</span>1 − <i>C</i><span class="symbol">)</span><sup>2</sup> + <i>y</i><sup>2</sup></span><span class="ignored">)</span></span> = <i>M</i><sup>2</sup>
 </div>
 
 </div>
 <div class="Indented">
-Полученное выражение является урвнение окружности радиус которой <span class="formula"><i>r</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>M</i></span><span class="ignored">)/(</span><span class="denominator"><i>M</i><sup>2</sup> − 1</span><span class="ignored">)</span></span></span>а центр находится на оси со смешение <span class="formula"><i>C</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>M</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><i>M</i><sup>2</sup> − 1</span><span class="ignored">)</span></span></span>, таким образом требование что максимум АХЧ, замкнутой системы, не превышал заданной величины сходится к требованию чтобы АФЧХ разомкнутой системы, не заходило внутрь полученной окружности. Индеск <span class="formula"><i>M</i></span> показателем коллебательности. Теперь мы ставим боле жесткие требования, а именно чтобы АФЧХ разомкнутой системы, не заходила в область окружающюю опасную точку. При практических расчетах считают что система обладает необходимым запасом усточивости при <span class="formula"><i>М</i> = 1, 1÷1, 6</span>, <span class="formula"><i>M</i></span> является критерием оптимальности при расчете настроечных параметров.
+Полученное выражение является урвнение окружности радиус которой <span class="formula"><i>r</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>M</i></span><span class="ignored">)/(</span><span class="denominator"><i>M</i><sup>2</sup> − 1</span><span class="ignored">)</span></span></span>а центр находится на оси со смешение <span class="formula"><i>C</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>M</i><sup>2</sup></span><span class="ignored">)/(</span><span class="denominator"><i>M</i><sup>2</sup> − 1</span><span class="ignored">)</span></span></span>, таким образом требование что максимум АХЧ, замкнутой системы, не превышал заданной величины сходится к требованию чтобы АФЧХ разомкнутой системы, не заходило внутрь полученной окружности. Индеск <span class="formula"><i>M</i></span> показателем коллебательности. Теперь мы ставим боле жесткие требования, а именно чтобы АФЧХ разомкнутой системы, не заходила в область окружающюю опасную точку. При практических расчетах считают что система обладает необходимым запасом усточивости при <span class="formula"><i>М</i> = 1, 1÷1, 6</span>, <a class="IndexReference" name="entry-Степень-колебательности-0" href="#index-Степень-колебательности">↓</a><span class="formula"><i>M</i></span> является критерием оптимальности при расчете настроечных параметров.
 </div>
 <div class="Indented">
 Связь между степенью затухания и показателем колебательности это<div class="formula">
-<i>M</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">sin<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span>2⋅arctan<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"> − ln<span class="symbol">(</span>1 − <i>φ</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">2<i>π</i></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span><span class="ignored">)</span></span>
+<i>M</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">sin<span class="symbol">(</span>2⋅arctan<span class="symbol">(</span><span class="fraction"><span class="ignored">(</span><span class="numerator"> − ln<span class="symbol">(</span>1 − <i>φ</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">2<i>π</i></span><span class="ignored">)</span></span><span class="symbol">)</span><span class="symbol">)</span></span><span class="ignored">)</span></span>
 </div>
 
 </div>
 <div class="Indented">
 <div class="formula">
-<i>φ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>A</i><sub>1</sub> − <i>A</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>A</i><sub>1</sub></span><span class="ignored">)</span></span>
+<i>φ</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>A</i><sub>1</sub> − <i>A</i><sub>2</sub></span><span class="ignored">)/(</span><span class="denominator"><i>A</i><sub>1</sub></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--16"></a>Условия оптимальной настройки регуляторов в одноконтурных системах регулирования
+</h1>
+<div class="Unindented">
+<div class="float">
+<div class="figure">
+Рисунок 1
 </div>
 
 </div>
 
-<hr class="footer"/>
+</div>
+<ol>
+<li>
+<span class="formula"><i>x</i></span> регулирумаемая величина
+</li>
+<li>
+<span class="formula"><i>Z</i></span> разсогласование
+</li>
+<li>
+<span class="formula"><i>x</i><sub><i>y</i></sub></span> задание
+</li>
+<li>
+<span class="formula"><i>x</i><sub><i>p</i></sub></span> регулирующее воздействие
+</li>
+
+</ol>
+<div class="Unindented">
+<div class="formula">
+<a class="eqnumber" name="eq:Передаточная функция">(14) </a><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>X</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>Z</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<a class="eqnumber" name="eq:Передаточная фунекция объекта относительно регулируюего воздейсвия">(15) </a><i>W</i><sub><i>o</i></sub>(<i>s</i>) = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>x</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>X</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<a class="eqnumber" name="eq:Переточная функция объекта относительно Катого воздействия">(16) </a><i>W</i><sub><span class="text">вк</span></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>X</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>X</i><sub><span class="text">вк</span></sub></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<div class="Indented">
+Выражение для регулируемой величины системы имеет вид
+</div>
+<div class="Indented">
+<div class="formula">
+<i>x</i><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <i>φ</i><sub><i>y</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span><i>X</i><sub><i>y</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> + <i>φ</i><sub><span class="text">вк</span></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span><i>x</i><sub><span class="text">вк</span></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span>
+</div>
+
+</div>
+<div class="Indented">
+где <div class="formula">
+<a class="eqnumber" name="eq:передатоная функция замкнутой системы относительно управления возедлйвия">(17) </a><i>φ</i><sub><i>y</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>w</i><sub>0</sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">1 + <i>W</i><sub>0</sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<a class="eqnumber" name="передаточная функция замкнутой системы относительно K-того возмущющего воздействия">(18) </a><i>φ</i><sub><span class="text">вк</span></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>w</i><sub><span class="text">вк</span></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator">1 + <i>W</i><sub><span class="text">вк</span></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<div class="Indented">
+Привидём все возмущяющие воздействия к одному входу
+</div>
+<div class="Indented">
+<div class="float">
+<div class="figure">
+рис 2
+</div>
+
+</div>
+
+</div>
+<div class="Indented">
+В данном случае все возмущяющие воздействия пройдят через соотвутсвующие фильтры с передаточными функциями <span class="formula"><i>W</i><sub><i>φ</i><sub>1</sub></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span> поутспят на вход регулятора в виде дополнительных управляющих воздействий <span class="formula"><i>x</i><sub><i>y</i>1</sub>, <i>x</i><sub><i>y</i>2</sub></span>вместе с основным управляющим воздействием <span class="formula"><i>x</i><sub><i>y</i></sub></span>, для эквивалентности схемы на рис 1 и рис 2 необходимо выбрать передаточные функции фильтров следующего вида <div class="formula">
+<i>W</i><sub><i>φ</i><i>k</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>W</i><sub><span class="text">вк</span></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>W</i><sub>0</sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>s</i><span class="symbol">)</span></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<div class="Indented">
+Выходные величины фильтра можно рассматривать как помехи которые накладываются на основной управляющий сигнал <span class="formula"><i>x</i><sub><i>y</i></sub></span>, который система должна отрабатывать как можно лучьше, поэтому условия наименьшего вляния возмущений на систему формально сводится к тому чтобы подбором настроечных параметров регулятора свести выходные величины фильтра к возможным минимумам, в соответвие с этим условие оптимальности можно записать.
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎪</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
+<span class="arrayrow">
+<span class="case align-l">
+<span class="symbol">∥</span><i>W</i><sub><i>φ</i><i>k</i></sub><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><span class="symbol">∥</span> =  
+</span>
+<span class="case align-l">
+0 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i></span><span class="ignored">)/(</span><span class="denominator"><i>dw</i></span><span class="ignored">)</span></span><span class="symbol">∥</span><i>W</i><sub><i>φ</i><i>k</i></sub><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><span class="symbol">∥</span> =  
+</span>
+<span class="case align-l">
+0 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+⋮ 
+</span>
+<span class="case align-l">
+⋮ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<span class="symbol">∥</span><span class="text"> Ф</span><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><span class="symbol">∥</span> =  
+</span>
+<span class="case align-l">
+1 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<span class="fraction"><span class="ignored">(</span><span class="numerator"><i>d</i></span><span class="ignored">)/(</span><span class="denominator"><i>dw</i></span><span class="ignored">)</span></span><span class="symbol">∥</span><i>W</i><sub><i>y</i></sub><span class="symbol">(</span><i>jw</i><span class="symbol">)</span><span class="symbol">∥</span> =  
+</span>
+<span class="case align-l">
+1 
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+</div>
+<div class="Indented">
+настройки находятся оптимальным если апмлитудно частотные характеристики фильтров и их производные при нулевой частоте меньше всего отличаются от 0
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--17"></a>Определние оптимальных настроек графо-аналитическим способом по АФХ объекта методом Ротача.
+</h1>
+<div class="Unindented">
+П регулятор:
+</div>
+<ol>
+<li>
+Строится АФХ разомкнутой системы с П регулятором при <span class="formula"><i>K</i><sub><i>p</i></sub> = 1</span>
+</li>
+<li>
+Строится окружность с заданным <a class="IndexReference" name="entry-Показатель-колебательности-0" href="#index-Показатель-колебательности">↓</a>M большое
+</li>
+<li>
+Увеличивается <span class="formula"><i>K</i><sub><i>p</i></sub></span> до тех пор пока АФХ разомкнутой системы не будет касатся окружности. <div class="Unindented">
+Это может не получится если если в качестве объекта будет объект первого порядка без запаздывания. В этом случае можно взять любое максимальное <span class="formula"><i>K</i><sub><i>p</i></sub></span> и оно не будет влиять на устойчивость всей системы.
+</div>
+
+</li>
+
+</ol>
+<div class="Unindented">
+Можно доказать что окружность с заданным <span class="formula"><i>M</i></span> всегда будет касатся луча проведённым из начала координат под углом <span class="formula"><i>β</i> = arcsin<span class="symbol">(</span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>M</i></span><span class="ignored">)</span></span><span class="symbol">)</span></span>, обычно этот угол принимают равным <span class="formula">38, <i>M</i> = 1, 62</span> , что обеспечивает необходимый запас устойчивости по частоте и по фазе.
+</div>
+<div class="Indented">
+Исходя из этого расчет можно производить следующим образом.
+</div>
+<ol>
+<li>
+Строится АФХ обхекта
+</li>
+<li>
+Проводится лучь под углом 38+180 градусов
+</li>
+<li>
+Строится окружность одновременно касающяся АФХ обхекта и проведённого луча.
+</li>
+<li>
+Определяется радиус окружности
+</li>
+<li>
+Вычисляется <span class="formula"><i>K</i><sub><i>p</i> <i>opt</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>M</i></span><span class="ignored">)/(</span><span class="denominator"><i>M</i><sup>2</sup> − 1</span><span class="ignored">)</span></span>⋅<span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>r</i></span><span class="ignored">)</span></span></span>, для <span class="formula"><i>M</i> = 1, 62</span>, выражение <span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>M</i></span><span class="ignored">)/(</span><span class="denominator"><i>M</i><sup>2</sup> − 1</span><span class="ignored">)</span></span><span class="unknown">\thickapprox</span>1</span> <span class="formula"><i>K</i><sub><i>p</i> <i>opt</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>r</i></span><span class="ignored">)</span></span></span>
+</li>
+
+</ol>
+<div class="Paragraph-">
+<a class="toc" name="toc-Paragraph--1"></a>И регулятор
+</div>
+<ol>
+<li>
+Строится АФХ объекта
+</li>
+<li>
+По АФХ обхекта строится АФХ разомкнутой системы для некоторого значения <span class="formula"><i>T</i><sub><span class="text">и</span></sub></span>выбираемого удобным для постоения. Для этого каждый фектор АФХ объекта необходимо повернуть на угол <span class="formula">90</span> градусов по часовой стрелке, и уменьшить его длину в <span class="formula"><i>T</i><sub><span class="text">и</span></sub><i>ω</i></span> раз
+</li>
+<li>
+Проводим луч под углом 38 градусов и строим окружность одновременно касающюся луча и АФХ разомкнутой системы.
+</li>
+<li>
+Определяем радиус, и <span class="formula"><i>T</i><sub><span class="text">и  opt</span></sub> = <i>T</i><sub><span class="text">и</span></sub><i>r</i></span>
+</li>
+
+</ol>
+<div class="Paragraph-">
+<a class="toc" name="toc-Paragraph--2"></a>Пи регулятор
+</div>
+<ol>
+<li>
+Строим АФХ
+</li>
+<li>
+Строим АФХ разомкнутой сисемы, дял различных значений <span class="formula"><i>Т</i><sub><span class="text">и</span></sub></span>, для этого из концов векторов АФХ объекта востанавливаем перпендикуляры и откладываем на них отрезки <span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>A</i><sub><span class="text">об</span></sub><span class="symbol">(</span><i>w</i><span class="symbol">)</span></span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><span class="text">и</span></sub><i>w</i></span><span class="ignored">)</span></span></span>
+</li>
+<li>
+Строим окружности одновременно касающие луча(38гр) и АФХ разомкнутой системы. Каждая косается луча и АФХ
+</li>
+<li>
+Определяем радиусы, расчитываем значения <span class="formula"><i>K</i><sub><i>p</i></sub></span> для различных значений <span class="formula"><i>T</i><sub><span class="text">и</span></sub></span><span class="formula"><i>K</i><sub><i>pi</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>M</i></span><span class="ignored">)/(</span><span class="denominator"><i>M</i><sup>2</sup> − 1</span><span class="ignored">)</span></span>⋅<span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>r</i><sub><i>i</i></sub></span><span class="ignored">)</span></span></span><div class="Unindented">
+<table>
+<tr>
+<td align="center" valign="top">
+r
+</td>
+<td align="center" valign="top">
+<span class="formula"><span class="text">T</span><sub><span class="text">и</span></sub></span>
+</td>
+<td align="center" valign="top">
+<span class="formula"><i>K</i><sub><i>p</i></sub></span>
+</td>
+
+</tr>
+<tr>
+<td align="center" valign="top">
+0,215
+</td>
+<td align="center" valign="top">
+40
+</td>
+<td align="center" valign="top">
+4,66
+</td>
+
+</tr>
+<tr>
+<td align="center" valign="top">
+0,285
+</td>
+<td align="center" valign="top">
+30
+</td>
+<td align="center" valign="top">
+3,49
+</td>
+
+</tr>
+<tr>
+<td align="center" valign="top">
+0,410
+</td>
+<td align="center" valign="top">
+20
+</td>
+<td align="center" valign="top">
+2,43
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</li>
+<li>
+По таблице строим график запаса устойвивости рис 8, из начала координат проводим касательную и в точке касания определяем оптимальные настройки.
+</li>
+
+</ol>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--19"></a>Расчет одноконтурных систем методом Стефани
+</h2>
+<div class="Unindented">
+Метод основан на использовании расширенной АФХ объекта, расширенное АФХ получается заменой оператора Лапласа в передаточной функции на <span class="formula"><i>w</i><span class="symbol">(</span><i>j</i> − <i>m</i><span class="symbol">)</span></span> где <span class="formula"><i>m</i></span> это степень колебательности которая в данном методе используется в качестве критерия оптимальности.
+</div>
+<div class="Indented">
+При <span class="formula"><i>m</i> = 0</span> получается обычное не разширенное АФХ, аналитическое выражения разширенных частотных характеристик распрастранённых автоматических регуляторов имеют вид:
+</div>
+<div class="Indented">
+<table>
+<tr>
+<td align="center" valign="top">
+П регулятор
+</td>
+<td align="center" valign="top">
+<span class="formula"><i>w</i><span class="symbol">(</span><i>m</i>, <i>jw</i><i>ω</i><span class="symbol">)</span> = <i>Kp</i></span>
+</td>
+
+</tr>
+<tr>
+<td align="center" valign="top">
+ПИ
+</td>
+<td align="center" valign="top">
+<span class="formula"><i>w</i>(<i>m</i>, <i>j</i><i>ω</i>) = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>m</i></span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><i>n</i></sub><i>ω</i><span class="symbol">(</span><i>m</i><sup>2</sup> + 1<span class="symbol">)</span></span><span class="ignored">)</span></span> + <i>K</i><sub><i>p</i></sub> + <i>j</i><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><i>n</i></sub><i>ω</i><span class="symbol">(</span><i>m</i><sup>2</sup> + 1<span class="symbol">)</span></span><span class="ignored">)</span></span></span>
+</td>
+
+</tr>
+<tr>
+<td align="center" valign="top">
+ПИД
+</td>
+<td align="center" valign="top">
+<span class="formula"><i>w</i>(<i>m</i>, <i>j</i><i>ω</i>) = <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>m</i></span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><i>n</i></sub><i>ω</i><span class="symbol">(</span><i>m</i><sup>2</sup> + 1<span class="symbol">)</span></span><span class="ignored">)</span></span> + <i>K</i><sub><i>p</i></sub> + <i>m</i><i>ω</i><i>T</i><sub><i>q</i></sub> + <i>j</i><span class="symbol">(</span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><i>n</i></sub><i>ω</i><span class="symbol">(</span><i>m</i><sup>2</sup> + 1<span class="symbol">)</span></span><span class="ignored">)</span></span> − <i>ω</i><i>T</i><sub><i>q</i></sub><span class="symbol">)</span></span>
+</td>
+
+</tr>
+
+</table>
+
+</div>
+<div class="Indented">
+Критерий устойчивости по Наквисту это<div class="formula">
+<i>W</i><sub>0</sub><span class="symbol">(</span><i>m</i>, <i>j</i><i>ω</i><span class="symbol">)</span> = <i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>m</i>, <i>j</i><i>ω</i><span class="symbol">)</span> = 1
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<a class="eqnumber" name="eq-19">(19) </a><i>W</i><sub><i>p</i></sub><span class="symbol">(</span><i>m</i>, <i>j</i><i>ω</i><span class="symbol">)</span> = <i>W</i><sub>0</sub><span class="symbol">(</span><i>m</i>, <i>j</i><i>ω</i><span class="symbol">)</span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<a class="eqnumber" name="eq:Обратная инверсная расширенная АФХ объекта">(20) </a><i>W</i><sub>0</sub><span class="symbol">(</span><i>m</i>, <i>j</i><i>ω</i><span class="symbol">)</span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>W</i><sub>0</sub><span class="symbol">(</span><i>m</i>, <i>j</i><i>ω</i><span class="symbol">)</span></span><span class="ignored">)</span></span>
+</div>
+
+</div>
+<div class="Indented">
+Уравнение 19 можно представить либо в алгебраической форме
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
+<span class="arrayrow">
+<span class="case align-l">
+<i>U</i><sub><i>p</i></sub><span class="symbol">(</span><i>m</i>, <i>n</i><span class="symbol">)</span> =  
+</span>
+<span class="case align-l">
+<i>U</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>w</i>, <i>ω</i><span class="symbol">)</span> 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<i>V</i><sub><i>p</i></sub><span class="symbol">(</span><i>m</i>, <i>n</i><span class="symbol">)</span> =  
+</span>
+<span class="case align-l">
+<i>V</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>w</i>, <i>ω</i><span class="symbol">)</span> 
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
+<span class="arrayrow">
+<span class="case align-l">
+<i>A</i><sub><i>p</i></sub><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span> =  
+</span>
+<span class="case align-l">
+<i>A</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span> 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+<i>F</i><sub><i>p</i></sub><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span> =  
+</span>
+<span class="case align-l">
+ − <i>F</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span> 
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+</div>
+<div class="Indented">
+Подставляя формулы 3 или 4 соотвественные разширенные АФХ можно выразить их настроечные параметры через характеристики объекта управления.
+</div>
+<div class="Indented">
+Например для ПИ регулятора это будет выглядить как:
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><i>u</i></sub></span><span class="ignored">)</span></span> = <i>ω</i><span class="symbol">(</span><i>m</i><sup>2</sup> + 1<span class="symbol">)</span>⋅<i>V</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<i>K</i><sub><i>p</i></sub> = <i>mV</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span> − <i>U</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><i>u</i></sub></span><span class="ignored">)</span></span><i>ω</i><span class="symbol">(</span><i>m</i><sup>2</sup> + 1<span class="symbol">)</span><i>A</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span><i>Sin</i><span class="symbol">(</span><i>F</i><sub><i>o</i></sub><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span><span class="symbol">)</span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<i>K</i><sub><i>p</i></sub> = <i>A</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span><i>m</i>sin<span class="symbol">(</span><i>F</i><sub><i>o</i></sub><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span> − <i>A</i><sub><i>o</i></sub><sup>*</sup><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span>cos<span class="symbol">(</span><i>F</i><sub><i>o</i></sub><span class="symbol">(</span><i>m</i>, <i>ω</i><span class="symbol">)</span><span class="symbol">)</span><span class="symbol">)</span>
+</div>
+
+</div>
+<div class="Indented">
+Подставив частоты расчитаем настроечные параметры регулятора, можно в плоскости настроечных параметров построить линии равного затухания для различных степеней колебательности <span class="formula"><i>m</i></span>.
+</div>
+<div class="Indented">
+Для всех настроечных параметров лежащих на одной линии степень затухания будет одинаковой, но это не означает что все они будут оптимальными. Расмотрим переходные процессы если двигатся по линии равного затухания слева на право.
+</div>
+<div class="Indented">
+Оптимальный переходный процесс получается в точке лежащей чуть правее максимума линии ровного затухания. Это точка соответствует максимальному отношению <span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>K</i><sub><i>p</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>T</i><sub><i>u</i></sub></span><span class="ignored">)</span></span></span>.
+</div>
+
+<hr class="footer">
 <div class="footer" id="generated-by">
-Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.2 (2011-06-12)</a> on <span class="create-date">2011-11-29T10:14:59.153260</span>
+Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.2 (2011-06-12)</a> on <span class="create-date">2011-12-07T14:53:22.146913</span>
 </div>
 </div>
 </body>

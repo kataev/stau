@@ -4,15 +4,17 @@ __author__ = 'Kataev Denis'
 import numpy as np
 from scipy import signal
 from inverse_laplase import _riemann
+from scipy import integrate
 
 class Response:
     def __init__(self,data,time=None,T=None):
-        """ Инициализация класса """
+        """ Класс динамической характеристики """
         self.data = data.copy()
-        if not T:
-            raise u'Нету временной постоянной ни массива данных'
         self.t = T
-        self.make_time()
+        if time is not None:
+            self.time=time
+        else:
+            self.make_time()
 
     def make_time(self,T=None):
         """ Берёт или создает массив по шагу времени """
@@ -66,7 +68,7 @@ class Response:
             self.data = data
         return self
 
-    def tangent(self):
+    def tangent(self,raw=False):
         """
         Метод касательной.
         """
@@ -79,9 +81,12 @@ class Response:
         T = D/(data[j+1] - data[j])
         m = np.where(data==data.max())
         tau = self.time[j-1]-data[j]*T
-        return {'point':(A,B,j),'T':T,'tau':tau}
+        if raw:
+            return {'point':(A,B,j),'T':T,'tau':tau}
+        else:
+            return Transfer(T,tau)
 
-    def tangent_poly(self):
+    def tangent_poly(self,raw=False):
         """ Метод касательной
         Методом полинома, определяем точку где 2 производная ровна нулю. """
         poly = np.poly1d(np.polyfit(self.time,self.data,3))
@@ -91,16 +96,22 @@ class Response:
         tau = tang.r[0]
         T = (1-tang[0])/tang[1]-tau
         j = int(point/self.t)
-        return {'point':(point,tang(point),j),'T':T,'tau':tau}
+        if raw:
+            return {'point':(point,tang(point),j),'T':T,'tau':tau}
+        else:
+            return Transfer(T,tau)
 
-    def match3(self,tangent=None):
-        if not tangent: tangent=self.tangent()
+    def match3(self,tangent=None,raw=False):
+        if not tangent: tangent=self.tangent(raw=True)
         T = tangent['T']*(1-tangent['point'][1])
         tau = tangent['point'][0]-T*np.log(tangent['T']/T)
-        return {'T':T,'tau':tau,'point':tangent['point']}
+        if raw:
+            return {'T':T,'tau':tau,'point':tangent['point']}
+        else:
+            return Transfer(T,tau)
 
-    def contact4(self,match3=None):
-        if not match3: match3=self.match3()
+    def contact4(self,match3=None,raw=False):
+        if not match3: match3=self.match3(raw=True)
         j = match3['point'][2]-1
         a = self.time[j],self.data[j]
         i = np.where(self.data>=0.75)[0][0]
@@ -110,9 +121,12 @@ class Response:
             tau = (b[0]*np.log(1-b[1]) - a[0]*np.log(1-b[1]))/(np.log(1-a[1]) - np.log(1-b[1]))
             T = tau/np.log(1-a[1])
         if tau and T:
-            return {'T':T,'tau':-1*tau,'point':match3['point']}
+            if raw:
+                return {'T':T,'tau':-1*tau,'point':match3['point']}
+            else:
+                return Transfer(T,tau)
 
-    def orman(self):
+    def orman(self,raw=False):
         i = np.where(self.data>=0.33)[0][0]
         a = self.time[i],self.data[i]
 
@@ -122,11 +136,10 @@ class Response:
         T = 1.25*(b[0]-a[0])
         tau = (3*a[0]-b[0])/2
 
-        return {'T':T,'tau':tau}
-
-
-        
-
+        if raw:
+            return {'T':T,'tau':tau}
+        else:
+            return Transfer(T,tau)
 
 class Transfer:
     def __init__(self,T,tau,point=None):

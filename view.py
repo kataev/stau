@@ -48,11 +48,23 @@ def test():
 
 def test_lf():
     """ Проба scipy системы. """
-    num = np.poly1d([3.6,1])
-    den = np.poly1d([130,23,1])
-    system = signal.lti(*signal.tf2ss(num,den))
-    d = system.step()
-    plt.plot(d[0],d[1],'-',)
+    orig = Response(np.array(variants['v11']),T=10)
+
+    num = np.poly1d([1])
+    den = np.poly1d((30, 20, 1))
+    system = signal.lti(num,den)
+    t,y = system.step(T=np.array(range(0,141)))
+    plt.plot(t,y)
+
+    num = np.poly1d([1])
+    den = np.poly1d(Response(np.array(t),time=y,T=0.0308513198557).normalization().simou())
+    system1 = signal.lti(num,den)
+    t1,y1 = system1.step(T=np.array(range(0,141)))
+    plt.plot(t1,y1)
+
+
+#    c = _riemann(lambda x: num(x)/den(x),np.array(range(0,100)),100)
+#    plt.plot(range(0,100),c,'-')
     plt.show()
 
 def test_contact4():
@@ -70,11 +82,13 @@ def test_transfer():
     orig = Response(np.array(variants['v14']),T=10) #Мой вариант 14
     orig.linearization().flattening(1).normalization()
 
+#    print orig.contact4(),orig.match3(orig.tangent())
+#
     plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
-    plt.plot(orig.time,Transfer(**orig.tangent()).to_time(orig.time).data,'-',label=u'Касательная')
-    plt.plot(orig.time,Transfer(**orig.match3(orig.tangent())).to_time(orig.time).data,'-',label=u'3 точки')
-    plt.plot(orig.time,Transfer(**orig.contact4()).to_time(orig.time).data,'-',label=u'Соприкосновения 4')
-    plt.plot(orig.time,Transfer(**orig.orman()).to_time(orig.time).data,'-',label=u'Орман')
+    plt.plot(orig.time,orig.tangent().to_time(orig.time).data,'-',label=u'Касательная')
+    plt.plot(orig.time,orig.match3().to_time(orig.time).data,'-',label=u'3 точки')
+#    plt.plot(orig.time,orig.contact4().to_time(orig.time).data,'-',label=u'Соприкосновения 4')
+    plt.plot(orig.time,orig.orman().to_time(orig.time).data,'-',label=u'Орман')
     plt.ylim([0,1])
     plt.xlim([0,orig.time.max()])
     plt.legend(loc='upper left')
@@ -82,17 +96,24 @@ def test_transfer():
 
 def test_poly_n():
     """ Тест полиномной передаточной функции и системы lti """
-    num = [20,1]
-    den = [130,23,1]
+    num = np.poly1d([1])
+    den = np.poly1d([130,23,1])
+
+    orig = Response(np.array(variants['v14']),T=10)
 
     system = signal.lti(num,den)
-    t,i = system.step()
+    t,y = system.step(T=orig.time)
 
-    plt.plot(t,i)
+    y1 = _riemann(lambda x: num(x)/den(x)/x,orig.time,300)
+
+    plt.plot(t,y,label='system')
+    plt.plot(t,y1)
+    plt.legend(loc='upper left')
     plt.show()
 
 if __name__ == '__main__':
 #    test_contact4()
-#    test_transfer()
-    test_poly_n()
+    test_transfer()
+#    test_lf()
+#    test_poly_n()
 #    all_vars()
