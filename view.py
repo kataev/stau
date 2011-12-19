@@ -5,7 +5,10 @@ import matplotlib.pyplot as plt
 from variants import variants
 from stau import *
 from inverse_laplase import _riemann
+import scipy
 from scipy import signal
+from scipy import Inf
+from scipy.integrate import quad
 
 def all_vars():
     """ Работа со всеми вариантами одновременно """
@@ -79,17 +82,34 @@ def test_contact4():
 
 def test_transfer():
     """ Тестирование передаточной функции """
-    orig = Response(np.array(variants['v14']),T=10) #Мой вариант 14
-    orig.linearization().flattening(1).normalization()
+#    orig = Response(np.array(variants['v14']),T=10) #Мой вариант 14
+#    orig.linearization().flattening(4).normalization()
+    print len(np.array(variants['v14']))
+    print np.array(variants['v14'])
+#    s = orig.simou()
+    system = signal.lti([3.6,1],[130,23, 1])
+    t,y = system.step()
+#    print y
+#    p = np.poly1d(np.polyfit(orig.time,1-orig.data,10))
+#    plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
+#    plt.plot(orig.time,[p(x) for x in orig.time],'-',label=u'1-h') #invert
+    plt.plot(t,y,'-',label=u'simou') #original
+#    plt.ylim([0,1])
+#    plt.xlim([0,orig.time.max()])
+    plt.legend(loc='upper left')
+    plt.show()
 
-#    print orig.contact4(),orig.match3(orig.tangent())
-#
+def show_simou_obs_error():
+    """ Тестирование передаточной функции """
+
+    orig = Response(np.array(variants['v14']),T=10) #Мой вариант 14
+    orig.linearization().flattening(5).normalization()
+    orig.data = 1 - orig.data
     plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
-    plt.plot(orig.time,orig.tangent().to_time(orig.time).data,'-',label=u'Касательная')
-    plt.plot(orig.time,orig.match3().to_time(orig.time).data,'-',label=u'3 точки')
-#    plt.plot(orig.time,orig.contact4().to_time(orig.time).data,'-',label=u'Соприкосновения 4')
-    plt.plot(orig.time,orig.orman().to_time(orig.time).data,'-',label=u'Орман')
-    plt.ylim([0,1])
+    plt.plot(orig.time,orig.data*orig.time,'-',label=u'Первая площядь') #original
+#    plt.plot(orig.time,orig.data*orig.time*orig.time,'-',label=u'Вторая') #original
+#    plt.plot(orig.time,orig.data*orig.time*orig.time*orig.time,'-',label=u'Третья') #original
+#    plt.ylim([0,1])
     plt.xlim([0,orig.time.max()])
     plt.legend(loc='upper left')
     plt.show()
@@ -114,6 +134,7 @@ def test_poly_n():
 if __name__ == '__main__':
 #    test_contact4()
     test_transfer()
+#    show_simou_obs_error()
 #    test_lf()
 #    test_poly_n()
 #    all_vars()
