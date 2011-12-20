@@ -158,15 +158,15 @@ class Response:
         s.append(nu[0]**2 + nu[1])
         for k in range(1,10):
             si = nu[k-1] + reduce(lambda sum,i:sum+nu[i]*s[k-2-i],range(0,k-2),0)
-            print si
             s.append(si)
-#            if si < s[-2]:break
-            nu.append(quad(lambda t: pow(-t,k)*fi(t),0,end)[0]/fac(k))
-        print s
+
+            nu.append(quad(lambda t: (-t)**k*fi(t),0,end)[0]/fac(k))
+
         a = [s[0],s[0]+s[2],s[0]+s[1]+s[2]]
         b = []
         for k in range(4,len(s)):
             a.append(s[k]+reduce(lambda sum,i: sum+s[k-i],range(1,k-1),0))
+        print a
         return a
 
 class Transfer:
