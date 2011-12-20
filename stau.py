@@ -149,27 +149,23 @@ class Response:
         fi = np.poly1d(np.polyfit(self.time,1-self.data,4))
 
         nu = []
-        nu.append(quad(fi,0,end)[0])
-        nu.append(quad(lambda t: -t*fi(t),0,end)[0])
-        nu.append(quad(lambda t: (-t)**2*fi(t),0,end)[0]/fac(2))
+        nu.append(quad(lambda t: fi(t),0,end)[0])
+        nu.append(quad(lambda t: pow(-t,1)*fi(t),0,end)[0])
+        nu.append(quad(lambda t: pow(-t,2)*fi(t),0,end)[0]/2)
 
         s = []
         s.append(nu[0])
-        s.append(nu[1] + nu[0]**2)
-        for k in range(2,10):
+        s.append(nu[0]**2 + nu[1])
+        for k in range(1,10):
             si = nu[k-1] + reduce(lambda sum,i:sum+nu[i]*s[k-2-i],range(0,k-2),0)
-            nu.append(quad(lambda t: (-t)**k*fi(t),0,end)[0]/fac(k))
-#            if si < 0: print '<0'
             s.append(si)
-#            else: break
 
-#        print nu
-#        print s
+            nu.append(quad(lambda t: (-t)**k*fi(t),0,end)[0]/fac(k))
+
         a = [s[0],s[0]+s[2],s[0]+s[1]+s[2]]
+        b = []
         for k in range(4,len(s)):
             a.append(s[k]+reduce(lambda sum,i: sum+s[k-i],range(1,k-1),0))
-
-
         print a
         return a
 

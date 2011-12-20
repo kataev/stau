@@ -51,7 +51,7 @@ def test():
 
 def test_lf():
     """ Проба scipy системы. """
-    orig = Response(np.array(variants['v11']),T=10)
+    orig = Response(np.array(variants['v11']),T=1)
 
     num = np.poly1d([1])
     den = np.poly1d((30, 20, 1))
@@ -82,33 +82,33 @@ def test_contact4():
 
 def test_transfer():
     """ Тестирование передаточной функции """
-#    orig = Response(np.array(variants['v14']),T=10) #Мой вариант 14
-#    orig.linearization().flattening(4).normalization()
-    print len(np.array(variants['v14']))
-    print np.array(variants['v14'])
-#    s = orig.simou()
     system = signal.lti([3.6,1],[130,23, 1])
     t,y = system.step()
-#    print y
-#    p = np.poly1d(np.polyfit(orig.time,1-orig.data,10))
+#    print y.flat,t
+    orig = Response(np.array(y),T=10) #Мой вариант 14
+    orig.linearization().flattening(1).normalization()
+    s = orig.simou()
+
 #    plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
 #    plt.plot(orig.time,[p(x) for x in orig.time],'-',label=u'1-h') #invert
-    plt.plot(t,y,'-',label=u'simou') #original
+#    plt.plot(t,y,'-',label=u'simou') #original
 #    plt.ylim([0,1])
 #    plt.xlim([0,orig.time.max()])
-    plt.legend(loc='upper left')
-    plt.show()
+#    plt.legend(loc='upper left')
+#    plt.show()
 
 def show_simou_obs_error():
     """ Тестирование передаточной функции """
+    system = signal.lti([3.6,1],[130,23, 1])
+    t,y = system.step()
 
-    orig = Response(np.array(variants['v14']),T=10) #Мой вариант 14
+    orig = Response(np.array(y),T=1) #Мой вариант 14
     orig.linearization().flattening(5).normalization()
     orig.data = 1 - orig.data
     plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
-    plt.plot(orig.time,orig.data*orig.time,'-',label=u'Первая площядь') #original
-#    plt.plot(orig.time,orig.data*orig.time*orig.time,'-',label=u'Вторая') #original
-#    plt.plot(orig.time,orig.data*orig.time*orig.time*orig.time,'-',label=u'Третья') #original
+    plt.plot(orig.time,orig.data*pow(orig.time,1),'-',label=u'1 площядь') #original
+#    plt.plot(orig.time,orig.data*pow(orig.time,2),'-',label=u'2 площядь') #original
+#    plt.plot(orig.time,orig.data*pow(orig.time,3),'-',label=u'3 площядь') #original
 #    plt.ylim([0,1])
     plt.xlim([0,orig.time.max()])
     plt.legend(loc='upper left')
