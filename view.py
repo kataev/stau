@@ -84,18 +84,24 @@ def test_transfer():
     """ Тестирование передаточной функции """
     system = signal.lti([3.6,1],[130,23, 1])
     t,y = system.step()
-#    print y.flat,t
-    orig = Response(np.array(y),T=10) #Мой вариант 14
-    orig.linearization().flattening(1).normalization()
+    orig = Response(np.array(y),T=1) #Мой вариант 14
+    orig.linearization().flattening().normalization()
     s = orig.simou()
-
-#    plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
-#    plt.plot(orig.time,[p(x) for x in orig.time],'-',label=u'1-h') #invert
+    num = np.poly1d(s[0])
+    den = np.poly1d(s[1])
+    print num
+    print den
+    y1 = _riemann(lambda t: num(t)/den(t)/t,orig.time,100)
+    print 'max ',(orig.data-y1).max()
+#    system1 = signal.lti(*s)
+#    t1,y1 = system1.step()
+    plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
+    plt.plot(orig.time,y1,'-',label=u'rieman') #invert
 #    plt.plot(t,y,'-',label=u'simou') #original
 #    plt.ylim([0,1])
 #    plt.xlim([0,orig.time.max()])
-#    plt.legend(loc='upper left')
-#    plt.show()
+    plt.legend(loc='upper left')
+    plt.show()
 
 def show_simou_obs_error():
     """ Тестирование передаточной функции """
@@ -131,9 +137,29 @@ def test_poly_n():
     plt.legend(loc='upper left')
     plt.show()
 
+def test_stable():
+    num,den = np.poly1d([3.6,1]),np.poly1d([130,23, 1])
+
+    W = lambda s: num(s)/den(s)
+
+    i = np.linspace(0,20j,20)
+    w = np.linspace(0.08,0.01,20)
+
+    s = np.array([W(s) for s in i*w])
+    print s
+    im = s.imag
+    re = s.real
+
+    plt.plot(-im,re,label='stable')
+    plt.ylim([0,1])
+    plt.xlim([0,1])
+    plt.show()
+
+
 if __name__ == '__main__':
+    test_stable()
 #    test_contact4()
-    test_transfer()
+#    test_transfer()
 #    show_simou_obs_error()
 #    test_lf()
 #    test_poly_n()
