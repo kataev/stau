@@ -84,17 +84,18 @@ def test_transfer():
     """ Тестирование передаточной функции """
     system = signal.lti([3.6,1],[130,23, 1])
     t,y = system.step()
-#    print y.flat,t
     orig = Response(np.array(y),T=10) #Мой вариант 14
     orig.linearization().flattening(1).normalization()
     s = orig.simou()
-
+#    system1 = signal.lti([50,1],[9.37850627e+06,   3.43973516e+04,   1.18723200e+04, 2.28335083e+02,   1.00000000e+00])
+#    t1,y1 = system.step()
 #    plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
 #    plt.plot(orig.time,[p(x) for x in orig.time],'-',label=u'1-h') #invert
-#    plt.plot(t,y,'-',label=u'simou') #original
+    plt.plot(t,y,'-',label=u'simou') #original
+#    plt.plot(t1,y1,'x',label=u'simou1') #original
 #    plt.ylim([0,1])
 #    plt.xlim([0,orig.time.max()])
-#    plt.legend(loc='upper left')
+    plt.legend(loc='upper left')
 #    plt.show()
 
 def show_simou_obs_error():
