@@ -3,6 +3,11 @@
 \begin_document
 \begin_header
 \textclass scrartcl
+\begin_preamble
+\usepackage{times}
+\renewcommand{\familydefault}{times}
+\renewcommand{\rmdefault}{times}
+\end_preamble
 \options dissere
 \use_default_options true
 \begin_modules
@@ -3763,10 +3768,6 @@ status open
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 

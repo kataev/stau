@@ -5,7 +5,9 @@ import numpy as np
 from inverse_laplase import _riemann
 from scipy import polyfit,Inf,factorial as fac
 from scipy.integrate import quad
-from scipy import linalg
+from scipy import signal
+from control import matlab
+from matplotlib import pyplot as plt
 
 class Response:
     def __init__(self,data,time=None,T=None):
@@ -143,9 +145,6 @@ class Response:
             return Transfer(T,tau)
 
     def simou(self):
-#        tau = np.where(self.data<=self.data[-1]*.005)[0][-1]
-#        self.data = self.data[tau:]
-#        self.make_time().normalization()
         end = self.time[-1]
         fi = np.poly1d(np.polyfit(self.time,1-self.data,4))
         nu = np.empty(10)
@@ -153,17 +152,14 @@ class Response:
         nu[0] = quad(lambda t: fi(t),0,end)[0]
         nu[1] = quad(lambda t: pow(-t,1)*fi(t),0,end)[0]
         nu[2] = quad(lambda t: pow(-t,2)*fi(t),0,end)[0]/2
-#        print nu[:3]
         s = np.empty(10)
         s.fill(0)
         s[1] = nu[0]
         s[2] = nu[0]*s[1]+nu[1]
-#        s[3] = nu[2]+nu[0]*s[2]+nu[1]*s[1]
         for k in range(3,10):
             s[k] = (nu[:k-1]*s[1:k][::-1]).sum()+nu[k-1]
             nu[k] = quad(lambda t: pow(-t,k)*fi(t),0,end)[0]/fac(k)
             if s[k] < s[k-1]: break
-
         last = max(s.nonzero()[0])
 
         b = np.empty(10)
@@ -174,15 +170,10 @@ class Response:
         if s[last] < 0 : b[1] = -s[last]/s[last-1]
 
         a[0]= 1
-#        a[1]= s[1] + b[1]
-#        a[2]= s[2] + b[1] * s[1]
-#        a[3]= s[3] + b[1] * s[2]
-#        a[4]= s[4] + b[1] * s[3]
-
         for k in range(1,last):
             a[k]=b[k] + s[k]+(b[1:k]*s[1:k][::-1]).sum()
         print s
-        return b[::-1],a[::-1]
+        return TransferPoly(b[::-1],a[::-1],self.time)
 
 class Transfer:
     def __init__(self,T,tau,point=None):
@@ -201,5 +192,33 @@ class Transfer:
 
     def to_time(self,time):
         """ Во временную область """
-        self.data = _riemann(lambda s:np.exp(-s*self.tau)/(self.T*s+1)/s,time,100)
-        return self
+        return _riemann(lambda s:np.exp(-s*self.tau)/(self.T*s+1)/s,time,100)
+
+class TransferPoly:
+    def __init__(self,num,den,time=np.arange(100)):
+        self.time = time
+        self.num = np.poly1d(num,variable='s')
+        self.den = np.poly1d(den,variable='s')
+        ss = signal.tf2ss(self.num,self.den)
+        self.ss = matlab.ss(*ss)
+
+    def __call__(self, s):
+        return self.num(s)/self.den(s)
+
+    def __str__(self):
+        num = str(self.num)
+        den = str(self.den)
+        return num+'\n'+'-'*len(num)+'\n'+den
+
+    def afchx(self):
+        return matlab.bode(self.ss)
+
+    def nykwist(self):
+        return matlab.nyquist(self.ss)
+
+    def step(self):
+        """ Во временную область """
+        y = _riemann(lambda s: self(s)/s,self.time,100)
+        plt.plot(self.time,y,label=u'ПФ скачок')
+        plt.grid()
+        return y

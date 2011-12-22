@@ -82,26 +82,29 @@ def test_contact4():
 
 def test_transfer():
     """ Тестирование передаточной функции """
-    system = signal.lti([3.6,1],[130,23, 1])
-    t,y = system.step()
-    orig = Response(np.array(y),T=1) #Мой вариант 14
-    orig.linearization().flattening().normalization()
-    s = orig.simou()
-    num = np.poly1d(s[0])
-    den = np.poly1d(s[1])
-    print num
-    print den
-    y1 = _riemann(lambda t: num(t)/den(t)/t,orig.time,100)
-    print 'max ',(orig.data-y1).max()
-#    system1 = signal.lti(*s)
-#    t1,y1 = system1.step()
-    plt.plot(orig.time,orig.data,'-',label=u'Оригинал') #original
-    plt.plot(orig.time,y1,'-',label=u'rieman') #invert
-#    plt.plot(t,y,'-',label=u'simou') #original
-#    plt.ylim([0,1])
+#    system = signal.lti([3.6,1],[130,23, 1])
+#    t,y = system.step()
+    var = np.array(variants['v12'])
+    v = np.empty(410)
+    v.fill(max(var))
+    v[:len(var)] = var
+    orig = Response(v,T=1).linearization().flattening(3).normalization()
+#    orig1 = Response(var,T=1).linearization().flattening(3).normalization()
+    y = orig.simou()
+#    y1 = orig1.simou()
+
+#    print y1
+
+#    plt.plot(orig1.time,orig1.data,'-',label=u'Оригинал')
+#    plt.plot(orig1.time,y1.to_time(orig1.time),'x',label=u'Симою')
+    plt.plot(orig.time,orig.data,'-',label=u'Оригинал с установившемся зн')
+#    plt.plot(orig.time,y.to_time(orig.time),'-',label=u'Симою с установлением')
+
+#    plt.ylim([0,1.1])
 #    plt.xlim([0,orig.time.max()])
-    plt.legend(loc='upper left')
-    plt.show()
+#    plt.legend(loc='upper left')
+#    plt.show()
+    return orig,y
 
 def show_simou_obs_error():
     """ Тестирование передаточной функции """
@@ -138,9 +141,9 @@ def test_poly_n():
     plt.show()
 
 def test_stable():
-    num,den = np.poly1d([3.6,1]),np.poly1d([130,23, 1])
+    t = TransferPoly([3.6,1],[130,23, 1])
 
-    W = lambda s: num(s)/den(s)
+
 
     i = np.linspace(0,20j,20)
     w = np.linspace(0.08,0.01,20)
@@ -157,9 +160,9 @@ def test_stable():
 
 
 if __name__ == '__main__':
-    test_stable()
+#    test_stable()
 #    test_contact4()
-#    test_transfer()
+    test_transfer()
 #    show_simou_obs_error()
 #    test_lf()
 #    test_poly_n()
