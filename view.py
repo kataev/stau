@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 __author__ = 'Kataev Denis'
-import matplotlib.pyplot as plt
 from variants import variants
 from stau import *
 from inverse_laplase import _riemann
-import scipy
 from scipy import signal
-from scipy import Inf
-from scipy.integrate import quad
 
 def all_vars():
     """ Работа со всеми вариантами одновременно """
@@ -84,8 +80,8 @@ def test_transfer():
     """ Тестирование передаточной функции """
 #    system = signal.lti([3.6,1],[130,23, 1])
 #    t,y = system.step()
-    var = np.array(variants['v12'])
-    v = np.empty(410)
+    var = np.array(variants['v14'])
+    v = np.empty(350)
     v.fill(max(var))
     v[:len(var)] = var
     orig = Response(v,T=1).linearization().flattening(3).normalization()
@@ -142,8 +138,6 @@ def test_poly_n():
 
 def test_stable():
     t = TransferPoly([3.6,1],[130,23, 1])
-
-
 
     i = np.linspace(0,20j,20)
     w = np.linspace(0.08,0.01,20)

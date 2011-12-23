@@ -3,7 +3,7 @@
 __author__ = 'Kataev Denis'
 import numpy as np
 from inverse_laplase import _riemann
-from scipy import polyfit,Inf,factorial as fac
+from scipy import factorial as fac
 from scipy.integrate import quad
 from scipy import signal
 from control import matlab
