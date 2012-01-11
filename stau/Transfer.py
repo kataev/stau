@@ -7,6 +7,7 @@ from scipy import factorial as fac
 from scipy.integrate import quad
 from scipy import signal
 from control import matlab
+from control import modelsimp
 from matplotlib import pyplot as plt
 
 class Response:
@@ -201,6 +202,7 @@ class TransferPoly:
         self.den = np.poly1d(den,variable='s')
         ss = signal.tf2ss(self.num,self.den)
         self.ss = matlab.ss(*ss)
+        self.order = max(len(self.num),len(self.den))
 
     def __call__(self, s):
         return self.num(s)/self.den(s)
@@ -210,15 +212,21 @@ class TransferPoly:
         den = str(self.den)
         return num+'\n'+'-'*len(num)+'\n'+den
 
+    def simp(self,order=0):
+        order = order or max(len(self.num),len(self.den)) - 1
+        s = modelsimp.balred(self.ss,order)
+        t = matlab.ss2tf(s)
+        return TransferPoly(t.num[0][0],t.den[0][0],self.time)
+
     def afchx(self):
         return matlab.bode(self.ss)
 
     def nykwist(self):
         return matlab.nyquist(self.ss)
 
-    def step(self):
+    def step(self,label=u'ПФ скачок'):
         """ Во временную область """
         y = _riemann(lambda s: self(s)/s,self.time,100)
-        plt.plot(self.time,y,label=u'ПФ скачок')
+        plt.plot(self.time,y,label=label + u' %d порядка' % self.order)
         plt.grid()
         return y

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>CPU</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="/static/underscore-1.2.2.js"></script>
+    <script src="/static/jquery-1.6.4.js"></script>
+    <script src="/static/jquery.sparkline.min.js"></script>
+    <script src="/static/json2.js"></script>
+    <script src="/static/backbone.js"></script>
+    <script src="/static/highcharts.js"></script>
+
+    <script type="text/template" id="group-template">
+    </script>
+    <script src="/static/script.js"></script>
+</head>
+<body>
+<select id='variant'>
+    {% for v in vars %}
+    <option value='{{ v }}'>Вариант №{{ v }}</option>
+    {% endfor %}
+</select>
+</body>
+</html>

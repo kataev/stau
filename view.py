@@ -1,10 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 __author__ = 'Kataev Denis'
-from variants import variants
-from stau import *
+from stau import variants
+from stau.Transfer import *
 from inverse_laplase import _riemann
 from scipy import signal
+from matplotlib import rcParams
+
+rcParams['text.usetex']=False
+rcParams['font.sans-serif'] = ['Liberation Sans']
+rcParams['font.serif'] = ['Liberation Serif']
 
 def all_vars():
     """ Работа со всеми вариантами одновременно """
