@@ -10,6 +10,8 @@ urlpatterns = patterns('',
     url(r'^$', 'stau.views.home', name='home'),
 #    url(r'^stau/', include('stau.foo.urls')),
     (r'^var/(?P<var>\d+)$', 'views.variants'),
+    (r'^var/(?P<var>\d+)/clear$', 'views.do_all'),
+    (r'^var/(?P<var>\d+)/simou/$', 'views.simou'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

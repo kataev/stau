@@ -10,9 +10,30 @@
     <script src="/static/json2.js"></script>
     <script src="/static/backbone.js"></script>
     <script src="/static/highcharts.js"></script>
+    <script src="http://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>
 
-    <script type="text/template" id="group-template">
+    <script type="text/template" id="tf-template">
+        <math display="block" id='MathDiv'>
+            <mi>W(s)</mi>
+            <mo>=</mo>
+                <mfrac>
+                <% _.each(tf, function(row) { %>
+                    <mrow>
+                        <% var index = 1 %>
+                        <% _.each(row, function(i) { %>
+                        <% if (index != 1) { print('<mo>+</mo>') } %>
+                        <mn><%= i %></mn>
+                        <msup>
+                            <% if (row.length-index>0) { print('<mo>s</mo>') } %>
+                            <% if (row.length-index>0) { print('<mn>'+ (row.length-index++) +'</mn>') } %>
+                        </msup>
+                        <% }); %>
+                    </mrow>
+                <% }); %>
+                </mfrac>
+        </math>
     </script>
+    <script src="/static/draw.js"></script>
     <script src="/static/script.js"></script>
 </head>
 <body>
@@ -21,5 +42,11 @@
     <option value='{{ v }}'>Вариант №{{ v }}</option>
     {% endfor %}
 </select>
+<button id='clear'>Слгадить и нормализовать</button>
+<button id='simou'>Аппроксиморовать методом Симою</button>
+<output id='tf'></output>
+
+<div id="chart" class='column'>
+</div>
 </body>
 </html>

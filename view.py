@@ -3,7 +3,7 @@
 __author__ = 'Kataev Denis'
 from stau import variants
 from stau.Transfer import *
-from inverse_laplase import _riemann
+from stau.inverse_laplase import _riemann
 from scipy import signal
 from matplotlib import rcParams
 

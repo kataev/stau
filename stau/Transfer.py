@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Kataev Denis'
 import numpy as np
-from inverse_laplase import _riemann
+from stau.inverse_laplase import _riemann
 from scipy import factorial as fac
 from scipy.integrate import quad
 from scipy import signal
@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 class Response:
     def __init__(self,data,time=None,T=None):
         """ Класс динамической характеристики """
-        self.data = data.copy()
+        self.data = np.array(data)
         self.t = T
         if time is not None:
             self.time=time
@@ -224,9 +224,10 @@ class TransferPoly:
     def nykwist(self):
         return matlab.nyquist(self.ss)
 
-    def step(self,label=u'ПФ скачок'):
+    def step(self,label=u'ПФ скачок',draw=True):
         """ Во временную область """
         y = _riemann(lambda s: self(s)/s,self.time,100)
-        plt.plot(self.time,y,label=label + u' %d порядка' % self.order)
-        plt.grid()
+        if draw:
+            plt.plot(self.time,y,label=label + u' %d порядка' % self.order)
+            plt.grid()
         return y
