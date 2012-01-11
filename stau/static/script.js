@@ -5,7 +5,7 @@ $(function(){
 
     $('#variant').change(function (e) {
         var variant = $("#variant option:selected").attr('value')
-        $.getJSON('var/'+variant.split('v')[1]).success(function(data){
+        $.getJSON('var/'+variant).success(function(data){
             chart = time_response({data:data.data,name:'test'});
             chart.render()
         });
@@ -13,7 +13,7 @@ $(function(){
 
     $('#clear').click(function (e) {
         var variant = $("#variant option:selected").attr('value')
-        $.getJSON('var/'+variant.split('v')[1]+'/clear').success(function(data){
+        $.getJSON('var/'+variant+'/clear').success(function(data){
             chart = time_response({data:data.data,name:'test'});
             chart.render()
         });
@@ -21,7 +21,7 @@ $(function(){
 
     $('#simou').click(function (e) {
         var variant = $("#variant option:selected").attr('value')
-        $.getJSON('var/'+variant.split('v')[1]+'/simou').success(function(data){
+        $.getJSON('var/'+variant+'/simou').success(function(data){
             d = data;
             chart = time_response({data:data.data,name:'test'});
             chart.render()

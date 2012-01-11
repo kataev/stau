@@ -21,13 +21,13 @@
                     <mrow>
                         <% var index = 1 %>
                         <% _.each(row, function(i) { %>
-                        <% if (index != 1) { print('<mo>+</mo>') } %>
-                        <mn><%= i %></mn>
-                        <msup>
-                            <% if (row.length-index>0) { print('<mo>s</mo>') } %>
-                            <% if (row.length-index>0) { print('<mn>'+ (row.length-index++) +'</mn>') } %>
-                        </msup>
-                        <% }); %>
+                            <% if (index != 1) { print('<mo>+</mo>') } %>
+                            <mn><%= i %></mn>
+                            <msup>
+                                <% if (row.length-index>0) { print('<mo>s</mo>') } %>
+                                <% if (row.length-index>0) { print('<mn>'+ (row.length-index++) +'</mn>') } %>
+                            </msup>
+                            <% }); %>
                     </mrow>
                 <% }); %>
                 </mfrac>
