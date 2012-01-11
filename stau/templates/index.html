@@ -11,9 +11,8 @@
     <script src="/static/backbone.js"></script>
     <script src="/static/highcharts.js"></script>
     <script src="http://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>
-
     <script type="text/template" id="tf-template">
-        <math display="block" id='MathDiv'>
+        <math display="block">
             <mi>W(s)</mi>
             <mo>=</mo>
                 <mfrac>
@@ -22,7 +21,7 @@
                         <% var index = 1 %>
                         <% _.each(row, function(i) { %>
                             <% if (index != 1) { print('<mo>+</mo>') } %>
-                            <mn><%= i %></mn>
+                            <mn><%= i.toFixed(2) %></mn>
                             <msup>
                                 <% if (row.length-index>0) { print('<mo>s</mo>') } %>
                                 <% if (row.length-index>0) { print('<mn>'+ (row.length-index++) +'</mn>') } %>
