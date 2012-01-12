@@ -34,6 +34,8 @@
             view.render()
             tf.fetch()
 
+//            $.getJSON(m.url()+'/step').success(function(d){time_response({data:d})})
+
         }
     });
 
