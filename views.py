@@ -37,6 +37,8 @@ def simou(request,var,order=0):
             tf = tf.simp(order)
         y = tf.step(draw=False,fast=True)
 
+        print tf
+
         return HttpResponse(json.dumps({'data':y.tolist(),'tf':{'num':tf.num.coeffs.tolist(),'den':tf.den.coeffs.tolist()}}))
     else:
         return HttpResponse(json.dumps({'errors':u'Нет такого варианта'}))
@@ -57,4 +59,11 @@ def transfer(request,num,den):
 
 def get_transfer(request,id):
     t = Transfer.objects.get(pk=id)
+    print t.q
     return HttpResponse(json.dumps(t.to_json))
+
+
+def step(request,id):
+    t = Transfer.objects.get(pk=id)
+    y =  t.q.step(draw=False,fast=True).tolist()
+    return HttpResponse(json.dumps(y))

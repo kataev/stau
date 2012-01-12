@@ -3,6 +3,7 @@
     <mo>=</mo>
     <mfrac>
         <% _.each(tf, function(row) { %>
+        <% if (!_.isArray(row)) {return} %>
         <mrow>
             <% var index = 1 %>
             <% _.each(row, function(i) { %>

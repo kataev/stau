@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     (r'^var/(?P<var>\d+)/simou/(?P<order>\d+)/$', 'views.simou'),
     (r'^transfer/(?P<num>.+)/(?P<den>.+)/$', 'views.transfer'),
     (r'^transfer/(?P<id>\d+)$', 'views.get_transfer'),
+    (r'^transfer/(?P<id>\d+)/step$', 'views.step'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

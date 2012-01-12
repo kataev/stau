@@ -24,8 +24,11 @@ class Transfer(models.Model):
     den = Base64Field()
 
     @property
+    def q(self):
+        return TransferPoly(self.num,self.den)
+
+    @property
     def to_json(self):
-        print type(self.num[0])
         return dict(num=self.num.tolist(),den=self.den.tolist())
 
 

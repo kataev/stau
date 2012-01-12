@@ -1,0 +1,24 @@
+<span class='simp'>Упростить</span>
+<div class='math'>
+    <math display="block">
+        <mi>W(s)</mi>
+        <mo>=</mo>
+        <mfrac>
+            <% _.each(tf, function(row) { %>
+            <% if (!_.isArray(row)) {return} %>
+            <mrow>
+                <% var index = 1 %>
+                <% _.each(row, function(i) { %>
+                <% if (index != 1) { print('<mo>+</mo>') } %>
+                <mn><%= i %></mn>
+                <msup>
+                    <% if (row.length-index>0) { print('<mo>s</mo>') } %>
+                    <% if (row.length-index>0) { print('<mn>'+ (row.length-index++) +'</mn>') } %>
+                </msup>
+                <% }); %>
+            </mrow>
+            <% }); %>
+        </mfrac>
+    </math>
+
+</div>
