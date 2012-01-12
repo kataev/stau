@@ -1,73 +1,43 @@
-<!DOCTYPE html>
-<html dir="ltr">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CPU</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection">
-    <![endif]-->
-    <link href="/static/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
 
-    <script src="/static/underscore-1.2.2.js"></script>
-    <script src="/static/jquery-1.6.4.js"></script>
-    <script src="/static/jquery.sparkline.min.js"></script>
-    <script src="/static/json2.js"></script>
-    <script src="/static/backbone.js"></script>
-    <script src="/static/highcharts.js"></script>
-    <script src="http://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>
-    <script type="text/template" id="tf-template">
-        {% include "math.html" %}
-    </script>
-    <script src="/static/draw.js"></script>
-    <!--<script src="/static/script.js"></script>-->
+  <title>Backbone Boilerplate</title>
 </head>
+
 <body>
-<div class="container">
-    <div class="container">
-        <h1><img id="header-image" alt='Калькулятор' src="/static/img/bar_chart.png">Калькулятор передаточных функций
-        </h1>
-        <hr>
-        <div id="subheader" class="span-24 last">
-            <h3 class="alt">Расчитывает модели и их параметры</h3>
-        </div>
-        <hr>
-        <div class="span-7 colborder">
-            <h6>Передаточные функции</h6>
+  <!-- Main container -->
+  <div role="main" id="main"></div>
 
-            <p>Получите передаточную функцию из <a class='conspect' alt="" href="">динамической характеритстики</a> <a
-                    class='conspect' alt="" href="">методом Симою</a>
-                или <a class='conspect' alt="" href="">методом Касательной</a>.
-            </p>
-        </div>
-        <div class="span-8 colborder">
-            <h6>Усточивость системы</h6>
+  <!--
+       Using the build tool? If yes, delete the following uncommented scripts and read
+       the comments starting on line 29.
+  -->
 
-            <p>Определите устойчивость системы припомощи критерия Найквиста.</p>
-        </div>
-        <div class="span-7 last">
-            <h6>Численное обратное преобразование Лапласа</h6>
-            <p>Примените обратное преобразование Лапласа к любой функции на заданном отрезке.</p>
-        </div>
-        <hr>
-        <hr class="space">
-        <div id="content" class="span-15 prepend-1 colborder">
+  <!-- Libraries -->
+  <script src="/static/js/libs/jquery.js"></script>
+  <script src="/static/js/libs/underscore.js"></script>
+  <script src="/static/js/libs/backbone.js"></script>
 
-        </div>
-        <div class="span-7 last">
+  <!-- Application -->
+  <script src="/static/app/index.js"></script>
+  <script src="/static/app/modules/stau.js"></script>
 
-        </div>
-        <hr>
-        <!--<h2 class="alt">You may pick and choose amongst these and many more features, so be bold.</h2>-->
-        <hr>
-        <p>
-            <!--<a href="http://validator.w3.org/check?uri=referer">-->
-                <!--<img src="valid.png" alt="Valid HTML 4.01 Strict" height="31" width="88" class="top">-->
-            <!--</a>-->
-        </p>
-    </div>
-</div>
+  <!--
+       If using the build tool you can uncomment the following lines and use
+       these instead.  They will toggle based on if you are using debug or
+       release.
+  -->
+
+  <!--
+  <script src="/assets/js/libs.js"></script>
+  <script src="/assets/js/templates.js"></script>
+  <script src="/assets/js/app.js"></script>
+  -->
 </body>
 </html>
