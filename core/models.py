@@ -19,7 +19,7 @@ class Transfer(models.Model):
         for f in self._meta.fields:
             if '_base64' in f.name:
                 f.dtype = getattr(self,f.db_column+'_dtype','int64')
-
+    title = models.CharField(max_length=100,default=u'Передаточная фунция')
     num = Base64Field()
     den = Base64Field()
 

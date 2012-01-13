@@ -4,6 +4,11 @@
 }
 
 /*#chart_legend { border: 1px dotted blue; }*/
+
+div.transfer h5 {
+    margin-bottom: 0;
+}
+
 #chart {
     height: 200px;
 }

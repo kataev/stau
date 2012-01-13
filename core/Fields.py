@@ -16,10 +16,13 @@ class Base64Field(models.TextField):
         setattr(cls, name, property(self.get_data, self.set_data))
 
     def get_data(self, obj):
+        print self.field_name,obj
         buffer = base64.decodestring(getattr(obj, self.field_name))
+
         return np.frombuffer(buffer,self.dtype).tolist()
 
     def set_data(self, obj, data):
+        print self.field_name,data
         data = np.array(data)
         self.dtype = str(getattr(obj,self.db_column+'_dtype','int64'))
         setattr(obj, self.field_name, base64.encodestring(data))

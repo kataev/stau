@@ -19,6 +19,7 @@
         defaults:{
 //            "num":  [1,2],
 //            "den":  [2,3]
+            title:'Передаточная функция'
         },
         urlRoot:'/api/transfer'
     });
@@ -45,7 +46,14 @@
         },
         tagName:'li',
         render:function(){
-            time_response({data:this.model.get('step')});
+            data = this.model.get('step');
+            time = this.model.get('time');
+            name = this.model.get('title');
+            var i = 0;
+            data = _(_.zip(time,data)).filter(function(num){
+                if ( (i++ % 3) == 0) {return num}
+            });
+            this.chart = time_response({step:data,name:name});
         }
     });
 
@@ -53,13 +61,15 @@
         initialize:function () {
             this.model.bind('change', this.render, this);
             m = this.model;
+            this.model.view = this;
         },
         template:"/static/app/templates/transfer.html",
         tagName:'div',
-        className:'span-6',
+        className:'span-6 transfer',
         events:{
-            "click .simp":"simp",
-            "click .step":"step"
+            "click .simp"   :"simp",
+            "click .step"   :"step",
+            "dblclick .math" :"edit"
         },
         render:function (done) {
             // Fetch the template, render it to the View element and call done.
@@ -71,7 +81,10 @@
             }, this);
         },
         simp:function () {
-            console.log('ololo')
+//            console.log('ololo')
+        },
+        edit:function(){
+            console.log('edit')
         },
         step:function () {
             $.ajax({url:this.model.url() + '/step', dataType:'json', context:this})
@@ -80,10 +93,8 @@
                         alert(data.message)
                     }
                     else {
-                        new Stau.Views.TimeResponse({model:this.model})
-                        this.model.set({step:data});
-
-
+                        this.chart = new Stau.Views.TimeResponse({model:this.model})
+                        this.model.set({time:data.time,step:data.data});
                     }
                 })
         },
