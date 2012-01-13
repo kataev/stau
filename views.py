@@ -65,5 +65,7 @@ def get_transfer(request,id):
 
 def step(request,id):
     t = Transfer.objects.get(pk=id)
-    y =  t.q.step(draw=False,fast=True).tolist()
+    try:y =  t.q.step(draw=False,fast=True).tolist()
+    except ValueError,e:
+        y = {'error':True,'message':str(e)}
     return HttpResponse(json.dumps(y))

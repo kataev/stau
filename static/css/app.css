@@ -1,0 +1,14 @@
+.math {
+    width:50px;
+    /*height: 50px;*/
+}
+
+/*#chart_legend { border: 1px dotted blue; }*/
+#chart {
+    height: 200px;
+}
+
+div#container{
+    width:950px;
+    margin: 0 auto;
+}

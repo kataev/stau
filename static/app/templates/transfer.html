@@ -1,5 +1,7 @@
-<span class='simp'>Упростить</span>
-<div class='math'>
+<span class="simp">Упростить</span>
+<span class="step">Show Step</span>
+<div id='transfer_<%= tf.id %>' class='math'>
+    <% if (tf.num && tf.den) { %>
     <math display="block">
         <mi>W(s)</mi>
         <mo>=</mo>
@@ -20,5 +22,5 @@
             <% }); %>
         </mfrac>
     </math>
-
+    <% } %>
 </div>

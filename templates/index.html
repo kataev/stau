@@ -6,13 +6,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="/static/css/style.css">
-
+    <link rel="stylesheet" href="/static/css/app.css">
+    <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
     <title>Backbone Boilerplate</title>
 </head>
 
 <body>
 <!-- Main container -->
-<div role="main" id="chart"></div>
+<div role="main" id="container">
+    <h1>Калькулятор передаточных функций</h1>
+    <div class='span-20' id="chart">
+        <h2>Считай и получайте радость</h2>
+    </div>
+    <div class='span-4 last' id="chart_legend">
+        <ul>
+        <li>1</li>
+        <li>2</li>
+        </ul>
+    </div>
+    <div class='span-12 '>2</div>
+    <div class='span-12 last'>3</div>
+
+
+</div>
 
 <!--
      Using the build tool? If yes, delete the following uncommented scripts and read

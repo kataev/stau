@@ -16,13 +16,16 @@
 (function (Stau) {
 
     Stau.Model = Backbone.Model.extend({
-        defaults: {
-            "num":  [1,2],
-            "den":  [2,3]
+        defaults:{
+//            "num":  [1,2],
+//            "den":  [2,3]
         },
-        urlRoot:'/transfer'
+        urlRoot:'/api/transfer'
     });
-    Stau.Collection = Backbone.Collection.extend({ /* ... */ });
+    Stau.Collection = Backbone.Collection.extend({
+        model:Stau.Model,
+        url:'/api/transfer'
+    });
     Stau.Router = Backbone.Router.extend({
         routes:{
             "transfer/:id":"transfer"
@@ -30,34 +33,63 @@
         transfer:function (id) {
             var tf = new Stau.Model({id:id});
             var view = new Stau.Views.Transfer({model:tf});
-            view.el = $('<div></div>').appendTo('body')
+            $(view.el).appendTo('#container')
             view.render()
             tf.fetch()
+        }
+    });
 
-//            $.getJSON(m.url()+'/step').success(function(d){time_response({data:d})})
-
+    Stau.Views.TimeResponse = Backbone.View.extend({
+        initialize:function(){
+            this.model.bind('change:step', this.render, this);
+        },
+        tagName:'li',
+        render:function(){
+            time_response({data:this.model.get('step')});
         }
     });
 
     Stau.Views.Transfer = Backbone.View.extend({
-        initialize:function(){
-            this.model.bind('change',this.render,this);
+        initialize:function () {
+            this.model.bind('change', this.render, this);
             m = this.model;
         },
         template:"/static/app/templates/transfer.html",
         tagName:'div',
-        events: {
-            "click .simp" : "s"
+        className:'span-6',
+        events:{
+            "click .simp":"simp",
+            "click .step":"step"
         },
         render:function (done) {
             // Fetch the template, render it to the View element and call done.
             namespace.fetchTemplate(this.template, function (tmpl) {
                 $(this.el).html(tmpl({tf:this.model.toJSON()}));
-                MathJax.Hub.Typeset()
-            },this);
+                if (this.model.get('num') && this.model.get('den')) {
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub, this.$('.math').attr('id'), this.math_render]);
+                }
+            }, this);
         },
-        s:function(){
-            console.log(e)
+        simp:function () {
+            console.log('ololo')
+        },
+        step:function () {
+            $.ajax({url:this.model.url() + '/step', dataType:'json', context:this})
+                .success(function (data) {
+                    if (data.error) {
+                        alert(data.message)
+                    }
+                    else {
+                        new Stau.Views.TimeResponse({model:this.model})
+                        this.model.set({step:data});
+
+
+                    }
+                })
+        },
+        math_render:function () {
+            this.math_width = this.$('.math nobr').width();
+//            this.$('.math').animate({width:'200px'},function(){console.log('end animation')})
         }
     });
 
