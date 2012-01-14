@@ -1,0 +1,29 @@
+<h5>Тоже передаточная функция</h5>
+<div id='transfer_simp_<%= tf.id %>' class='math'>
+    <% if (tf.t && tf.tau) { %>
+    <math display="block">
+        <mi>W(s)</mi>
+        <mo>=</mo>
+        <mfrac>
+            <mrow>
+                <mo>1</mo>
+            </mrow>
+            <mrow>
+                <mo><%= tf.t[0] %></mo>
+                <mo>s</mo>
+                <mo>+</mo>
+                <mo>1</mo>
+            </mrow>
+        </mfrac>
+        <msup>
+            <mo>e</mo>
+            <mn>-<%= tf.tau[0] %>s</mn>
+        </msup>
+    </math>
+    <% } %>
+</div>
+<div class='span-4'>
+    <button class="step">Cкачок</button>
+    <input class='length' min='10' max="1000" value='300' type="number">
+    <button class="chart_del">Del</button>
+</div>
