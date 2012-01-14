@@ -1,4 +1,4 @@
-<h5 contenteditable="true"><%= tf.title %> <%= tf.order %> порядка</h5>
+<h5 contenteditable="true"><%= tf.title %> <%= tf.order %> порядка  id: <% print(tf.id|| 0) %></h5>
 <div id='transfer_<%= tf.id %>' class='math'>
     <% if (tf.num && tf.den) { %>
     <math display="block">

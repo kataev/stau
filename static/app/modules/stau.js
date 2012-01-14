@@ -106,7 +106,6 @@
         render:function(){
             namespace.fetchTemplate(this.template, function (tmpl) {
                 var data = this.model.toJSON();
-                console.log(data)
                 $(this.el).html(tmpl(data));
             }, this);
         },
@@ -139,6 +138,7 @@
             var series = _.zip(time,data);
             this.model.chart = chart.addSeries({data:series,name:'Динамическая характеристика '+id,marker: { enabled:false },
                 allowPointSelect:true,id:'response'+id});
+            $(this.el).css('background-color',this.model.chart.color);
         },
         del_chart:function(){
             if (this.model.chart){this.model.chart.remove()}
@@ -153,23 +153,6 @@
         norm:function(){
             this.model.norm()
         }
-    });
-
-
-    Stau.Views.TimeResponse = Backbone.View.extend({
-        initialize:function(){
-            this.model.bind('change:step', this.render, this);
-        },
-        tagName:'li',
-        render:function(){
-            var data = this.model.get('step');
-            var time = this.model.get('time');
-            var series = _.zip(time,data);
-            chart.addSeries({data:series,name:this.model.get('title')+ ' ' + this.model.order + ' порядка',marker: { enabled:false },
-                allowPointSelect:true,id:'transfer'+this.model.get('id')});
-            $(this.el).css('background-color',this.model.chart.color);
-        }
-
     });
 
     Stau.Views.Transfer_simp = Backbone.View.extend({
@@ -268,6 +251,7 @@
                         var series = _.zip(time,data);
                         this.model.chart = chart.addSeries({data:series,name:this.model.get('title')+ ' ' + this.model.order + ' порядка',marker: { enabled:false },
                             allowPointSelect:true,id:'transfer'+this.model.get('id')});
+                        $(this.el).css('background-color',this.model.chart.color);
                     }
                 })
         },
