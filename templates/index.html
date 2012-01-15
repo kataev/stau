@@ -7,20 +7,18 @@
 
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/app.css">
-    <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection">
-    <![endif]-->
+
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.css">
+
+
     <title>Калькулятор передаточных функций</title>
 </head>
 
 <body class=''>
 <!-- Main container -->
-<div role="main" id="container" class=''>
-    <h1>Калькулятор передаточных функций</h1>
-    <div class='span-24' id="chartNode">
-        <h2>Считай и получайте радость</h2>
+<div role="main" id="container" class="container">
+    <h1>Калькулятор передаточных функций <small>и многое другое...</small></h1>
+    <div class='span16' id="chartNode">
     </div>
 </div>
 
@@ -36,7 +34,14 @@
 <script src="/static/js/libs/highcharts.js"></script>
 <script src="/static/js/libs/exporting.js"></script>
 
-<script src="http://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>
+
+
+<script src="/static/bootstrap/js/bootstrap-modal.js"></script>
+
+
+<!--<script src="/static/js/libs/MathJax/config/TeX-AMS-MML_HTMLorMML-full.js"></script>-->
+<script src="/static/js/libs/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/1.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>-->
 <!-- Application -->
 <script src="/static/app/draw.js"></script>
 <script src="/static/app/index.js"></script>

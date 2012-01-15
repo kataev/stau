@@ -90,7 +90,7 @@
 
     Stau.Views.Response = Backbone.View.extend({
         tagName:'div',
-        className:'prepend-2 span-22 response',
+        className:'row response',
         template:"/static/app/templates/response.html",
         events:{
             "click .simou":"simou",
@@ -163,7 +163,7 @@
         },
         template:"/static/app/templates/transfer_s.html",
         tagName:'div',
-        className:'prepend-2 span-22 transfer',
+        className:'row transfer',
         events:{
             "click .step":"step",
             "click .chart_del":"del_chart"
@@ -209,14 +209,15 @@
         },
         template:"/static/app/templates/transfer.html",
         tagName:'div',
-        className:'prepend-2 span-22 transfer',
+        className:'row transfer',
         events:{
             "click .simp":"simp",
             "click .step":"step",
             "click .nyquist":"nyquist",
             "dblclick .math":"edit",
 
-            "click .chart_del":"del_chart"
+            "click .chart_del":"del_chart",
+            "click .remove":"remove"
         },
         render:function (done) {
             // Fetch the template, render it to the View element and call done.
@@ -284,7 +285,6 @@
     // This will fetch the tutorial template and render it.
     Stau.Views.Tutorial = Backbone.View.extend({
         template:"/static/app/templates/example.html",
-
         render:function (done) {
             time_response({})
             var col = new Stau.Collection;
@@ -297,7 +297,7 @@
                 });
             })
             var r = new Stau.Response({id:1})
-            var v = new Stau.Views.Response({model:r})
+            v = new Stau.Views.Response({model:r})
             r.fetch()
             v.render()
             $(v.el).appendTo('#container')

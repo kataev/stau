@@ -14,7 +14,7 @@ time_response = function (args) {
         },
         exporting:{enabled:true},
         buttons:{
-            exportButton:{enabled:true}
+            exportButton:{enabled:false}
         },
         title:{text:null, x:0, floating:true},
 //    series:[ {name:name,data:args.step} ],

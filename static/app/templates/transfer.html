@@ -1,5 +1,5 @@
-<h5 contenteditable="true"><%= tf.title %> <%= tf.order %> порядка  id: <% print(tf.id|| 0) %></h5>
-<div id='transfer_<%= tf.id %>' class='math'>
+<h2 contenteditable="true"><%= tf.title %> <%= tf.order %> порядка  id: <% print(tf.id|| 0) %></h2>
+<div id='transfer_<%= tf.id %>' class='math span16'>
     <% if (tf.num && tf.den) { %>
     <math display="block">
         <mi>W(s)</mi>
@@ -11,7 +11,7 @@
                 <% var index = 1 %>
                 <% _.each(row, function(i) { %>
                 <% if (index != 1) { print('<mo>+</mo>') } %>
-                <mn><%= i %></mn>
+                <mn><% if (i > 1) { print(i.toFixed(2)) } else { print(i) } %></mn>
                 <msup>
                     <% if (row.length-index>0) { print('<mo>s</mo>') } %>
                     <% if (row.length-index>0) { print('<mn>'+ (row.length-index++) +'</mn>') } %>
@@ -23,18 +23,22 @@
     </math>
     <% } %>
 </div>
-<div class='span-3'>
-    <button class="simp">Упростить</button>
-    <input class='order' min='1' max="<%= tf.order %>" value='<%= tf.order -1 || 0 %>' type="number">
-</div>
-<div class='span-4'>
-    <button class="step">Cкачок</button>
+<div class='span4'>
+    <h3>График</h3>
+    <button class="btn primary small step">Cкачок</button>
     <input class='length' min='10' max="1000" value='300' type="number">
-    <button class="chart_del">Del</button>
+    <button class="btn small danger chart_del">Скрыть</button>
 </div>
-<div class='span-2'>
-    <button class="nyquist">Найквист</button>
+<div class='span4'>
+    <h3>Преобразования</h3>
+    <button class="btn small simp">Упростить</button>
+    <input class='order span1' min='1' max="<%= tf.order %>" value='<%= tf.order -1 || 0 %>' type="number">
 </div>
-<div class='span-2'>
-    <button class="remove">Удолить</button>
+<div class='span4'>
+    <h3>Устойчивость</h3>
+    <button class="btn small nyquist">Найквист</button>
+</div>
+<div class='span2'>
+    <h3>Модель</h3>
+    <button class="btn small danger remove">Уничтожить</button>
 </div>
