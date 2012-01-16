@@ -1,5 +1,5 @@
-<h2 contenteditable="true"><%= tf.title %> <%= tf.order %> порядка  id: <% print(tf.id|| 0) %></h2>
-<div id='transfer_<%= tf.id %>' class='math span16'>
+<h2><%= tf.title %> <%= tf.order %> порядка №<% print(tf.id|| 0) %></h2>
+<div class='math span16'>
     <% if (tf.num && tf.den) { %>
     <math display="block">
         <mi>W(s)</mi>
@@ -23,22 +23,24 @@
     </math>
     <% } %>
 </div>
-<div class='span4'>
-    <h3>График</h3>
-    <button class="btn primary small step">Cкачок</button>
-    <input class='length' min='10' max="1000" value='300' type="number">
-    <button class="btn small danger chart_del">Скрыть</button>
-</div>
-<div class='span4'>
-    <h3>Преобразования</h3>
-    <button rel="twipsy" data-original-title="Получить передаточную функцию заданного порядка на основе этой" class="btn small simp">Упростить</button>
-    <input class='order span1' min='1' max="<%= tf.order %>" value='<%= tf.order -1 || 0 %>' type="number">
-</div>
-<div class='span4'>
-    <h3>Устойчивость</h3>
-    <button class="btn small nyquist">Найквист</button>
-</div>
-<div class='span2'>
-    <h3>Модель</h3>
-    <button class="btn small danger remove">Уничтожить</button>
+<div class='row'>
+    <div class='span4'>
+        <h3>График</h3>
+        <input class='length' min='10' max="1000" value='300' type="number">
+    </div>
+    <div class='span4'>
+        <h3>Преобразования</h3>
+        <button rel="twipsy" data-original-title="Получить передаточную функцию заданного порядка на основе этой"
+                class="btn small simp">Упростить
+        </button>
+        <input class='order span1' min='1' max="<%= tf.order %>" value='<%= tf.order -1 || 0 %>' type="number">
+    </div>
+    <div class='span4'>
+        <h3>Устойчивость</h3>
+        <button class="btn small nyquist">Найквист</button>
+    </div>
+    <div class='span2'>
+        <h3>Модель</h3>
+        <button class="btn small danger remove">Уничтожить</button>
+    </div>
 </div>

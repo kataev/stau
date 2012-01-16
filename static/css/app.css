@@ -5,13 +5,31 @@ h1 {
 #chartNode {
     height: 250px;
     margin: 10px;
+    margin: 0;
     /*height: 500px;*/
     /*width: 500px;*/
+}
+
+#sidebar {
+    /*border: 1px black solid;*/
+}
+
+#sidebar h3 {
+    font-size: 14px;
+    text-align: center;
+}
+
+.response div.row {
+    margin-bottom: 5px;
 }
 
 div#container{
     width:950px;
     margin: 0 auto;
+}
+
+#header {
+    height: 250px;
 }
 
 .length {

@@ -29,6 +29,7 @@ class Transfer(models.Model):
     den = Base64Field()
     den_dtype = models.CharField(max_length=100,default='int64')
 
+    step_length = models.PositiveIntegerField(default=300)
     parent = models.ForeignKey('Transfer',null=True)
 
     @property
@@ -62,6 +63,7 @@ class Transfer_simp(models.Model,TransferSimp):
     tau = Base64Field()
     tau_dtype = models.CharField(max_length=100,default='int64')
 
+    step_length = models.PositiveIntegerField(default=300)
     parent = models.ForeignKey('Transfer',null=True)
 
 

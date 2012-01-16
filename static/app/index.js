@@ -112,7 +112,7 @@ jQuery(function ($) {
             // that may be placed in modules.  To have this work globally (at the
             // cost of losing all route events) you can change the following line
             // to: Backbone.history.navigate(href, true);
-//      app.router.navigate(href, true);
+            app.router.navigate(href, true);
         }
     });
 });
