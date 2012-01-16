@@ -228,6 +228,8 @@
                 if (this.model.get('num') && this.model.get('den')) {
                     MathJax.Hub.Queue(["Typeset", MathJax.Hub, this.$('.math').attr('id'), this.math_render]);
                 }
+
+                this.$('[rel="twipsy"]').twipsy()
             }, this);
         },
         simp:function () {
